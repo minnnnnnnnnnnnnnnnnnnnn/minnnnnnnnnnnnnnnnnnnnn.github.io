@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>法規彙編</title>
+        <meta charset="utf-8">
+        <meta name="description" content="這是截至中華民國114年01月20日的法規"/>
+        <meta name="author" content="臺中市立臺中第一高級中等學校學生自治聯合會第三十屆學生會自治部部長louischo303@"/>
+        <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <script>
+            fetch(new Request('./法規彙編.json')).then( (response) => {return response.json()} ).then( (j) => 
+            {
+                console.log( j ) ; 
+                var lawCount = j.Laws.length ; 
+                var body = document.querySelector( "body" ) ; 
+                var cover = document.createElement( "span" ) ; 
+                body.appendChild( cover ) ; 
+                cover.setAttribute( "id" , "COVER" ) ; 
+                cover.innerHTML = "<div>臺中市立臺中第一高級中等學校<br/>學生自治聯合會</div><h1>法規彙編</h1><br/><span>113-1</span>"
+                var catalogue = document.createElement( "span" ) , contents = document.createElement( "span" ) ; 
+                contents.innerText = "目錄" ; 
+                body.appendChild( catalogue ) ; 
+                catalogue.appendChild( contents ) ; 
+                contents.setAttribute( "class" , "title" ) ; 
+                var a = 0 , b = 0 , c = 0 , d = 0 , e = 0 , h1 = document.createElement( "h1" ) , h2 = document.createElement( "h1" ) , h3 = document.createElement( "h1" ) , h4 = document.createElement( "h1" ) , h5 = document.createElement( "h1" ) ; 
+                let A = document.createElement( "div" ) ; 
+                A.setAttribute( "id" , "A" ) ; 
+                h1.innerText = "中央法規" ; 
+                A.appendChild( h1 ) ; 
+                let B = document.createElement( "div" ) ; 
+                B.setAttribute( "id" , "B" ) ; 
+                h2.innerText = "行政法規" ; 
+                B.appendChild( h2 ) ; 
+                let C = document.createElement( "div" ) ; 
+                C.setAttribute( "id" , "C" ) ; 
+                h3.innerText = "立法法規" ; 
+                C.appendChild( h3 ) ; 
+                let D = document.createElement( "div" ) ; 
+                D.setAttribute( "id" , "D" ) ; 
+                h4.innerText = "司法法規" ; 
+                D.appendChild( h4 ) ; 
+                let E = document.createElement( "div" ) ; 
+                E.setAttribute( "id" , "E" ) ; 
+                h5.innerText = "廢止法規" ; 
+                E.appendChild( h5 ) ; 
+                for( i = 0 ; i < lawCount ; i++ ) 
+                {
+                    if( j.Laws[i].LawCategory[0] == "中" ) 
+                    {
+                        a++ ; 
+                    }
+                    else if( j.Laws[i].LawCategory[0] == "行" ) 
+                    {
+                        b++ ; 
+                    }
+                    else if( j.Laws[i].LawCategory[0] == "立" ) 
+                    {
+                        c++ ; 
+                    }
+                    else if( j.Laws[i].LawCategory[0] == "司" ) 
+                    {
+                        d++ ; 
+                    }
+                    else if( j.Laws[i].LawCategory[0] == "廢" ) 
+                    {
+                        e++ ; 
+                    }
+                }
+                for( i = 0 ; i < lawCount ; i++ ) 
+                {
+                    if( i < a ) 
+                    {
+                        let aa = document.createElement( "a" ) ; 
+                        aa.setAttribute( "href" , "#" + i ) ; 
+                        aa.innerText = j.Laws[i].LawName ; 
+                        A.appendChild( aa ) ; 
+                    }
+                    else if( i < a + b ) 
+                    {
+                        let aa = document.createElement( "a" ) ; 
+                        aa.setAttribute( "href" , "#" + i ) ; 
+                        aa.innerText = j.Laws[i].LawName ; 
+                        B.appendChild( aa ) ; 
+                    }
+                    else if( i < a + b + c ) 
+                    {
+                        let aa = document.createElement( "a" ) ; 
+                        aa.setAttribute( "href" , "#" + i ) ; 
+                        aa.innerText = j.Laws[i].LawName ; 
+                        C.appendChild( aa ) ; 
+                    }
+                    else if( i < a + b + c + d ) 
+                    {
+                        let aa = document.createElement( "a" ) ; 
+                        aa.setAttribute( "href" , "#" + i ) ; 
+                        aa.innerText = j.Laws[i].LawName ; 
+                        D.appendChild( aa ) ; 
+                    }
+                    else 
+                    {
+                        let aa = document.createElement( "a" ) ; 
+                        aa.setAttribute( "href" , "#" + i ) ; 
+                        aa.innerText = j.Laws[i].LawName ; 
+                        E.appendChild( aa ) ; 
+                    }
+                    if( i == 0 ) 
+                    {
+                        let spann = document.createElement( "span" ) ; 
+                        body.appendChild( spann ) ; 
+                        spann.setAttribute( "class" , "break" ) ; 
+                        spann.innerHTML = "<div style=\"display:inline;\">中央法規</span>" ; 
+                    }
+                    else if( i == a ) 
+                    {
+                        let spann = document.createElement( "span" ) ; 
+                        body.appendChild( spann ) ; 
+                        spann.setAttribute( "class" , "break" ) ; 
+                        spann.innerHTML = "<div style=\"display:inline;\">行政法規</span>" ; 
+                    }
+                    else if( i == a + b ) 
+                    {
+                        let spann = document.createElement( "span" ) ; 
+                        body.appendChild( spann ) ; 
+                        spann.setAttribute( "class" , "break" ) ; 
+                        spann.innerHTML = "<div style=\"display:inline;\">立法法規</span>" ; 
+                    }
+                    else if( i == a + b + c ) 
+                    {
+                        let spann = document.createElement( "span" ) ; 
+                        body.appendChild( spann ) ; 
+                        spann.setAttribute( "class" , "break" ) ; 
+                        spann.innerHTML = "<div style=\"display:inline;\">司法法規</span>" ; 
+                    }
+                    else if( i == a + b + c + d ) 
+                    {
+                        let spann = document.createElement( "span" ) ; 
+                        body.appendChild( spann ) ; 
+                        spann.setAttribute( "class" , "break" ) ; 
+                        spann.innerHTML = "<div style=\"display:inline;\">廢止法規</span>" ; 
+                    }
+                    let div = document.createElement("div") ; 
+                    div.setAttribute( "id" , i ) ; 
+                    body.appendChild( div ) ; 
+                }
+                catalogue.appendChild( A ) ; 
+                catalogue.appendChild( B ) ; 
+                catalogue.appendChild( C ) ; 
+                catalogue.appendChild( D ) ; 
+                catalogue.appendChild( E ) ; 
+                var law = body.querySelectorAll( "body > div" ) ; 
+                for( i = 0 ; i < law.length ; i++ ) 
+                {
+                    // 法規名稱
+                    law[i].appendChild( document.createElement("div") ).setAttribute( "class" , "title" ) ; 
+                    function ab() 
+                    {
+                        // 廢止備註
+                        if( j.Laws[i].LawAbandonNote == "廢" ) 
+                        {
+                            return "（廢）" 
+                        }
+                        else 
+                        {
+                            return "" 
+                        }
+                    }
+                    function ac() 
+                    {
+                        if( j.Laws[i].LawLevel == "命令" ) 
+                        {
+                            if( j.Laws[i].LawName.match( /臺中第一高級中學/ ) != null ) 
+                            { 
+                                return "臺中第一高級中學" + j.Laws[i].LawName.split( /臺中第一高級中學/ )[1].replace( /^/ , "<br/>" ) 
+                            }
+                            else if( j.Laws[i].LawName.match( /臺中市立臺中第一高級中等學校學生自治聯合會/ ) != null ) 
+                            {
+                                if( j.Laws[i].LawAbandonNote == "廢" ) 
+                                {
+                                    return "臺中市立臺中第一高級中等學校" + j.Laws[i].LawName.split( /臺中市立臺中第一高級中等學校/ )[1].replace( /^/ , "<br/>" ) 
+                                }
+                                else 
+                                {
+                                    return "臺中市立臺中第一高級中等學校學生自治聯合會" + j.Laws[i].LawName.split( /臺中市立臺中第一高級中等學校學生自治聯合會/ )[1].replace( /^/ , "<br/>" )  
+                                }
+                            }
+                        } 
+                        else 
+                        {
+                            if( j.Laws[i].LawAbandonNote == "廢" ) 
+                            {
+                                return "臺中市立臺中第一高級中等學校" + j.Laws[i].LawName.split( /臺中市立臺中第一高級中等學校/ )[1].replace( /^/ , "<br/>" ) 
+                            }
+                            else 
+                            {
+                                return "臺中市立臺中第一高級中等學校學生自治聯合會" + j.Laws[i].LawName.split( /臺中市立臺中第一高級中等學校學生自治聯合會/ )[1].replace( /^/ , "<br/>" ) 
+                            }
+                        }
+                    }
+                    document.querySelectorAll( ".title" )[i + 1].innerHTML =  "<span class=\"abandoned\">" + ab() + "</span><span>" + ac() + "</span>" ; 
+
+
+
+                    // 立法沿革
+                    var legislativeHistory = document.createElement("ol") ; 
+                    law[i].appendChild( legislativeHistory ) ; 
+                    legislativeHistory.setAttribute( "class" , "legislativeHistory" ) ; 
+                    legislativeHistory.innerHTML += "<li>" + j.Laws[i].LawHistories.replace(/(?:\r\n)/g, "</li><li>") + "</li>" ; 
+
+
+
+                    // 前言
+                    var foreword = "<p>" + j.Laws[i].LawForeword.replace(/(?:\r\n)/g, "<br/>") + "</p>" ; 
+                    if( j.Laws[i].LawForeword != "" ) 
+                    {
+                        law[i].appendChild( document.createElement("div") ).setAttribute( "class" , "Foreword" ) ; 
+                        document.querySelector( ".Foreword" ).innerHTML = "<span>宗旨</span><br/>" + foreword + "<br/>" ; 
+                    }
+
+
+                    // 內文
+                    const articleLength = j.Laws[i].LawArticles.length ; 
+                    var main = document.createElement("div") ; 
+                    law[i].appendChild( main ) ; 
+                    for( ii = 0 ; ii < articleLength ; ii++ )
+                    {
+                        var articleContent = j.Laws[i].LawArticles[ii].ArticleContent.replace(/(?:\r\n)/g, "</span></li><li><span>") ; 
+                        var articleTitle ; 
+                        j.Laws[i].LawArticles[ii].ArticleNo == "" ? articleTitle = j.Laws[i].LawArticles[ii].ArticleNo : articleTitle = j.Laws[i].LawArticles[ii].ArticleNo + "&nbsp;" ; 
+                        main.innerHTML += "<h6>" + articleTitle + "</h6>" ; 
+                        function aaa() 
+                        {
+                            if( j.Laws[i].LawArticles[ii].ArticleContent[0] == "第" ) 
+                            {
+                                main.innerHTML += "<h1><span>" + articleContent.replace( / /g , "&#x00A0;" ) + "</span></h1><br/>" ; 
+                            }
+                            else if( j.Laws[i].LawArticles[ii].ArticleContent[3] == "第" ) 
+                            {
+                                main.innerHTML += "<h2><span>" + articleContent.replace( / /g , "&#x00A0;" ) + "</span></h2><br/>" ; 
+                            }
+                            else if( j.Laws[i].LawArticles[ii].ArticleContent[6] == "第" ) 
+                            {
+                                main.innerHTML += "<h3><span>" + articleContent.replace( / /g , "&#x00A0;" ) + "</span></h3><br/>" ; 
+                            }
+                            else if( j.Laws[i].LawArticles[ii].ArticleContent[9] == "第" ) 
+                            {
+                                main.innerHTML += "<h4><span>" + articleContent.replace( / /g , "&#x00A0;" ) + "</span></h4><br/>" ; 
+                            }
+                            else if( j.Laws[i].LawArticles[ii].ArticleContent[12] == "第" ) 
+                            {
+                                main.innerHTML += "<h5><span>" + articleContent.replace( / /g , "&#x00A0;" ) + "</span></h5><br/>" ; 
+                            }
+                        }
+                        function aaaaaa() 
+                        {
+                            function aaaaaaaaa(aC) 
+                            {
+                                var articleBR = articleContent.split( "</span></li><li><span>" ) ; 
+                                if( articleBR.length != 1 ) 
+                                {
+                                    aC += "<ol class=\"paragraph\">" ; 
+                                    for( iii = 0 ; iii < articleBR.length ; iii++ ) 
+                                    {
+                                        if( articleBR[iii].match( /[一二三四五六七八九十]+\u3001/ ) != null && articleBR[iii].split( /[一二三四五六七八九十]+\u3001/ ).length == 2 ) 
+                                        {
+                                            aC += "<span><span>" + articleBR[iii].split( /\u3001/ )[0] + "\u{3001}</span>" ; 
+                                            aC += articleBR[iii].split( /[一二三四五六七八九十]+\u3001/ )[1].replace( /^/ , "<span>" ) + "</span></span>" ; 
+                                        }
+                                        if( articleBR[iii].match( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ ) != null && articleBR[iii].split( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ ).length == 2 ) 
+                                        {
+                                            aC += "<span><span>" + articleBR[iii].split( /\uFF09/ )[0] + "\u{FF09}</span>" ; 
+                                            aC += articleBR[iii].split( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ )[1].replace( /^/ , "<span>" ) + "</span></span>" ; 
+                                        }
+                                        if( articleBR[iii].match( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ ) != null && articleBR[iii].split( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ ).length == 2 ) 
+                                        {
+                                            aC += "<span class=\"of\"><span>" + articleBR[iii].split( /\u3001/ )[0] + "\u{3001}</span>" ; 
+                                            aC += articleBR[iii].split( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ )[1].replace( /^/ , "<span>" ) + "</span></span>" ; 
+                                        }
+                                        if( articleBR[iii].match( /[0-9]+\u002E|[\uFF10-\uFF19]+\u002E/) != null && articleBR[iii].split( /[\uFF10-\uFF19]+\u002E|[0-9]+\u002E/ ).length == 2 ) 
+                                        {
+                                            aC += "<span class=\"of\"><span>" + articleBR[iii].split( /\u002E/ )[0] + "\u{002E}</span>" ; 
+                                            aC += articleBR[iii].split( /[\uFF10-\uFF19]+\u002E|[0-9]+\u002E/ )[1].replace( /^/ , "<span>" ) + "</span></span>" ; 
+                                        }
+                                        if( ( articleBR[iii].match( /[一二三四五六七八九十]+\u3001/ ) == null || articleBR[iii].split( /[一二三四五六七八九十]+\u3001/ ).length != 2 ) && ( articleBR[iii].match( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ ) == null || articleBR[iii].split( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ ).length != 2 ) && ( articleBR[iii].match( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ ) == null || articleBR[iii].split( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ ).length != 2 ) && ( articleBR[iii].match( /[0-9]+\u002E|[\uFF10-\uFF19]+\u002E/) == null && articleBR[iii].split( /[\uFF10-\uFF19]+\u002E|[0-9]+\u002E/ ).length != 2 ) ) 
+                                        {
+                                            aC += "<li>" + articleBR[iii] + "</li>" ; 
+                                        }
+                                    }
+                                    if( aC.split( /<li>/ ).length > 2 ) 
+                                    {
+                                        aC = aC.replace( /class="paragraph"/ , "class=\"paragraph showNum\"" ) ; 
+                                    }
+                                }
+                                else 
+                                {
+                                    aC += "<ol class=\"paragraph\"><li><span>" + articleContent + "</span></li>" ; 
+                                }
+                                return aC 
+                            }
+                            main.innerHTML += "<article>" + aaaaaaaaa("") + "</ol></article><br/>" ; 
+                        }
+                        j.Laws[i].LawArticles[ii].ArticleNo == "" ? aaa() : aaaaaa() ; 
+                    }
+                }
+
+
+                // cover 
+                var spn = document.createElement( "span" ) ; 
+                var contributes = "" ; 
+                var publishDate = "中華民國114年01月20日" ; //出版日期
+                body.appendChild( spn ) ; 
+                spn.setAttribute( "id" , "COVER-BACK" ) ; 
+                spn.setAttribute( "style" , "line-height:1.3;" ) ; 
+                spn.innerHTML = "<h1><span>臺中市立臺中第一高級中等學校學生自治聯合會&nbsp;法規彙編<span></h1><ul><li><span>出版者：</span><span>臺中市立臺中第一高級中等學校學生自治聯合會第三十屆學生會自治部</span></li><li><span>發行人：</span><span>卓祐宸</span></li><li><span>編輯：</span><span>卓祐宸" + contributes + "</span></li><li><span>網站：</span><a href=\"https://sites.google.com/view/tcfshsu\" style=\"color:#00f;font-family:\'Noto Sans\',sans-serif;\">https://sites.google.com/view/tcfshsu</a></li><li><span>定價：</span><span>免費供大眾下載使用</span></li><li><span>出版日期：</span><span>" + publishDate + "</span></li></ul>"
+            }).catch( (err) => 
+            { 
+                let errorMessage = document.createElement( "div" ) ; 
+                errorMessage.setAttribute( "style" , "display:flex;justify-content:center;align-items:center;width:100%;height:100vh;" ) ; 
+                errorMessage.innerHTML = "<span style=\"font-size:10rem;font-family:\'\u{004E}oto \u{0053}ans \u{0054}\u{0043}\',sans-serif;line-height:2;text-align:center;color:#f00;font-weight:900;\">" + err + "</span>" ; 
+                document.querySelector( "body" ).appendChild( errorMessage ) ; 
+            }) ; 
+        </script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans:wght@700&display=swap'); 
+            @page /* pageNum */
+            {
+                @bottom-center 
+                {
+                    content : counter(page) ; 
+                    font-family : "OCR A Std" , "Noto Sans" ; 
+                }
+            }
+            @page a 
+            {
+                margin : 0 ; 
+                margin-bottom : .4in ; 
+            }
+            *
+            {
+                padding : 0 ; 
+                margin : 0 ; 
+                box-sizing : border-box ; 
+            }
+            html , body 
+            {
+                font-family : /*MOESongUN ,*/ DFKai-SB /*Windows內建*/ , BiauKaiTC /*Mac*/ , TW-Kai /*全字庫正楷書*/ , "Noto Sans TC" , sans-serif ; 
+                line-height : 1 ; 
+                font-size : 12pt ; 
+                color : #000 ; 
+            }
+            body > div , body > span , body > span > .title 
+            {
+                width : 100% ; 
+                display : block ; 
+                padding : 0 1rem ; 
+                padding-left : 3.5rem ; 
+                page-break-after : always ; 
+            }
+            body > div 
+            {
+                page : pageNum ; 
+            }
+            body > span > .title , .break , #COVER 
+            {
+                page-break-after : auto ; 
+            }
+            body > span > div > h1 
+            {
+                margin-left : -1.5rem ; 
+            }
+            a , a:visited , a:hover , a:focus 
+            {
+                color : #000 ; 
+                text-decoration : none ; 
+                display : block ; 
+            }
+            .break , #COVER , #COVER h1 
+            {
+                font-size : 50pt ; 
+                font-weight : 900 ; 
+                display : flex ; 
+                flex-direction : column ; 
+                justify-content : center ; 
+                align-items : center ; 
+                height : calc(297mm - .4in) ; 
+                page : a ; 
+            }
+            #COVER div 
+            {
+                font-weight : 900 ; 
+                font-size : 20pt ; 
+                padding : 2rem 0 ; 
+                text-align : center ; 
+                letter-spacing : 2px ; 
+                line-height : 1 ; 
+            }
+            #COVER h1 
+            {
+                height : fit-content ; 
+            }
+            #COVER span 
+            {
+                font-weight : 500 ; 
+            }
+            .Foreword 
+            {
+                display : flex ; 
+                flex-direction : column ; 
+                align-items : center ; 
+            }
+            .Foreword > span 
+            {
+                font-size : 22pt ; 
+                font-weight : normal ; 
+            }
+            .title 
+            {
+                font-weight : 900 ; 
+                font-size : 20pt ; 
+                padding : 2rem 0 ; 
+                text-align : center ; 
+                letter-spacing : 2px ; 
+                line-height : 1 ; 
+            }
+            .abandoned 
+            {
+                color : #f00 ; 
+            }
+            li 
+            {
+                list-style : none ; 
+            }
+            li , ol > span 
+            {
+                display : flex ; 
+            }
+            h1 , h2 , h3 , h4 , h5 
+            {
+                margin-left : -3.5rem ; 
+            }
+            h1 
+            {
+                font-size : 20pt ; 
+                font-weight : normal ; 
+            }
+            h2 
+            {
+                font-size : 18pt ; 
+                font-weight : normal ; 
+            }
+            h3 
+            {
+                font-size : 16pt ; 
+                font-weight : normal ; 
+            }
+            h4 
+            {
+                font-size : 14pt ; 
+                font-weight : bold ; 
+            }
+            h5 
+            {
+                font-size : 14pt ; 
+                font-weight : normal ; 
+            }
+            h6 
+            {
+                font-weight : bold ; 
+                font-size : 12pt ; 
+            }
+            h1 :first-child , h2 :first-child , h3 :first-child , h4 :first-child , h5 :first-child , ol > span :first-child 
+            {
+                flex-shrink : 0 ; 
+            }
+            .showNum > li 
+            {
+                counter-increment : paragraph-count ; 
+                position : relative ; 
+            }
+            .showNum > li::before 
+            {
+                content : counter( paragraph-count ) ; 
+                position : absolute ; 
+                color : #666 ; 
+                font-family : "Noto Sans TC" ; 
+                font-style : italic ; 
+                font-size : 1.05em ; 
+                left : -1em ; 
+            }
+            .legislativeHistory 
+            {
+                font-size : 8pt ; 
+                font-weight : normal ; 
+                list-style : none ; 
+                text-align : right ; 
+                padding-bottom : 2rem ; 
+            }
+            .of 
+            {
+                padding-left : 2em ; 
+            }
+            .legislativeHistory li 
+            {
+                display : block ; 
+            }
+            .legislativeHistory::before 
+            {
+                content : "立法沿革：" ; 
+                text-align : right ; 
+                font-weight : bold ; 
+            }
+
+            #COVER-BACK 
+            {
+                width : 100% ; 
+            }
+            #COVER-BACK h1 
+            {
+                display : flex ; 
+                font-weight : 900 ; 
+                width : 100% ; 
+                margin : 1rem 0 ; 
+                font-size : 16pt ; 
+                justify-content : center ; 
+                align-items : center ; 
+            }
+        </style>
+    </head>
+    <body></body>
+</html>
