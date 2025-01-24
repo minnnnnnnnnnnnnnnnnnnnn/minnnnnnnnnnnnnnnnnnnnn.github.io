@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Afacad+Flux:wght@100..1000&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&family=Noto+Sans+TC:wght@200..900&family=Zhi+Mang+Xing&display=swap');
+@font-face 
+{
+    font-family: 'cwTeXKai';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.eot) ; 
+    src: url(https://fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.eot?#iefix) format('embedded-opentype'),url(https://fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.woff2) format('woff2'),url(https://fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.woff) format('woff'),url(https://fonts.gstatic.com/ea/cwtexkai/v3/cwTeXKai-zhonly.ttf) format('truetype') ; 
+}
+@counter-style a 
+{
+    system : numeric ; 
+    range : 0 infinite ; 
+    symbols : '零' '壹' '貳' '參' '肆' '伍' '陸' '柒' '捌' '玖' ; 
+    prefix : '' ; 
+    suffix : '、' ; 
+}
+@keyframes _0 
+{
+    from { opacity : 0 ; } 
+    to { opacity : 1 ; }
+}
+@keyframes a 
+{
+    0%{ content : '\003e\00a0\00a0\00a0' ; } 
+    50% { content : '\00a0\003e\00a0\00a0' ; } 
+    100% { content : '\003e\00a0\00a0\00a0' ; } 
+}
+@keyframes b 
+{
+    0%{ --deg : 0deg ; } 
+    12.5%{ --deg : 45deg ; } 
+    25%{ --deg : 90deg ; } 
+    37.5%{ --deg : 135deg ; } 
+    50%{ --deg : 180deg ; } 
+    62.5%{ --deg : 225deg ; } 
+    75%{ --deg : 270deg ; } 
+    87.5%{ --deg : 315deg ; } 
+    100%{ --deg : 360deg ; }
+}
+:root 
+{
+    animation : b .3s infinite ; 
+    font-size : 1em ; 
+    --first-date : #3c0392 ; 
+    --first-date-font : "Afacad Flux" ; 
+    --first : #365679 ; 
+    --noto-sans : "Noto Sans TC" ; 
+    --noto-serif : "Noto Serif TC" ; 
+    --first-corner : #1c3f60 ; 
+    --colour : #05759b ; 
+    --colour-article : #024237 ; 
+    --colour-article-sub : #390b97 ; 
+    --colour-sub : #5e17eb ; 
+    --bg-colour : #fcf7e4 ; 
+    --font-kai : "cwTeXKai" , "DFKai-SB" , "BiaukaiTC" , "TW-Kai" , sans-serif ; 
+    --end-colour : linear-gradient(var(--deg),#004aad,#ff4304) ; 
+    --end-Font : 'Anton' ; 
+}
+*
+{
+    margin : 0 ; 
+    padding : 0 ; 
+    box-sizing : border-box ; 
+}
+html , body 
+{
+    width : 100% ; 
+    height : 100vh ; 
+}
+body 
+{
+    font-family : "LXGW WenKai TC"/*google font*/ , cwTeXKai , DFKai-SB/*windows內建字體*/ , sans-serif ; 
+    font-weight : 400 ; 
+    font-style : normal ; 
+}
+noscript 
+{
+    width : 100% ; 
+    display : flex ; 
+    justify-content : center ; 
+    align-items : center ; 
+    position : fixed ; 
+    top : 0 ; 
+    font-family : var(--noto-sans) ; 
+    font-size : 10rem ; 
+    font-weight : 900 ; 
+}
+ul , ol 
+{
+    list-style-type : none ; 
+    color : var(--colour-article) ; 
+}
+article 
+{
+    width : 32em ; 
+    font-size : 2.5rem ; 
+    color : var(--colour-article) ; 
+}
+p 
+{
+    text-indent : 2em ; 
+}
+h1 
+{
+    font-size : 9rem ; 
+    position : fixed ; 
+    top : 1rem ; 
+    left : 1rem ; 
+    line-height : 1 ; 
+}
+h1 svg 
+{
+    fill : var(--colour) ; 
+    height : 1em ; 
+}
+.aaa 
+{
+    justify-content : center ; 
+    align-items : center ; 
+    position : fixed ; 
+    width : 100% ; 
+    height : 100vh ; 
+    display : none ; 
+    font-size : 2rem ; 
+    color : var(--colour) ; 
+}
+#flscrn
+{
+    font-weight : 900 ; 
+    font-size : 5rem ; 
+    color : transparent ; 
+    position : fixed ; 
+    height : 100vh ; 
+    width : 100% ; 
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : center ; 
+    align-items : center ; 
+}
+#flscrn input 
+{
+    margin-bottom : 3rem ; 
+}
+#flscrn span 
+{
+    background : linear-gradient( 35deg , #ef5fa7 , #f00 ) ; 
+    background-clip : text ; 
+    cursor : pointer ; 
+    transition : linear .15s ; 
+    z-index : 2 ; 
+}
+#flscrn span::before { content : '\003e' ;  font-family : sans-serif ;  color : #f00 ; }#flscrn span::after { content : '\003c' ;  font-family : sans-serif ;  color : #ef5fa7 ; }
+#flscrn span:hover::before { content : '\003c' ;  color : #0ff ; }#flscrn span:hover::after { content : '\003e' ;  color : #10a058 ; }
+#flscrn span:hover 
+{
+    background : linear-gradient(35deg , #10a058 , #0ff ) ; 
+    background-clip : text ; 
+    font-size : 7rem ; 
+}
+.click-left , .click-right
+{
+    opacity : 0 ; 
+    width : 50% ; 
+    height : 100vh ; 
+    position : fixed ; 
+    z-index : 999999999 ; 
+    top : 0 ; 
+    display : block ; 
+    cursor : none ; 
+}
+.click-right
+{
+    right : 0 ; 
+}
+.click-left:focus , .click-right:focus 
+{
+    outline : 0 ; 
+}
+
+/*first*/
+.fst 
+{
+    flex-direction : column ; 
+    color : #333 ; 
+}
+.fst h1 
+{
+    position : relative ; 
+}
+.fst h1 svg 
+{
+    fill: url(#grad1);
+    width : 36rem ; 
+}
+.stop1 
+{
+    stop-color : #2d4095 ; 
+}
+.stop2 
+{
+    stop-color : #57c1ff ; 
+}
+.fst h1 , .fst h3 
+{
+    margin : 1.5rem 0 ; 
+    z-index : 99 ; 
+}
+.fstD 
+{
+    color : var(--first-date) ; 
+    position : fixed ; 
+    bottom : 2rem ; 
+    left : 3rem ; 
+    font-family : var(--first-date-font) ; 
+}
+
+/*second*/
+.scd , .scd article 
+{
+    flex-direction : column ; 
+    font-size : 3rem ; 
+}
+.scd h1 
+{
+    position : relative ; 
+}
+.scd h2 
+{
+    font-size : 5rem ; 
+}
+.scd h1 svg 
+{
+    width : 2em ; 
+}
+.scd h2 svg 
+{
+    fill : var(--colour-sub) ; 
+    width : 4em ; 
+    height : 1em ; 
+}
+.scd h2 + article 
+{
+    color : var(--colour-article-sub) ; 
+}
+.scd h2 ~ article p  
+{
+    text-indent : 0 ; 
+    text-align : center ; 
+}
+.scd article 
+{
+    width : 25em ; 
+    margin-top : 1.5rem ; 
+    margin-bottom : 1em ; 
+}
+
+/*third*/
+.thd 
+{
+    font-size : 4rem ; 
+}
+.thd div 
+{
+    margin-left : -2em ; 
+    padding-top : 3rem ; 
+}
+.thd li 
+{
+    margin : 1.5rem 0 ; 
+}
+.thd ol li::before 
+{
+    content : '' ; 
+    color : var(--colour-article-sub) ; 
+    font-family : var(--noto-sans) ; 
+    font-weight : 900 ; 
+    animation : a .3s infinite ; 
+}
+
+/*fourth*/
+.frt 
+{
+    font-size : 3rem ; 
+}
+.frt h1 svg 
+{
+    width : 4em ; 
+}
+.frt h1 ~ svg 
+{
+    height : 25rem ; 
+    width : 100px ; 
+    margin-top : 3rem ; 
+}
+.frt li 
+{
+    padding : 2rem 0 ; 
+}
+
+/*fifth*/
+.fft 
+{
+    font-size : 2.5rem ; 
+}
+.fft h1 svg 
+{
+    width : 4em ; 
+}
+.fft article 
+{
+    padding-top : 3em ; 
+}
+.fft-1 
+{
+    flex-direction : column ; 
+}
+.fft-1 h1 
+{
+    position : relative ; 
+    margin-bottom : 4rem ; 
+    width : 7em ; 
+}
+.fft-1 div 
+{
+    height : 300px ; 
+}
+.fft-1 div svg 
+{
+    width : 55rem ; 
+}
+
+/*sixth*/
+.sxt 
+{
+    font-size : 2.5rem ; 
+}
+.sxt h1 svg 
+{
+    width : 2em ; 
+}
+.sxt article 
+{
+    width : 28em ; 
+    padding-top : 5rem ; 
+    line-height : 1.5 ; 
+}
+
+/*seventh*/
+.svt h1 svg 
+{
+    width : 2em ; 
+}
+.svt article 
+{
+    padding-top : 5rem ; 
+}
+
+/*eighth*/
+.eth 
+{
+    align-items : center ; 
+    line-height : 1.5 ; 
+}
+.eth article h6 
+{
+    padding-top : 10rem ; 
+}
+.eth h1 svg , .eth-1 h1 svg , .eth-2 h1 svg 
+{
+    width : 4em ; 
+}
+/* .eth article 
+{
+    margin-bottom : calc(calc(calc(100vh - 33rem) / 30)) ; 
+} */
+.eth article h6 , .eth-1 article h6 , .eth-2 article h6 
+{
+    color : var(--colour) ; 
+    font-size : 5rem ; 
+    width : 100% ; 
+    text-align : center ; 
+    padding-bottom : .5rem ; 
+    font-family : var(--font-kai) ; 
+}
+.eth-1 ol , .eth-2 ol 
+{
+    height : 10em ; 
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : space-evenly ; 
+    list-style-type : a ; 
+    list-style-position : inside ; 
+}
+.eth-1 article ol li , .eth-1 article ol span span , .eth-2 article ol li , .eth-2 article ol span span 
+{
+    color : var(--colour-article-sub) ; 
+}
+.eth-1 article ol li::marker , .eth-1 article ol li b , .eth-2 article ol li::marker , .eth-2 article ol li b 
+{
+    color : var(--colour-article) ; 
+}
+
+/*end*/
+.end h1 
+{
+    color : transparent ; 
+    font-family : var(--end-Font) ; 
+    font-size : 17.5rem ; 
+    position : relative ; 
+    top : 0 ; 
+    left : 0 ; 
+    font-weight : 400 ; 
+    background-clip : text ; 
+    background-image : var(--end-colour) ; 
+}
+
+/*background*/
+#BG-color , #BG-colour
+{
+    background-color : var(--bg-colour) ; 
+    width : 100% ; 
+    height : 100% ; 
+    position : fixed ; 
+    z-index : -999999999 ; 
+}
+#BG-colour 
+{
+    background-color : #fff ; 
+    z-index : -99999999 ; 
+}
+#BG svg 
+{
+    position : fixed ; 
+    z-index : -9999999 ; 
+}
+.tr , .tm , .tl 
+{
+    top : 0 ; 
+}
+.br , .bl , .bm 
+{
+    bottom : 0 ; 
+}
+.tr , .br 
+{
+    right : 0 ; 
+}
+.tl , .ml , .bl 
+{
+    left : 0 ; 
+}
