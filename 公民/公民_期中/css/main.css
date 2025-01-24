@@ -1,0 +1,288 @@
+/*
+https://i.ibb.co/9st5SdH/fst.png
+https://i.ibb.co/hgd23R6/ins-1.png
+https://i.ibb.co/25yDqVP/end.png
+*/
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@300;400;700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+@keyframes a 
+{
+    0%{ content : '\003e\00a0\00a0\00a0' ; } 
+    50% { content : '\00a0\003e\00a0\00a0' ; } 
+    100% { content : '\003e\00a0\00a0\00a0' ; } 
+}
+*
+{
+    margin : 0 ; 
+    padding : 0 ; 
+    box-sizing : border-box ; 
+}
+html , body 
+{
+    width : 100% ; 
+    height : 100vh ; 
+}
+ul , ol 
+{
+    list-style-type : none ; 
+    color : #ddd ; 
+}
+/* p::before 
+{
+    content : '\00a0\00a0\00a0\00a0' ; 
+} */
+p 
+{
+    color : var(--third-colour) ; 
+    text-indent : 2em ; 
+}
+article 
+{
+    margin : 10rem 5rem 0 5rem ; 
+    line-height: 5rem ; 
+    font-size : 3rem ; 
+}
+h2 
+{
+    color : #ff9301 ; 
+    position : fixed ; 
+    top : 3rem ; 
+    left : .8rem ; 
+    font-size : 6rem ; 
+    font-weight : 250 ; 
+    line-height: 1 ; 
+}
+.aaa 
+{
+    justify-content : center ; 
+    align-items : center ; 
+    position : fixed ; 
+    width : 100% ; 
+    height : 100vh ; 
+    display : none ; 
+    font-size : 2rem ; 
+    background : #aaa ; 
+}
+:root 
+{
+    font-size : 1em ; 
+    --first-h1 : linear-gradient( 35deg , #ef5fa7 , #f00 ) ; 
+    --first-date : #003462 ; 
+    --first-font : "DFKai-SB" ; 
+    --second-chartBG : linear-gradient( 180deg , #003462 , #61d835 ) ; 
+    --second-chartAxisFont : "Afacad Flux" ; 
+    --second-chartStick1 : #3982ca ; 
+    --second-chartStick2 : #2a64a4 ; 
+    --second-chartStick3 : #1e4c7c ; 
+    --third-colour : #90e0ef ; 
+    --end-colour : #434343 ; 
+    --end-Font : 'Anton' ; 
+}
+body 
+{
+    font-family : "LXGW WenKai Mono TC"/*google font*/ , DFKai-SB/*windows內建字體*/ , monospace ; 
+    font-weight : 400 ; 
+    font-style : normal ; 
+}
+#flscrn
+{
+    font-weight : 900 ; 
+    font-size : 5rem ; 
+    color : transparent ; 
+    position : fixed ; 
+    height : 100vh ; 
+    width : 100% ; 
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : center ; 
+    align-items : center ; 
+}
+#flscrn input 
+{
+    margin-bottom : 3rem ; 
+}
+#flscrn span 
+{
+    background : linear-gradient( 35deg , #ef5fa7 , #f00 ) ; 
+    background-clip : text ; 
+    cursor : pointer ; 
+    transition : linear .15s ; 
+}
+#flscrn span::before { content : '\003e' ;  font-family : monospace ;  color : #f00 ; }#flscrn span::after { content : '\003c' ;  font-family : monospace ;  color : #ef5fa7 ; }
+#flscrn span:hover::before { content : '\003c' ;  color : #0ff ; }#flscrn span:hover::after { content : '\003e' ;  color : #10a058 ; }
+#flscrn span:hover 
+{
+    background : linear-gradient(35deg , #10a058 , #0ff ) ; 
+    background-clip : text ; 
+    font-size : 7rem ; 
+}
+.click-left , .click-right
+{
+    opacity : 0 ; 
+    width : 50% ; 
+    height : 100vh ; 
+    position : fixed ; 
+    z-index : 999 ; 
+    top : 0 ; 
+    display : block ; 
+    cursor : none ; 
+}
+.click-right
+{
+    right : 0 ; 
+}
+.click-left:focus , .click-right:focus 
+{
+    outline : 0 ; 
+}
+
+/*first*/
+.fst 
+{
+    color : #000 ; 
+    flex-direction : column ; 
+    background : url('../i/fst.png') no-repeat fixed center / cover ; 
+}
+.fst img 
+{
+    width : 100% ; 
+    height : 100vh ; 
+    position : fixed ; 
+}
+.fst h1 
+{
+    color : transparent ; 
+    font-size : 9rem ; 
+    font-weight : 750 ; 
+    font-family : var(--first-font) , BiauKaiTC ; 
+}
+.fst h1 , .fst h3 
+{
+    margin : 1.5rem 0 ; 
+    z-index : 99 ; 
+}
+.fst h1 span 
+{
+    background : var(--first-h1) ; 
+    background-clip : text ; 
+}
+.fstD 
+{
+    color : var(--first-date) ; 
+    position : fixed ; 
+    bottom : 2rem ; 
+    left : 3rem ; 
+    font-family : var(--second-chartAxisFont) ; 
+}
+
+/*second*/
+.scd 
+{
+    font-size : 4rem ; 
+    align-items : center ; 
+    justify-content : flex-start ; 
+}
+.scd ul 
+{
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : center ; 
+}
+.scdD 
+{
+    margin-left : 4rem ; 
+}
+.scd li 
+{
+    margin : 3rem 6rem 3rem 0 ; 
+}
+.scdC:first-child , .scdD:first-child 
+{
+    margin-top : 0 ; 
+}
+.scdC .a::before 
+{
+    content : '\003e\00a0\00a0\00a0' ; 
+    animation: a .5s linear infinite ; 
+    font-family : var(--second-chartAxisFont) ; 
+}
+.scdC .b::before 
+{
+    content : '\003e\00a0\00a0\00a0' ; 
+    animation: a .5s linear .1s infinite ; 
+    font-family : var(--second-chartAxisFont) ; 
+}
+.scdC .c::before 
+{
+    content : '\003e\00a0\00a0\00a0' ; 
+    animation: a .5s linear .2s infinite ; 
+    font-family : var(--second-chartAxisFont) ; 
+}
+.scd article 
+{
+    margin : 2rem 10rem ; 
+}
+
+/*fourth*/
+.frt p 
+{
+    font-size : 3.5rem ; 
+    color : #61d835 ; 
+    text-indent : 0 ; 
+}
+/* .frt p::before 
+{
+    content : '' ; 
+} */
+
+/*sixth*/
+.sxt 
+{
+    font-size : 4rem ; 
+}
+.sxt div 
+{
+    position : fixed ; 
+    width : 100% ; 
+    height : calc(100vh - 11rem) ; 
+    bottom : 0 ; 
+}
+.sxt ol 
+{
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : center ; 
+    position : absolute ; 
+    bottom : 0 ; 
+    top : 0 ; 
+    margin : auto ; 
+    left : 20% ; 
+}
+.sxt ol li::before 
+{
+    content : '\003e\00a0\00a0\00a0' ; 
+    animation: a .5s linear infinite ; 
+    font-family : var(--second-chartAxisFont) ; 
+}
+.sxt ol li 
+{
+    margin : 1rem 0 ; 
+}
+.sxt ol:first-child 
+{
+    margin-top : 0 ; 
+}
+
+/*end*/
+.end 
+{
+    color : var(--end-colour) ; 
+    font-family : var(--end-Font) ; 
+    font-size : 7rem ; 
+    background : url(../i/end.png) no-repeat fixed center / cover ; 
+}
+
+/*background*/
+.insBG 
+{
+    background : url(../i/ins.png) no-repeat fixed center / cover ; /*click*/
+}
