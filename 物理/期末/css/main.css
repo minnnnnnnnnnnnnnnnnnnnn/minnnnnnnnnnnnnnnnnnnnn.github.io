@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@200..900&family=Noto+Sans+TC:wght@200..900&family=Zhi+Mang+Xing&display=swap');
+@keyframes _0 
+{
+    from { opacity : 0 ; } 
+    to { opacity : 1 ; }
+}
+@keyframes _1 
+{
+    from { position : fixed ;  bottom : 10% ;  opacity : 0 ; } 
+    to { bottom : 20vh ;  opacity : 1 ; } 
+}
+@keyframes _2 
+{
+    0%{ content : "" } 
+    12.5%{ content : "~" } 
+    25%{ content : "~T" } 
+    37.5%{ content : "~TH" } 
+    50%{ content : "~THE" } 
+    62.5%{ content : "~THE E" } 
+    75%{ content : "~THE EN" } 
+    87.5%{ content : "~THE END" } 
+    100%{ content : "~THE END~" } 
+}
+@keyframes _3 
+{
+    0%{ transform : scale(100) ; } 
+    90%{ transform : scale(5) ; } 
+    100%{ transform : scale(1) ; }
+}
+@keyframes b 
+{
+    0%{ --deg : 0deg ; } 
+    12.5%{ --deg : 45deg ; } 
+    25%{ --deg : 90deg ; } 
+    37.5%{ --deg : 135deg ; } 
+    50%{ --deg : 180deg ; } 
+    62.5%{ --deg : 225deg ; } 
+    75%{ --deg : 270deg ; } 
+    87.5%{ --deg : 315deg ; } 
+    100%{ --deg : 360deg ; }
+}
+@counter-style a 
+{
+    system : numeric ; 
+    range : 0 infinite ; 
+    symbols : '零' '壹' '貳' '參' '肆' '伍' '陸' '柒' '捌' '玖' ; 
+    prefix : '' ; 
+    suffix : '、' ; 
+}
+:root 
+{
+    font-size : 1em ; 
+    --h1 : "Zhi Mang Xing" ;
+    --first-date : #0cc0df ; 
+    --first-date-font : "Afacad Flux" ; 
+    --first : #365679 ; 
+    --noto-sans : "Noto Sans TC" ; 
+    --noto-serif : "Noto Serif TC" ; 
+    --first-corner : #1c3f60 ; 
+    --font-kai : "DFKai-SB" ; 
+    --black-blue : #0b1320 ; 
+    --bg-white : #fcfaef ; 
+    --colour-ref : #004aad ; 
+    --end-Font : 'Anton' ; 
+}
+iframe 
+{
+    width : 80% ; 
+    height : 85vh ; 
+}
+*
+{
+    margin : 0 ; 
+    padding : 0 ; 
+    box-sizing : border-box ; 
+}
+html , body 
+{
+    width : 100% ; 
+    height : 100vh ; 
+}
+h1:has( svg ) 
+{
+    font-size : 9rem ; 
+    position : absolute ; 
+    top : .625rem ; 
+    left : .625rem ; 
+    fill : var(--black-blue) ; 
+}
+ul , ol 
+{
+    list-style-type : none ; 
+}
+p 
+{
+    text-indent : 2em ; 
+}
+article 
+{
+    margin : 10rem 5rem 0 5rem ; 
+    line-height: 5rem ; 
+    font-size : 3rem ; 
+}
+.aaa 
+{
+    justify-content : center ; 
+    align-items : center ; 
+    position : fixed ; 
+    width : 100% ; 
+    height : 100vh ; 
+    display : none ; 
+    font-size : 2rem ; 
+    background : var(--bg-white) ; 
+}
+body 
+{
+    font-family : "LXGW WenKai TC" , DFKai-SB , sans-serif ; 
+    font-weight : 400 ; 
+    font-style : normal ; 
+}
+#flscrn
+{
+    font-weight : 900 ; 
+    font-size : 5rem ; 
+    color : transparent ; 
+    position : fixed ; 
+    height : 100vh ; 
+    width : 100% ; 
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : center ; 
+    align-items : center ; 
+}
+#flscrn input 
+{
+    margin-bottom : 3rem ; 
+}
+#flscrn span 
+{
+    background : linear-gradient( 35deg , #ef5fa7 , #f00 ) ; 
+    background-clip : text ; 
+    cursor : pointer ; 
+    transition : linear .15s ; 
+}
+#flscrn span::before { content : '\003e' ;  font-family : sans-serif ;  color : #f00 ; }#flscrn span::after { content : '\003c' ;  font-family : sans-serif ;  color : #ef5fa7 ; }
+#flscrn span:hover::before { content : '\003c' ;  color : #0ff ; }#flscrn span:hover::after { content : '\003e' ;  color : #10a058 ; }
+#flscrn span:hover 
+{
+    background : linear-gradient(35deg , #10a058 , #0ff ) ; 
+    background-clip : text ; 
+    font-size : 7rem ; 
+}
+.click-left , .click-right
+{
+    opacity : 0 ; 
+    width : 50% ; 
+    height : 100vh ; 
+    position : fixed ; 
+    z-index : 999999999 ; 
+    top : 0 ; 
+    display : block ; 
+    cursor : none ; 
+}
+.click-right
+{
+    right : 0 ; 
+}
+.click-left:focus , .click-right:focus 
+{
+    outline : 0 ; 
+}
+.bold 
+{
+    font-weight : 700 ; 
+}
+.h1bg 
+{
+    font-size : 5rem ; 
+    width : 6em ; 
+    height : 1.5em ; 
+    background : var(--first-corner) ; 
+    transform : skew(-10deg) ; 
+    position : absolute ; 
+    margin-left : -.5em ; 
+    border-radius : 1rem ; 
+}
+.nul 
+{
+    width : 100% ; 
+    height : 13.5rem ; 
+}
+
+/*first*/
+.fst 
+{
+    animation : b 3s infinite , _0 .3s ; 
+    color : var(--first) ; 
+    flex-direction : column ; 
+}
+.fst svg 
+{
+    position : fixed ; 
+    height : 20vh ; 
+    fill : var(--first-corner) ; 
+}
+.fst .svg_1 
+{
+    bottom : 0 ; 
+    left : 0 ; 
+}
+.fst .svg_2 
+{
+    top : 0 ; 
+    right : 0 ; 
+}
+.fst h1 
+{
+    font-size : 9rem ; 
+    font-weight : 1000 ; 
+    font-family : var(--noto-sans) , sans-serif ; 
+    text-align : center ; 
+    color : transparent ; 
+    background-clip : text ; 
+    background-image : linear-gradient( var(--deg) , #00f , #00f , #00f , #00f , #00f , #00f , #00f , #00f , #00f , #f00 , #f00 , #f00 , #f00 , #f00 , #f00 , #f00 , #f00 , #f00 , #f00 ) ; 
+}
+.fst h1 , .fst h3 
+{
+    margin : 1.5rem 0 ; 
+    z-index : 99 ; 
+}
+.fstD 
+{
+    color : var(--first-date) ; 
+    position : fixed ; 
+    bottom : 2rem ; 
+    left : 3rem ; 
+    font-family : var(--first-date-font) ; 
+}
+.fst-1 
+{
+    flex-direction : column ; 
+}
+.fst-1 .h1bg 
+{
+    font-size : 9rem ; 
+    width : 3.5em ; 
+}
+.fst-1 h1 svg 
+{
+    left : .5em ; 
+    top : .25em ; 
+    position : absolute ; 
+    width : 2em ; 
+    fill : #fff ; 
+}
+.fst-1 ol 
+{
+    list-style-type : a ; 
+    list-style-position : inside ; 
+    writing-mode : vertical-lr ; 
+    font : 900 5.5rem var(--noto-serif) ; 
+}
+.fst-1 ol li 
+{
+    padding : 0 .5rem ; 
+}
+
+/*second*/
+.scd 
+{
+    color : #000 ; 
+    justify-content : space-between ; 
+    animation : _0 .5s ; 
+}
+.scd h1 svg 
+{
+    fill : #ddd ; 
+}
+.scd span 
+{
+    width : 50% ; 
+}
+.scd h1 + span 
+{
+    padding : 10rem 3rem 0 7rem ; 
+    font-family : var(--noto-serif) ; 
+    font-weight : 850 ; 
+    font-size : 3.4375rem ; 
+}
+.scd :not(h1 + span):not(h1) 
+{
+    font-family : var(--noto-sans) ; 
+    font-weight : 600 ; 
+    font-size : 3.125rem ; 
+    text-align : right ; 
+    width : 70% ; 
+    margin-right : 3rem ; 
+}
+.scd h1 , .scd span 
+{
+    z-index : 999 ; 
+}
+.scd h1 + span 
+{
+    color : #ddd ; 
+}
+.scd .halfBG 
+{
+    height : 300vh ; 
+    width : 75% ; 
+    background : var(--first) ; 
+    position : fixed ; 
+    z-index : 99 ; 
+    left : -25% ; 
+    transform : rotate( -25deg ) ; 
+}
+
+/*third*/
+.thd 
+{
+    position : relative ; 
+    justify-content: center ; 
+    align-items : center ; 
+    color : var(--black-blue) ; 
+}
+.thd h1 svg 
+{
+    width : 4em ; 
+}
+.thd ol 
+{
+    list-style-type : decimal ; 
+    font-size : 3.4375rem ; 
+    padding-top: 5rem ; 
+    padding-right : 3rem ; 
+    z-index : 99 ; 
+    animation : _1 .75s ; 
+}
+.thd ol li 
+{
+    border-bottom : 1px solid #bd8f53 ; 
+    margin : 2rem 0 ; 
+}
+.thd > div 
+{
+    border-radius : 3rem ; 
+    position : absolute ; 
+    top : -5vh ; 
+    right : -10% ; 
+    background : var(--black-blue) ; 
+    z-index : 999 ; 
+    height : calc(calc(200vh / 3) + 8vh) ; 
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : space-around ; 
+    transform: skew( -15deg );
+    width : 40% ; 
+}
+/* .thd > div::after 
+{
+    content : '' ; 
+    position : absolute ; 
+    z-index : 99999 ; 
+    right : 0 ; 
+    bottom : 0 ; 
+    width : 100.1% ; 
+    height : 4.53125rem ; 
+    transform : rotate(-15deg) ; 
+    background : #fff ; 
+    padding-top : .5rem ; 
+}
+.thd > div::before 
+{
+    content : '' ; 
+    position : absolute ; 
+    z-index : 99999 ; 
+    right : -15rem ; 
+    bottom : -5rem ; 
+    width : 100.1% ; 
+    height : 10rem ; 
+    transform : rotate(-15deg) ; 
+    background : #fff ; 
+} */
+.thd div > div
+{
+    transform : skew( 15deg ) ; 
+    margin-top : -7rem ; 
+}
+.thd div h3 
+{
+    transform : skew( 15deg ) ; 
+    margin-top : 5rem ; 
+    margin-left : 3rem ; 
+    width : 20rem ; 
+}
+.thd div h3 svg 
+{
+    fill : #fff ; 
+}
+.thd div span 
+{
+    font-size : 2.8125rem ; 
+    font-family : var(--noto-sans) ; 
+    font-weight : 850 ; 
+    color : #ccc ; 
+    transform : skew( 15deg ) ; 
+    margin-left : 3rem ; 
+}
+.thd div > div + span 
+{
+    margin-top : -3rem ; 
+    margin-bottom : 1rem ; 
+}
+
+/*fourth*/
+.frt 
+{
+    background : #000 ; 
+}
+.frt video 
+{
+    height : 100vh ; 
+}
+
+/*fifth*/
+.fft h1 
+{
+    font-size : 5rem ; 
+}
+.fft h1 .h1bg 
+{
+    width : 3.5em ; 
+}
+.fft h1 svg 
+{
+    left : .25em ; 
+    top : .25em ; 
+    position : absolute ; 
+    width : 2em ; 
+    fill : #fff ; 
+}
+.fft article 
+{
+    width : 10em ; 
+    display : flex ; 
+    align-items : center ; 
+}
+.fft img 
+{
+    width : calc(100% - 30rem) ; 
+    padding-right : 3rem ; 
+}
+
+/*sixth*/
+.sxt h1 
+{
+    font-size : 5rem ; 
+}
+.sxt h1 svg 
+{
+    left : .5em ; 
+    top : .25em ; 
+    position : absolute ; 
+    width : 4em ; 
+    fill : #fff ; 
+}
+.sxt .nul 
+{
+    height : 7.5rem ; 
+}
+.sxt .left 
+{
+    width : 33% ; 
+}
+.sxt .right 
+{
+    width : 67% ; 
+}
+.sxt .left , .sxt .right 
+{
+    line-height : 1.3 ; 
+    font-size : 2.5rem ; 
+    padding : 0 1rem ; 
+}
+
+/*seventh*/
+.svt 
+{
+    flex-direction : column ; 
+}
+.svt h1 
+{
+    font-size : 5rem ; 
+}
+.svt h1 svg 
+{
+    left : .5em ; 
+    top : .25em ; 
+    position : absolute ; 
+    width : 4em ; 
+    fill : #fff ; 
+}
+.svt .nul 
+{
+    height : 7.5rem ; 
+}
+.svt ol 
+{
+    list-style : a inside ; 
+    padding : 0 10% ; 
+}
+.svt ol li::marker , .svt ol li b 
+{
+    font-weight : bold ; 
+    font-family : var(--noto-serif) ; 
+}
+
+/*eighth*/
+.eth 
+{
+    font-family : var(--noto-serif) ; 
+    font-weight : 600 ; 
+}
+.eth h1 svg 
+{
+    width : 4em ; 
+}
+.eth table 
+{
+    margin-top : 5rem ; 
+    text-align : center ; 
+    border-collapse : collapse ; 
+    font-size : 3rem ; 
+}
+.eth thead td , .eth thead th 
+{
+    font-weight : 900 ; 
+    border : .125rem solid #000 ; 
+    border-bottom : .3rem double #000 ; 
+}
+.eth th , .eth td:not(thead td) 
+{
+    border : .125rem solid #000 ; 
+}
+.eth thead th , .eth th 
+{
+    border-right : .3rem double #000 ; 
+}
+
+/*ninth*/
+.nin 
+{
+    flex-direction : column ; 
+}
+/* .nin h1 
+{
+    font-size : 5rem ; 
+} */
+.nin h1 .h1bg 
+{
+    font-size : 9rem ; 
+}
+.nin h1 svg 
+{
+    left : .5em ; 
+    top : .25em ; 
+    position : absolute ; 
+    width : 4em ; 
+    fill : #fff ; 
+}
+.nin ol 
+{
+    list-style : a ; 
+    font-size : 3.75rem ; 
+    width : 100% ; 
+    padding-right : 5% ; 
+    padding-left : 15% ; 
+}
+
+/*tenth*/
+.ten 
+{
+    flex-direction : column ; 
+}
+.ten h1 .h1bg 
+{
+    font-size : 9rem ; 
+}
+.ten h1 svg 
+{
+    left : .5em ; 
+    top : .25em ; 
+    position : absolute ; 
+    width : 4em ; 
+    fill : #fff ; 
+    filter : drop-shadow(1px 1px #0ff ) drop-shadow(-1px -1px #f0f) ; 
+    animation : _3 .3s ; 
+}
+.ten ul 
+{
+    color : var(--colour-ref) ; 
+    font : 900 2rem var(--noto-sans) ; 
+}
+
+/*end*/
+.end 
+{
+    animation : b .3s infinite ; 
+}
+.end h1 
+{
+    display : flex ; 
+    justify-content : center ; 
+    align-items : center ; 
+    font-family : var(--end-Font) ; 
+    font-size : 15rem ; 
+    position : relative ; 
+}
+.end h1::before 
+{
+    content : '~THE END~' ; 
+    color : transparent ; 
+    background : linear-gradient(var(--deg) , var(--first) , #7a0b0b ) text ; 
+    animation : _2 1.5s ; 
+    width : 60rem ; 
+    position : absolute ; 
+    z-index : 99 ; 
+}
+.end h1::after 
+{
+    content : '~THE END~' ; 
+    animation : _2 1.5s ; 
+    filter : drop-shadow(3px 1px #0ff ) drop-shadow(-1px -3px #f0f) ; 
+    width : 60rem ; 
+    position : absolute ; 
+    z-index : 9 ; 
+}
+
+/* 
+.insBG
+{
+    background : linear-gradient( 45deg , #00f , #0f0 , #f00 ) no-repeat fixed center / cover ; 
+} */
