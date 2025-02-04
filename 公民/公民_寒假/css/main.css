@@ -152,3 +152,17 @@ ul , ol
 {
     outline : 0 ; 
 }
+
+/*end*/
+.end h1 
+{
+    color : transparent ; 
+    font-family : var(--end-Font) ; 
+    font-size : 17.5rem ; 
+    position : relative ; 
+    top : 0 ; 
+    left : 0 ; 
+    font-weight : 400 ; 
+    background-clip : text ; 
+    background-image : var(--end-colour) ; 
+}
