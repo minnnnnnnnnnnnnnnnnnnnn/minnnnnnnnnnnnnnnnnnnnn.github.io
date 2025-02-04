@@ -88,3 +88,67 @@ ul , ol
 {
     list-style-type : none ; 
 }
+
+.aaa 
+{
+    justify-content : center ; 
+    align-items : center ; 
+    position : fixed ; 
+    width : 100% ; 
+    height : 100vh ; 
+    display : none ; 
+    font-size : 2rem ; 
+    color : var(--colour) ; 
+}
+#flscrn
+{
+    font-weight : 900 ; 
+    font-size : 5rem ; 
+    color : transparent ; 
+    position : fixed ; 
+    height : 100vh ; 
+    width : 100% ; 
+    display : flex ; 
+    flex-direction : column ; 
+    justify-content : center ; 
+    align-items : center ; 
+}
+#flscrn input 
+{
+    margin-bottom : 3rem ; 
+}
+#flscrn span 
+{
+    background : linear-gradient( 35deg , #ef5fa7 , #f00 ) ; 
+    background-clip : text ; 
+    cursor : pointer ; 
+    transition : linear .15s ; 
+    z-index : 2 ; 
+}
+#flscrn span::before { content : '\003e' ;  font-family : sans-serif ;  color : #f00 ; }#flscrn span::after { content : '\003c' ;  font-family : sans-serif ;  color : #ef5fa7 ; }
+#flscrn span:hover::before { content : '\003c' ;  color : #0ff ; }#flscrn span:hover::after { content : '\003e' ;  color : #10a058 ; }
+#flscrn span:hover 
+{
+    background : linear-gradient(35deg , #10a058 , #0ff ) ; 
+    background-clip : text ; 
+    font-size : 7rem ; 
+}
+.click-left , .click-right
+{
+    opacity : 0 ; 
+    width : 50% ; 
+    height : 100vh ; 
+    position : fixed ; 
+    z-index : 999999999 ; 
+    top : 0 ; 
+    display : block ; 
+    cursor : none ; 
+}
+.click-right
+{
+    right : 0 ; 
+}
+.click-left:focus , .click-right:focus 
+{
+    outline : 0 ; 
+}
