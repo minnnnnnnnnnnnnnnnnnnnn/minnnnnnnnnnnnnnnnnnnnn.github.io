@@ -99,6 +99,7 @@ ul , ol
     display : none ; 
     font-size : 2rem ; 
     color : var(--colour) ; 
+    background-color : var(--bg-colour) ; 
 }
 #flscrn
 {
