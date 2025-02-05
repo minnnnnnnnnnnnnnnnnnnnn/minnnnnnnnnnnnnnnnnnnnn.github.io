@@ -154,6 +154,16 @@ ul , ol
     outline : 0 ; 
 }
 
+/*first*/
+.fstD 
+{
+    color : var(--first-date) ; 
+    position : fixed ; 
+    bottom : 2rem ; 
+    left : 3rem ; 
+    font-family : var(--first-date-font) ; 
+}
+    
 /*end*/
 .end h1 
 {
