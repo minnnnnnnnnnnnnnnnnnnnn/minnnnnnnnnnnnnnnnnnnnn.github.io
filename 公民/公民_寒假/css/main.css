@@ -155,6 +155,11 @@ ul , ol
 }
 
 /*first*/
+.first
+{
+    font-family : XingkaiTC ; 
+    color : var(--first-colour) ; 
+}
 .fstD 
 {
     color : var(--first-date) ; 
