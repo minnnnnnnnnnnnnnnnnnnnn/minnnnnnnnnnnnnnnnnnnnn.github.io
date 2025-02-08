@@ -38,10 +38,23 @@
     87.5%{ --deg : 315deg ; } 
     100%{ --deg : 360deg ; }
 }
+@keyframes c 
+{
+    0%{ --deeg : 0deg ; } 
+    12.5%{ --deeg : 45deg ; } 
+    25%{ --deeg : 90deg ; } 
+    37.5%{ --deeg : 135deg ; } 
+    50%{ --deeg : 180deg ; } 
+    62.5%{ --deeg : 225deg ; } 
+    75%{ --deeg : 270deg ; } 
+    87.5%{ --deeg : 315deg ; } 
+    100%{ --deeg : 360deg ; }
+}
 :root 
 {
-    animation : b .3s infinite ; 
+    animation : b .3s infinite , c 1s infinite ; 
     font-size : 1em ; 
+    --first-colour : linear-gradient( var(--deeg) , #2d4095 , #57c1ff ) ; 
     --first-date : #000 ; 
     --first-date-font : "Afacad Flux" ; 
     --noto-sans : "Noto Sans TC" ; 
