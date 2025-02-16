@@ -1,0 +1,14 @@
+.bread ul 
+{
+    display : inline-flex ; 
+}
+.bread ul li a 
+{
+    color : #000 ; 
+    text-decoration : none ; 
+}
+.bread ul li a::after 
+{
+    content : '>' ; 
+    margin : 0 2rem ; 
+}

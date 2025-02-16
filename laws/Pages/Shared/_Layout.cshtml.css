@@ -1,0 +1,63 @@
+﻿/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/* header */
+header nav a img 
+{
+  height : 3rem ; 
+}
+
+
+
+/* footer */
+footer 
+{
+  margin : 1rem ; 
+  margin-bottom : 0 ; 
+}
+
+footer > div:first-child 
+{
+  margin-left : 1rem ; 
+  color : #057b7b ; 
+}
+footer > div:first-child ul li 
+{
+  list-style-type : disc ; 
+}
+
+footer > div:last-child 
+{
+  background : #f2f2f2 ; 
+  margin : 0 -1rem ; 
+}
+footer > div:last-child > span , footer > div:last-child > ul , footer > div:last-child > span > ul > li 
+{
+  margin : 1rem ; 
+  margin-bottom : 0 ; 
+}
+footer > div:last-child > span > ul > li::before 
+{
+  content : '>' ; 
+} 
+footer > div:last-child a , footer > div:last-child a:visited 
+{
+  color : #000 ; 
+}
+footer > div:last-child a:hover , footer > div:last-child a:focus 
+{
+  color : #c03 ; 
+  text-decoration : underline ; 
+}
+footer > div:last-child > ul 
+{
+  display : flex ; 
+  align-items : center ; 
+  border-left : solid 1px #000 ; 
+}
+footer > div:last-child > ul li 
+{
+  border-right : solid 1px #000 ; 
+  padding : 0 1rem ; 
+}
