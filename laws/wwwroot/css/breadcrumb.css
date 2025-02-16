@@ -1,0 +1,14 @@
+.bread ul 
+{
+    display : inline-flex ; 
+}
+.bread ul li a 
+{
+    color : #000 ; 
+    text-decoration : none ; 
+}
+.bread ul li:not(:last-child)::after 
+{
+    content : '>' ; 
+    margin : 0 1rem ; 
+}

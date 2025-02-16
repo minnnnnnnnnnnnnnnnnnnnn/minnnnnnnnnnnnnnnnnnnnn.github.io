@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "臺中市立臺中第一高級中等學校學生自治聯合會法規資料庫/1.0.0": {
+        "runtime": {
+          "臺中市立臺中第一高級中等學校學生自治聯合會法規資料庫.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "臺中市立臺中第一高級中等學校學生自治聯合會法規資料庫/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

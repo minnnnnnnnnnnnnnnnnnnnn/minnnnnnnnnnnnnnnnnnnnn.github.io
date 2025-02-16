@@ -1,0 +1,44 @@
+html 
+{
+  font-size : 14px ; 
+  position : relative ; 
+  min-height : 100% ; 
+  font-family : "Songti TC" ; 
+}
+
+@media (min-width: 768px) 
+{
+  html 
+  {
+    font-size : 16px ; 
+  }
+}
+* 
+{
+  margin : 0 ; 
+  padding : 0 ; 
+  box-sizing : border-box ; 
+}
+ul , ol 
+{
+  list-style-type : none ; 
+}
+a , a:visited 
+{
+  color : #057b7b ; 
+  text-decoration : none ; 
+}
+a:hover , a:focus 
+{
+  color : #c03 ; 
+  text-decoration : underline ; 
+}
+a:focus 
+{
+  outline : solid #fa8484 ; 
+}
+
+.main 
+{
+  margin : 1rem 3rem ; 
+}

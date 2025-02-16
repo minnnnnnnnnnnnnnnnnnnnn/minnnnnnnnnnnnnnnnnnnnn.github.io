@@ -1,0 +1,68 @@
+/* _content/臺中市立臺中第一高級中等學校學生自治聯合會法規資料庫/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+
+/* header */
+header nav a img[b-4zjoink7fz] 
+{
+  height : 3rem ; 
+}
+
+
+
+/* footer */
+footer[b-4zjoink7fz] 
+{
+  margin : 1rem ; 
+  margin-bottom : 0 ; 
+}
+.footer-note a[b-4zjoink7fz] , .footer-note a:visited[b-4zjoink7fz] 
+{
+  color : #000 ; 
+  text-decoration : underline ; 
+}
+footer > .footer-note[b-4zjoink7fz] 
+{
+  margin-left : 1rem ; 
+  color : #057b7b ; 
+}
+footer > .footer-note ul li[b-4zjoink7fz] 
+{
+  list-style-type : disc ; 
+}
+
+.footer-bottom[b-4zjoink7fz] 
+{
+  background : #f2f2f2 ; 
+  margin : 0 -1rem ; 
+}
+.footer-bottom > span[b-4zjoink7fz] , .footer-bottom > ul[b-4zjoink7fz] , .footer-bottom > span > ul > li[b-4zjoink7fz] 
+{
+  margin : 1rem ; 
+  margin-bottom : 0 ; 
+}
+.footer-bottom > span > ul > li[b-4zjoink7fz]::before 
+{
+  content : '>' ; 
+} 
+.footer-bottom a[b-4zjoink7fz] , .footer-bottom a:visited[b-4zjoink7fz] 
+{
+  color : #000 ; 
+}
+.footer-bottom a:hover[b-4zjoink7fz] , .footer-bottom a:focus[b-4zjoink7fz] 
+{
+  color : #c03 ; 
+  text-decoration : underline ; 
+}
+.footer-bottom > ul[b-4zjoink7fz] 
+{
+  display : flex ; 
+  align-items : center ; 
+  border-left : solid 1px #000 ; 
+}
+.footer-bottom > ul li[b-4zjoink7fz] 
+{
+  border-right : solid 1px #000 ; 
+  padding : 0 1rem ; 
+}
