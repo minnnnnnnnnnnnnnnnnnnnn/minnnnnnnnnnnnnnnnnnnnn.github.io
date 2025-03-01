@@ -7799,17 +7799,17 @@
         }, 
         {
             "LawLevel": "命令",
-            "LawName": "臺中市立臺中第一高級中等學校學生自治聯合會評議委員會議議事規則",
+            "LawName": "臺中第一高級中學評議委員會議議事規則",
             "LawURL": "https://sites.google.com/view/tcfshsu/學生議會/自治法規/司法法規/評議委員會議議事規則",
             "LawCategory": "司法法規",
-            "LawModifiedDate": "",
+            "LawModifiedDate": "20250224",
             "LawEffectiveDate": "",
             "LawEffectiveNote": "",
             "LawAbandonNote": "",
             "LawHasEngVersion": "N",
             "EngLawName": "",
             "LawAttachements": [],
-            "LawHistories": "1.中華民國113年10月01日評議委員會主任委員公布全文十三條。",
+            "LawHistories": "1.中華民國113年10月01日評議委員會主任委員公布全文十三條。2.中華民國114年02月24日評議委員會主任委員公布修正名稱。",
             "LawForeword": "",
             "LawArticles": [ 
                 {
@@ -7881,17 +7881,17 @@
         }, 
         {
             "LawLevel": "命令",
-            "LawName": "臺中市立臺中第一高級中等學校學生自治聯合會評議委員會提供資訊收費細則",
+            "LawName": "臺中第一高級中學評議委員會提供資訊收費細則",
             "LawURL": "https://sites.google.com/view/tcfshsu/學生議會/自治法規/司法法規/評議委員會提供資訊收費細則",
             "LawCategory": "司法法規",
-            "LawModifiedDate": "",
+            "LawModifiedDate": "20250224",
             "LawEffectiveDate": "",
             "LawEffectiveNote": "",
             "LawAbandonNote": "",
             "LawHasEngVersion": "N",
             "EngLawName": "",
             "LawAttachements": [],
-            "LawHistories": "1.中華民國113年10月01日評議委員會主任委員公布全文八條。",
+            "LawHistories": "1.中華民國113年10月01日評議委員會主任委員公布全文八條。2.中華民國114年02月24日評議委員會主任委員公布修正名稱及第八條。",
             "LawForeword": "",
             "LawArticles": [ 
                 {
@@ -7932,23 +7932,23 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第八條", 
-                    "ArticleContent": "本標準自發布日施行。"
+                    "ArticleContent": "本細則自發布日施行。"
                 }
             ]
         }, 
         {
             "LawLevel": "命令",
-            "LawName": "臺中市立臺中第一高級中等學校學生自治聯合會評議委員自律規則",
+            "LawName": "臺中第一高級中學評議委員自律規則",
             "LawURL": "https://sites.google.com/view/tcfshsu/學生議會/自治法規/司法法規/評議委員自律規則",
             "LawCategory": "司法法規",
-            "LawModifiedDate": "20241031",
+            "LawModifiedDate": "20250224",
             "LawEffectiveDate": "",
             "LawEffectiveNote": "",
             "LawAbandonNote": "",
             "LawHasEngVersion": "N",
             "EngLawName": "",
             "LawAttachements": [],
-            "LawHistories": "1.中華民國113年10月31日評議委員會主任委員公布全文二十二條。",
+            "LawHistories": "1.中華民國113年10月31日評議委員會主任委員公布全文二十二條。2.中華民國114年02月24日評議委員會主任委員公布修正名稱及第六條。",
             "LawForeword": "",
             "LawArticles": [  
                 {
@@ -7979,7 +7979,7 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第六條", 
-                    "ArticleContent": "評議委員於任職期間不得參加政黨、政治體及其活動，任職前已參加政黨、政治團體者，應退出之。\r\n評議委員參與各項公職人員選舉，應於各該公職人員任期屆滿一年以前，辭去其職務。\r\n評議委員違反前項規定者，不得登記為公職人員選舉之候選人。"
+                    "ArticleContent": "評議委員於任職期間不得參加政黨、政治體及其活動，任職前已參加政黨、政治團體者，應退出之。\r\n評議委員參與各項公職人員選舉，應於參選各該公職人員以前，辭去其職務。\r\n評議委員違反前項規定者，不得登記為公職人員選舉之候選人。"
                 }, 
                 {
                     "ArticleType": "A",
