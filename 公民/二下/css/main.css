@@ -165,6 +165,7 @@ a
     cursor : pointer ; 
     transition : linear .15s ; 
     z-index : 2 ; 
+    user-select : none ; 
 }
 #flscrn span::before { content : '\003e' ;  font-family : sans-serif ;  color : #f00 ; }#flscrn span::after { content : '\003c' ;  font-family : sans-serif ;  color : #ef5fa7 ; }
 #flscrn span:hover::before { content : '\003c' ;  color : #0ff ; }#flscrn span:hover::after { content : '\003e' ;  color : #10a058 ; }
@@ -184,6 +185,7 @@ a
     top : 0 ; 
     display : block ; 
     cursor : none ; 
+    user-select : none ; 
 }
 .click-right
 {
