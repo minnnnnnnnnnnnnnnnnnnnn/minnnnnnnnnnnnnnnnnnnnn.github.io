@@ -165,7 +165,6 @@ a
     cursor : pointer ; 
     transition : linear .15s ; 
     z-index : 2 ; 
-    user-select : none ; 
 }
 #flscrn span::before { content : '\003e' ;  font-family : sans-serif ;  color : #f00 ; }#flscrn span::after { content : '\003c' ;  font-family : sans-serif ;  color : #ef5fa7 ; }
 #flscrn span:hover::before { content : '\003c' ;  color : #0ff ; }#flscrn span:hover::after { content : '\003e' ;  color : #10a058 ; }
@@ -185,7 +184,6 @@ a
     top : 0 ; 
     display : block ; 
     cursor : none ; 
-    user-select : none ; 
 }
 .click-right
 {
@@ -198,7 +196,15 @@ a
 h1:not( .fst h1 ):not( .end h1 ) 
 {
     font-family : source-han-serif-tw-subset ; 
-    font-weight : 900;
+    font-weight : 900 ; 
+}
+h1:not( .fst h1 ):not( .e h1 ):not( .end h1 ) 
+{
+    border-bottom : 1px solid #ccc ; 
+    width : 50% ; 
+    display : flex ; 
+    justify-content : center ; 
+    margin-bottom : 1em ; 
 }
 p 
 {
@@ -208,6 +214,16 @@ p
 h6 
 {
     font-size : 1.5em ; 
+    margin : 0 calc(50% - 6.5em) ; 
+}
+article 
+{
+    height : 15em ; 
+    margin-bottom : 3em ; 
+}
+.print 
+{
+    display : none ; 
 }
 
 /*first*/
