@@ -17,7 +17,7 @@ $(()=>
         $("#print").on( "click" , () => {
           var newWin=window.open('','列印視窗') ; 
           newWin.document.open() ; 
-          newWin.document.write( '<html><head><script src="/js/adobeFont.js"></script><link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="css/print.css"></head><body onload="window.print()">' ) ; 
+          newWin.document.write( '<html><head><script src="js/adobeFont.js"></script><link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="css/print.css"></head><body onload="window.print()">' ) ; 
           for( count = 1 ; count <= max ; count++ ) 
           {
             newWin.document.write( $('#' + count ).prop( 'outerHTML' ) ) ; 
