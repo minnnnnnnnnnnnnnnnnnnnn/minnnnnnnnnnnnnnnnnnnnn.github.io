@@ -827,14 +827,14 @@
             "LawName": "臺中市立臺中第一高級中等學校學生自治聯合會決算法",
             "LawURL": "https://sites.google.com/view/tcfshsu/學生議會/自治法規/中央法規/決算法",
             "LawCategory": "中央法規",
-            "LawModifiedDate": "20231211",
+            "LawModifiedDate": "20250305",
             "LawEffectiveDate": "20240101",
             "LawEffectiveNote": "",
             "LawAbandonNote": "",
             "LawHasEngVersion": "N",
             "EngLawName": "",
             "LawAttachements": [],
-            "LawHistories": "1.中華民國112年12月11日第十四屆學生議會第一會期第一次臨時會二讀通過制定全文29條條文。",
+            "LawHistories": "1.中華民國112年12月11日第十四屆學生議會第一會期第一次臨時會二讀通過制定全文29條條文。\r\n2.中華民國114年03月05日第十五屆學生議會第二會期第一次常會二讀通過修正部分條文。",
             "LawForeword": "",
             "LawArticles": [ 
                 {
@@ -880,7 +880,7 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第七條【決算編造與期限】",
-                    "ArticleContent": "本會各部門之決算於該預算期間結束後二日內送學生會財政部彙整。\r\n前項各部門決算，行政部門由學生會財政部長擬具，立法部門由學生議會秘書長擬具，司法部門由評議委員會秘書長擬具。"
+                    "ArticleContent": "本會各部門之決算於該預算期間結束後十四日內送學生會財政部彙整。\r\n前項各部門決算，行政部門由學生會財政部長擬具，立法部門由學生議會秘書長擬具，司法部門由評議委員會主任委員擬具。"
                 }, 
                 {
                     "ArticleType": "A",
@@ -895,7 +895,7 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第十條【各部門之決算編造】",
-                    "ArticleContent": "各部門編造單位決算時，應按其事實編製執行預算之各表，並附有關之會計報告、執行預算經過以及執行工作計畫之說明。"
+                    "ArticleContent": "各部門編造單位決算時，應按其事實編製執行預算之各表。"
                 }, 
                 {
                     "ArticleType": "A",
@@ -910,7 +910,7 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第十三條【總決算書之提出】",
-                    "ArticleContent": "總決算書呈會長，經會長簽呈後應於下一預算期間七日前，將決算提出至學生議會審議。"
+                    "ArticleContent": "總決算書呈會長，經會長簽呈後應於下一預算期間第一次常會七日前，將決算提出至學生議會審議。"
                 }, 
                 {
                     "ArticleType": "A",
@@ -945,7 +945,7 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第十九條【財政委員會提出期限】",
-                    "ArticleContent": "財政委員會應於總決算案提出後五日內審核完畢，並於審核完畢後五日內，將決算提出於學生議會。"
+                    "ArticleContent": "財政委員會應於總決算案提出後之下次常會前七日內審核完畢，並於審核完畢後之常會前三日將決算提出於學生議會。"
                 }, 
                 {
                     "ArticleType": "A",
@@ -955,7 +955,7 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第二十一條【附註表達之準用】",
-                    "ArticleContent": "總決算書內附註表達之審核與審議，準用本法第十八條與第二十條。"
+                    "ArticleContent": "總決算書內附註表達之審核與審議，準用第十八條與第二十條。"
                 }, 
                 {
                     "ArticleType": "A",
@@ -975,7 +975,7 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第二十四條【財政部長活動結束報告】",
-                    "ArticleContent": "行政部門應於各次活動結束日之後十四日內提出預算執行報告書。\r\n大會應於財政部長送達後下次常會完成其查核，若大會未於該次常會查核則視為通過。"
+                    "ArticleContent": "（刪除）"
                 }, 
                 {
                     "ArticleType": "A",
@@ -996,6 +996,11 @@
                     "ArticleType": "A",
                     "ArticleNo": "第二十八條【本法之準用】",
                     "ArticleContent": "本法有未竟事宜者，經學生議會同意，準用中華民國《決算法》。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第二十八之一條【第一一三學年度第一期間之決算】",
+                    "ArticleContent": "第一一三學年度第一期間決算案應於學生議會第二會期第二次常會前提交至學生議會財政委員會審議，不適用本法有關提交期限之規定。"
                 }, 
                 {
                     "ArticleType": "A",
@@ -2007,7 +2012,7 @@
             "LawHasEngVersion": "N",
             "EngLawName": "",
             "LawAttachements": [],
-            "LawHistories": "1.中華民國113年3月6日第十四屆學生議會第二會期第一次常會二讀通過制定全文24條。\r\n2.中華民國113年10月22日第十五屆學生議會第一會期第二次常會二讀通過修正第八條、第十一條及第二十一條。",
+            "LawHistories": "1.中華民國113年3月6日第十四屆學生議會第二會期第一次常會二讀通過制定全文24條。\r\n2.中華民國113年10月22日第十五屆學生議會第一會期第二次常會二讀通過修正第八條、第十一條及第二十一條。\r\n3.中華民國114年03月05日第十五屆學生議會第二會期第一次常會二讀通過修正第二十條。",
             "LawForeword": "",
             "LawArticles": [ 
                 {
@@ -2118,7 +2123,7 @@
                 {
                     "ArticleType": "A",
                     "ArticleNo": "第二十條【任命】",
-                    "ArticleContent": "各項會議之學生代表，名額若為三名以內， 除當然代表外，由學生會會長自行任命副會長或學生會內閣首長作為出席代表。"
+                    "ArticleContent": "各項會議之學生代表，名額若為三名以內，除當然代表外，由學生會會長自行任命學生會幹部作為出席代表，若遇無法符合校務會議學生代表之出席規範者可任命本校學生作為出席代表。"
                 }, 
                 {
                     "ArticleType": "A",
@@ -8691,19 +8696,181 @@
         }, 
         {
             "LawLevel": "法律",
-            "LawName": "臺中市立臺中第一高級中等學校學生自治聯合會學生政黨法",
-            "LawURL": "https://sites.google.com/view/tcfshsu/學生議會/自治法規/廢止法規/廢學生政黨法",
-            "LawCategory": "廢止法規 > 中央法規",
-            "LawModifiedDate": "20191003",
+            "LawName": "臺中市立臺中第一高級中等學校學生自治聯合會非訟事件法",
+            "LawURL": "https://sites.google.com/view/tcfshsu/學生議會/自治法規/司法法規/非訟事件法",
+            "LawCategory": "司法法規",
+            "LawModifiedDate": "20250305",
             "LawEffectiveDate": "",
             "LawEffectiveNote": "",
-            "LawAbandonNote": "廢",
+            "LawAbandonNote": "",
             "LawHasEngVersion": "N",
             "EngLawName": "",
             "LawAttachements": [],
-            "LawHistories": "1.中華民國106年10月27日第八屆學生議會第一會期第二次常會二讀通過制定全文24條條文。\r\n2.中華民國108年10月3日第十屆學生議會第一會期第一次常會二讀通過修正第三、四、五、八、十五、二十、二十一條條文。",
+            "LawHistories": "1.中華民國114年03月05日第十五屆第二會期學生議會第一次常會二讀通過制定全文二十五條。",
             "LawForeword": "",
             "LawArticles": [ 
+                {
+                    "ArticleType": "C",
+                    "ArticleNo": "",
+                    "ArticleContent":"   第 一 章 總則"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第一條", 
+                    "ArticleContent": "本法依據《臺中市立臺中第一高級中等學校學生自治聯合會評議委員會組織及職權行使法》第七條訂定之。\r\n評議委員會管轄之非訟事件，除另有規定外，適用本法之規定。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第二條", 
+                    "ArticleContent": "非訟事件，由評議委員會一般法庭第二庭管轄。\r\n非訟事件之抗告，由評議委員會一般法庭第三庭管轄。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第三條", 
+                    "ArticleContent": "本法稱關係人者，謂聲請人、相對人及其他利害關係人。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第四條", 
+                    "ArticleContent": "聲請，應以書狀為之。\r\n陳述，應以書狀或言詞為之。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第五條", 
+                    "ArticleContent": "非訟事件之裁判，由獨任評議委員以裁定行之。\r\n非訟事件之抗告，由評議委員以三人合議裁定之。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第六條", 
+                    "ArticleContent": "非訟事件之程序費用，除本法別有規定外，由會庫支付。\r\n因可歸責於關係人之事由，致生無益之費用時，法庭得以裁定命其負擔費用之全部或一部。"
+                }, 
+                {
+                    "ArticleType": "C",
+                    "ArticleNo": "",
+                    "ArticleContent":"   第 二 章 清算事件"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第七條", 
+                    "ArticleContent": "政黨財產之清算，依政黨法應由評議委員裁判者，應由主管機關聲請非訟事件管轄法庭清算之。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第八條", 
+                    "ArticleContent": "清算事件之聲請認定有下列情形之一者，法庭應以裁定不接受聲請：\r\n一、聲請不符格式或要件。\r\n二、聲請人非政黨主管機關。\r\n三、被清算團體非屬學聯會主管機關立案之政黨。\r\n四、被清算之政黨得自行清算者。\r\n五、就清算中或已清算之案件，複提起同一聲請。\r\n六、聲請顯無理由或有重大過失。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第九條", 
+                    "ArticleContent": "法庭於接受之聲請後，應即指派清算人。\r\n前項之清算人，應以熟悉被清算政黨之黨務者為優先。\r\n清算人，法庭認有必要時，得以裁定解除其職務，並另派清算人。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十條", 
+                    "ArticleContent": "清算人之職務如下：\r\n一、了結現務。\r\n二、收取債權，清償債務。\r\n三、移交賸餘財產於主管機關。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十一條", 
+                    "ArticleContent": "政黨之清算，屬於法庭監督。法庭得隨時為監督上必要之檢查及處分。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十二條", 
+                    "ArticleContent": "清算人就任後，應即檢查政黨財產情形，造具資產負債表及財產目錄，送交法庭及主管機關查閱。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十三條", 
+                    "ArticleContent": "清算人就任後，應以公告方法，催告債權人報明債權，對於明知之債權人，並應分別通知。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十四條", 
+                    "ArticleContent": "政黨財產不足清償其債務時，清算人應即通知債權人。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十五條", 
+                    "ArticleContent": "清算人應於清算完結後十五日內，造具結算表冊，送交法庭。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十六條", 
+                    "ArticleContent": "結算表冊，由評議委員會自接收日起，保存三年。"
+                }, 
+                {
+                    "ArticleType": "C",
+                    "ArticleNo": "",
+                    "ArticleContent":"   第 三 章 恢復身分事件"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十七條", 
+                    "ArticleContent": "會員受政黨對黨員身分做成處分，認處分違反法令者，得向非訟事件管轄法庭聲請恢復身分。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十八條", 
+                    "ArticleContent": "恢復身分事件之聲請認定有下列情形之一者，法庭應以裁定不接受聲請：\r\n一、聲請不符格式或要件。\r\n二、聲請人未曾為該政黨之黨員。\r\n三、被告團體非屬學聯會主管機關立案之政黨。\r\n四、就審理中或已裁判之案件，複提起同一聲請。\r\n五、聲請顯無理由或有重大過失。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第十九條", 
+                    "ArticleContent": "法庭於接受聲請後，應即通知政黨提出答辯狀。\r\n法庭於接受聲請後，應即通知政黨提供政黨之章程，並送主管機關查驗。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第二十條", 
+                    "ArticleContent": "法庭於審理時，應依我國民事訴訟之程序行準備程序、言詞辯論及宣示裁定。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第二十一條", 
+                    "ArticleContent": "法庭認政黨對黨員身分做成處分為有理由，應以裁定駁回聲請。\r\n法庭認政黨對黨員身分做成處分為無理由，應以裁定宣告恢復聲請人黨員之身分。前二項之裁定，\r\n應宣示之，並分送裁判書予聲請人、政黨及主管機關。"
+                }, 
+                {
+                    "ArticleType": "C",
+                    "ArticleNo": "",
+                    "ArticleContent":"   第 四 章 附則"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第二十二條", 
+                    "ArticleContent": "非訟事件之法庭秩序、配置、組織、旁聽、影音保存、職員迴避、書狀格式、傳送方式及證據，除本法別有規定外，準用一般訴訟之規定。\r\n非訟事件之聲請、陳述、訊問、裁定、抗告，除本法別有規定外，準用我國非訟事件法。\r\n清算，除本法別有規定外，準用我國公司法。\r\n恢復身分案件，除本法別有規定外，準用我國民事訴訟法。\r\n前四項之準用規定重複之處，法庭應擇一準用之。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第二十三條", 
+                    "ArticleContent": "本法之施行細則，由評議委員會定之。\r\n本法未規定或新增之非訟事件，其處理辦法由評議委員會定之。"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第二十四條", 
+                    "ArticleContent": "案件編號之規則如下：\r\n一、清算事件：「中一中評委第○庭清字第○號」\r\n二、恢復身分事件：「中一中評委第○庭非訴裁字第○號」\r\n三、抗告：「中一中評委第○庭非訴抗字第○號」"
+                }, 
+                {
+                    "ArticleType": "A",
+                    "ArticleNo": "第二十五條", 
+                    "ArticleContent": "本法自公布日起實施。"
+                }
+            ]
+        }, 
+        {
+                "LawLevel": "法律",
+                "LawName": "臺中市立臺中第一高級中等學校學生自治聯合會學生政黨法",
+                "LawURL": "https://sites.google.com/view/tcfshsu/學生議會/自治法規/廢止法規/廢學生政黨法",
+                "LawCategory": "廢止法規 > 中央法規",
+                "LawModifiedDate": "20191003",
+                "LawEffectiveDate": "",
+                "LawEffectiveNote": "",
+                "LawAbandonNote": "廢",
+                "LawHasEngVersion": "N",
+                "EngLawName": "",
+                "LawAttachements": [],
+                "LawHistories": "1.中華民國106年10月27日第八屆學生議會第一會期第二次常會二讀通過制定全文24條條文。\r\n2.中華民國108年10月3日第十屆學生議會第一會期第一次常會二讀通過修正第三、四、五、八、十五、二十、二十一條條文。",
+                "LawForeword": "",
+                "LawArticles": [ 
                 {
                     "ArticleType": "C",
                     "ArticleNo": "",
