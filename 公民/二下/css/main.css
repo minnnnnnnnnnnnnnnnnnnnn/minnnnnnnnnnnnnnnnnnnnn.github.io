@@ -72,7 +72,7 @@
 :root 
 {
     animation : b .3s infinite ; 
-    font-size : 1em ; 
+    font-size : 16px ; 
     --first-colour : linear-gradient( 15deg , #2d4095 , #57c1ff ) ; 
     --first-bg : linear-gradient( 15deg , #fff , #fff ) ; 
     --first-date : #000 ; 
