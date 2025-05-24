@@ -11,6 +11,19 @@
         <meta name="author" content="臺中市立臺中第一高級中等學校學生自治聯合會第三十屆學生會自治部部長louischo303@"/>
         <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
         <script>
+            $(()=>{
+            function updateLocalTime() {
+                const now = new Date();
+                const weekday = now.toLocaleDateString("en-US", { weekday: "long" });
+                const y = now.getFullYear();
+                const m = String(now.getMonth() + 1).padStart(2, "0");
+                const d = String(now.getDate()).padStart(2, "0");
+                const hms = now.toLocaleTimeString("en-US", { hour12: false });
+                const localEl = document.getElementById("localtime");
+                if (localEl) localEl.textContent = `${y}-${m}-${d} ${hms} (${weekday})`;
+            }
+            _updateTimeId = setInterval(updateLocalTime, 1000);
+            updateLocalTime();}
             fetch(new Request('./法規彙編.json')).then( (response) => {return response.json()} ).then( (j) => 
             {
                 console.log( j ) ; 
@@ -19,7 +32,7 @@
                 var cover = document.createElement( "span" ) ; 
                 body.appendChild( cover ) ; 
                 cover.setAttribute( "id" , "COVER" ) ; 
-                cover.innerHTML = "<div>臺中市立臺中第一高級中等學校<br/>學生自治聯合會</div><h1>法規彙編</h1><br/><span>113-2</span>"
+                cover.innerHTML = "<div>臺中市立臺中第一高級中等學校<br/>學生自治聯合會</div><h1>法規彙編</h1><br/><span>113-2</span><br/><span id=\"localtime\"></span>" ; 
                 var catalogue = document.createElement( "span" ) , contents = document.createElement( "span" ) ; 
                 contents.innerText = "目錄" ; 
                 body.appendChild( catalogue ) ; 
