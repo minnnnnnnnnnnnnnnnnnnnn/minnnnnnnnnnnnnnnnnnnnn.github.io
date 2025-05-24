@@ -23,7 +23,7 @@
                 if (localEl) localEl.textContent = `${y}-${m}-${d} ${hms} (${weekday})`;
             }
             _updateTimeId = setInterval(updateLocalTime, 1000);
-            updateLocalTime();}
+            updateLocalTime();});
             fetch(new Request('./法規彙編.json')).then( (response) => {return response.json()} ).then( (j) => 
             {
                 console.log( j ) ; 
