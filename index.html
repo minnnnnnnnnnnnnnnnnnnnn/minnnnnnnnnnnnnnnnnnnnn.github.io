@@ -343,24 +343,24 @@
             @font-face 
             {
                 font-family: "sung";
-                src: url("https://minnnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-98_1.ttf") format("truetype");
+                src: url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-98_1.ttf") format("truetype");
             }
             @font-face 
             {
                 font-family: 'kai';
-                src: url("https://minnnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-98_1.ttf") format("truetype") ; 
+                src: url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-98_1.ttf") format("truetype") ; 
             }
             @font-face 
             {
                 font-family : "kai_" ; 
-                src : url("https://minnnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-Ext-B-98_1.ttf") format("truetype")
-                , url("https://minnnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-Plus-98_1.ttf") format("truetype") ; 
+                src : url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-Ext-B-98_1.ttf") format("truetype")
+                , url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-Plus-98_1.ttf") format("truetype") ; 
             }
             @font-face 
             {
                 font-family : "sung_" ; 
-                src : url("https://minnnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-Ext-B-98_1.ttf") format("truetype")
-                , url("https://minnnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-Plus-98_1.ttf") format("truetype") ; 
+                src : url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-Ext-B-98_1.ttf") format("truetype")
+                , url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-Plus-98_1.ttf") format("truetype") ; 
             }
             @page /* pageNum */
             {
@@ -553,6 +553,7 @@
 
             #COVER-BACK 
             {
+                display : none ; 
                 width : 100% ; 
             }
             #COVER-BACK h1 
@@ -573,6 +574,13 @@
                 font-size : 1.5rem ; 
                 font-family : 'Noto Sans Mono' , mono-space ; 
                 font-weight : 700 ; 
+            }
+            @print 
+            {
+                #COVER-BACK 
+                {
+                    display : block ; 
+                }
             }
         </style>
     </head>
