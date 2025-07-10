@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content=""/>
+        <meta name="author" content="louischo303"/>
+        <meta name="keywords" content=""/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+          $(()=>
+          {
+            $( "body > span" ).on( "click" , () => 
+            {
+              navigator.clipboard.writeText( $( "body > select" ).val() ) ; 
+              window.alert( '複製成功' ) ; 
+            } ) ; 
+          } ) ; 
+        </script>
+    </head>
+    <body>
+      <select name="" id="">
+        <option value="&#x00a0;">NBSP</option>
+        <option value="&#x2000;">NQSP</option>
+        <option value="&#x2001;">MQSP</option>
+        <option value="&#x2002;">ENSP</option>
+        <option value="&#x2003;">EMSP</option>
+        <option value="&#x2004;">3/MSP</option>
+        <option value="&#x2005;">4/MSP</option>
+        <option value="&#x2006;">6/MSP</option>
+        <option value="&#x2007;">FSP</option>
+        <option value="&#x2008;">PSP</option>
+        <option value="&#x2009;">THSP</option>
+        <option value="&#x200a;">HSP</option>
+        <option value="&#x200b;">ZWSP</option>
+        <option value="&#x205f;">MMSP</option>
+        <option value="&#x202f;">NNBSP</option>
+        <option value="&#x2060;">WJ</option>
+        <option value="&#x2420;">"SP"</option>
+        <option value="&#x3000;">IDSP</option>
+        <option value="&#xfeff;">ZWNBSP</option>
+      </select>
+      <span style="cursor:pointer;">點擊複製</span>
+    </body>
+</html>
