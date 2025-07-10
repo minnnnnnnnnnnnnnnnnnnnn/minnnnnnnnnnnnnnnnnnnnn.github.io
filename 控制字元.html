@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content=""/>
+        <meta name="author" content="louischo303"/>
+        <meta name="keywords" content=""/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+          $(()=>
+          {
+            $( "body > span" ).on( "click" , () => 
+            {
+              navigator.clipboard.writeText( $( "body > select" ).val() ) ; 
+              window.alert( '複製成功' ) ; 
+            } ) ; 
+          } ) ; 
+        </script>
+    </head>
+    <body>
+      <select name="" id="">
+        <option value="&#x0000;">NUL(無法複製)</option>
+        <option value="&#x0001;">SOH</option>
+        <option value="&#x0002;">STX</option>
+        <option value="&#x0003;">ETX</option>
+        <option value="&#x0004;">EOT</option>
+        <option value="&#x0005;">ENQ</option>
+        <option value="&#x0006;">ACK</option>
+        <option value="&#x0007;">BEL</option>
+        <option value="&#x0008;">BS</option>
+        <option value="&#x0009;">HT</option>
+        <option value="&#x000a;">LF</option>
+        <option value="&#x000b;">VT</option>
+        <option value="&#x000c;">FF</option>
+        <option value="&#x000d;">CR</option>
+        <option value="&#x000e;">SO</option>
+        <option value="&#x000f;">SI</option>
+        <option value="&#x0010;">DLE</option>
+        <option value="&#x0011;">DC1</option>
+        <option value="&#x0012;">DC2</option>
+        <option value="&#x0013;">DC3</option>
+        <option value="&#x0014;">DC4</option>
+        <option value="&#x0015;">NAK</option>
+        <option value="&#x0016;">SYN</option>
+        <option value="&#x0017;">ETB</option>
+        <option value="&#x0018;">CAN</option>
+        <option value="&#x0019;">EM</option>
+        <option value="&#x001a;">SUB</option>
+        <option value="&#x001b;">ESC</option>
+        <option value="&#x001c;">FS</option>
+        <option value="&#x001d;">GS</option>
+        <option value="&#x001e;">RS</option>
+        <option value="&#x001f;">US</option>
+      </select>
+      <span style="cursor:pointer;">點擊複製</span>
+    </body>
+</html>
