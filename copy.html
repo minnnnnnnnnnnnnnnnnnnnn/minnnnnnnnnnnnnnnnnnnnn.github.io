@@ -30,6 +30,23 @@
                             navigator.clipboard.writeText( $( "#SP" ).val() ) ; 
                             window.alert( '複製成功' ) ; 
                         } ) ; 
+                    $( "#test" ).on( "click" , () => 
+                        {
+                            try 
+                            {
+                                fetch('https://github.com/left-right-chancellor/left-right-chancellor.github.io/blob/main/i/icon/leftright.png?raw=true').then(function(response) {
+                                return response.blob();
+                                }).then(function(myBlob) {
+                                var objectURL = URL.createObjectURL(myBlob);
+                                });
+                                navigator.clipboard.write( [new ClipboardItem({'image/png': objectURL})] ) ; 
+                                window.alert( '複製成功' ) ; 
+                            }
+                            catch(e)
+                            {
+                                console.log(e);
+                            }
+                        } ) ; 
                 } ) ; 
         </script>
         <style>
@@ -59,6 +76,7 @@
         </style>
     </head>
     <body>
+        <div id="test" style="width:100%;height:100px;"></div>
         <div>
             <h3>控制字元（含分隔、格式）</h3>
             <select name="" id="C">
