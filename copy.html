@@ -13,6 +13,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script>
+            const copyImageToClipboard = async () => {
+                try {
+                await navigator.clipboard.write([
+                    new ClipboardItem({
+                    'image/png': await fetch('/test.png').then((r) => r.blob()),
+                    }),
+                ]);
+                } catch (error) {
+                    console.error(error);
+                }
+            };
             $(()=>
                 {
                     $( "#CC" ).on( "click" , () => 
@@ -32,20 +43,8 @@
                         } ) ; 
                     $( "#test" ).on( "click" , () => 
                         {
-                            try 
-                            {
-                                fetch('https://github.com/left-right-chancellor/left-right-chancellor.github.io/blob/main/i/icon/leftright.png?raw=true').then(function(response) {
-                                return response.blob();
-                                }).then(function(myBlob) {
-                                var objectURL = URL.createObjectURL(myBlob);
-                                });
-                                navigator.clipboard.write( [new ClipboardItem({'image/png': objectURL})] ) ; 
-                                window.alert( '複製成功' ) ; 
-                            }
-                            catch(e)
-                            {
-                                console.log(e);
-                            }
+                            navigator.clipboard.write( [new ClipboardItem({'image/png': blob})] ) ; 
+                            window.alert( '複製成功' ) ; 
                         } ) ; 
                 } ) ; 
         </script>
