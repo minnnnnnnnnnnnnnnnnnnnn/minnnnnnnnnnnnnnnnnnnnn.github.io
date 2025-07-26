@@ -15,10 +15,10 @@
         <script>
             const copyImageToClipboard = async () => {
                 try {
-                await navigator.clipboard.write([
-                    new ClipboardItem({
-                    'image/png': await fetch('/test.png').then((r) => r.blob()),
-                    }),
+                    await navigator.clipboard.write([
+                        new ClipboardItem({
+                        'image/png': await fetch('/test.png').then((r) => r.blob()),
+                        }),
                 ]);
                 } catch (error) {
                     console.error(error);
@@ -41,11 +41,7 @@
                             navigator.clipboard.writeText( $( "#SP" ).val() ) ; 
                             window.alert( '複製成功' ) ; 
                         } ) ; 
-                    $( "#test" ).on( "click" , () => 
-                        {
-                            navigator.clipboard.write( [new ClipboardItem({'image/png': blob})] ) ; 
-                            window.alert( '複製成功' ) ; 
-                        } ) ; 
+                    $( "#test" ).on( "click" , copyImageToClipboard ) ; 
                 } ) ; 
         </script>
         <style>
