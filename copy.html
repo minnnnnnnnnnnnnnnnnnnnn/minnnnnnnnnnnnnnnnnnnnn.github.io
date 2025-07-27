@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             $(()=>
                 {
@@ -30,15 +31,12 @@
                             navigator.clipboard.writeText( $( "#SP" ).val() ) ; 
                             window.alert( '複製成功' ) ; 
                         } ) ; 
-                    $( "#test" ).on( "click" , () => 
+                    $( "#test" ).on( "click" , async () => 
                         {
                             try 
                             {
-                                fetch("test.png").then(response => response.blob()).then((blob) => 
-                                {
-                                    navigator.clipboard.write( [new ClipboardItem({'image/png': blob})] ) ; 
-                                    window.alert( '複製成功' ) ; 
-                                });
+                                await navigator.clipboard.write( [new ClipboardItem({'image/png': await fetch( "test.png" ).then( r => r.blob() ) } ) ] ) ; 
+                                await window.alert( "複製成功" ) ; 
                             }
                             catch( e ) 
                             {
