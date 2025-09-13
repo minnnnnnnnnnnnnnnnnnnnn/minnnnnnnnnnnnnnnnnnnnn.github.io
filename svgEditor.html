@@ -1,16 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8"/>
-<title>svg editor</title>
-</head>
-<body>
-<svg id="svg" viewBox="0 0 24 24">
-<path id="preview" d="M0 0"/>
-</svg>
-<input id="in" type=""/>
-<script>
-
-</script>
-</body>
+    <head>
+        <meta charset="utf-8"/>
+        <title>svg editor</title>
+        <style>
+            #svg 
+            {
+                display : block ; 
+                /* width : 50% ;  */
+                height : 50vh ; 
+            }
+            #in 
+            {
+                width : 100% ; 
+                height : 20vh ; 
+                display : block ; 
+                margin : 0 ; 
+                padding : 0 ; 
+                background-color : #222 ; 
+            }
+            #in , #in::placeholder 
+            {
+                color : #fff ; 
+            }
+        </style>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 24 24" fill="#f00" fill-rule="evenodd">
+            <path id="preview" d=""/>
+        </svg>
+        <input type="color" name="" id="color" value="#ff0000" />
+        <input type="text" id="vb" placeholder="viewBox" />
+        <select name="" id="fr">
+            <option value="" selected disabled>fill rule</option>
+            <option value="nonzero">non-zero</option>
+            <option value="evenodd">even-odd</option>
+        </select>
+        <textarea id="in" placeholder="path"></textarea>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            $(()=>
+            {
+                $( "#in" ).on( "input" , () => 
+                {
+                    $( "#preview" ).attr( "d" , $( "#in" ).val() ) ; 
+                } ) ; 
+                $( "#color" ).on( "input" , () => 
+                {
+                    $( "#svg" ).attr( "fill" , $( "#color" ).val() ) ; 
+                } ) ; 
+                $( "#fr" ).on( "input" , () => 
+                {
+                    $( "#svg" ).attr( "fill-rule" , $( "#fr" ).val() ) ; 
+                } ) ; 
+                $( "#vb" ).on( "input" , () => 
+                {
+                    $( "#svg" ).attr( "viewBox" , ($( "#vb" ).val() == null || $( "#vb" ).val() == "") ? "0 0 24 24" : $( "#vb" ).val() ) ; 
+                } ) ; 
+            } ) ; 
+        </script>
+    </body>
 </html>
