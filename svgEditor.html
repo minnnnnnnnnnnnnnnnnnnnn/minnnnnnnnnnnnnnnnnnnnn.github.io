@@ -37,7 +37,8 @@
             <option value="evenodd">even-odd</option>
         </select>
         <textarea id="in" placeholder="path"></textarea>
-        <button id="save">save</button>
+        <button id="create">create</button>
+        <a id="save" href="test.png" download>save</a>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script>
             $(()=>
@@ -59,7 +60,7 @@
                 {
                     $( "#svg" ).attr( "viewBox" , ($( "#vb" ).val() == null || $( "#vb" ).val() == "") ? "0 0 24 24" : $( "#vb" ).val() ) ; 
                 } ) ; 
-                $( "#save" ).on( "click" , () => 
+                $( "#create" ).on( "click" , () => 
                 {
                     let d = new Blob( ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + ( ( $( "#vb" ).val() == null || $( "#vb" ).val() == "" ) ? "0 0 24 24" : $( "#vb" ).val() ) + '" fill=" ' + $( "#color" ).val() + '" fill-rule="' + ( ( $( "#fr" ).val() == null || $( "#fr" ).val() == "" ) ? "evenodd" : $( "#fr" ).val() ) + '">\r\n<path d="' + $( "#in" ).val() + '"/>\r\n</svg>'] , { type : "image/svg+xml" } ) ; 
                     if( f !== null ) 
@@ -67,7 +68,8 @@
                         window.URL.revokeObjectURL( f ) ; 
                     }
                     f = window.URL.createObjectURL( d ) ; 
-                    window.location.href = f ; 
+                    // window.location.replace( f ) ; 
+                    $( "#save" ).attr( "href" , f ) ;  
                 } ) ; 
             } ) ; 
         </script>
