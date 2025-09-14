@@ -62,7 +62,7 @@
                 } ) ; 
                 $( "#create" ).on( "click" , () => 
                 {
-                    let d = new Blob( ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + ( ( $( "#vb" ).val() == null || $( "#vb" ).val() == "" ) ? "0 0 24 24" : $( "#vb" ).val() ) + '" fill=" ' + $( "#color" ).val() + '" fill-rule="' + ( ( $( "#fr" ).val() == null || $( "#fr" ).val() == "" ) ? "evenodd" : $( "#fr" ).val() ) + '">\r\n<path d="' + $( "#in" ).val() + '"/>\r\n</svg>'] , { type : "image/svg+xml" } ) ; 
+                    let d = new Blob( ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + ( ( $( "#vb" ).val() == null || $( "#vb" ).val() == "" ) ? "0 0 24 24" : $( "#vb" ).val() ) + '" fill=" ' + $( "#color" ).val() + '" fill-rule="' + ( ( $( "#fr" ).val() == null || $( "#fr" ).val() == "" ) ? "evenodd" : $( "#fr" ).val() ) + '">\r\n\t<path d="' + $( "#in" ).val() + '"/>\r\n</svg>'] , { type : "image/svg+xml" } ) ; 
                     if( f !== null ) 
                     {
                         window.URL.revokeObjectURL( f ) ; 
