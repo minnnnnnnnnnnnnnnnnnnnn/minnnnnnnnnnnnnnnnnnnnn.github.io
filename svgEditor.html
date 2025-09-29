@@ -27,7 +27,7 @@
     </head>
     <body>
         <svg xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 24 24" fill="#f00" fill-rule="evenodd">
-            <path id="preview" d=""/>
+            <path id="preview" d="M0 0h24v24"/>
         </svg>
         <input type="color" name="" id="color" value="#ff0000" />
         <input type="text" id="vb" placeholder="viewBox" />
@@ -36,7 +36,7 @@
             <option value="nonzero">non-zero</option>
             <option value="evenodd">even-odd</option>
         </select>
-        <textarea id="in" placeholder="path"></textarea>
+        <textarea id="in" placeholder="M0 0h24v24"></textarea>
         <button id="create">create</button>
         <a id="save" href="test.png" download>save</a>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -46,6 +46,7 @@
                 let f = null ; 
                 $( "#in" ).on( "input" , () => 
                 {
+                    $( "#in" ).attr( "placeholder" , "path" ) ; 
                     $( "#preview" ).attr( "d" , $( "#in" ).val() ) ; 
                 } ) ; 
                 $( "#color" ).on( "input" , () => 
