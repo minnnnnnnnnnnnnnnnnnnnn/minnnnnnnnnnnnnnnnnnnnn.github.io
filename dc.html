@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <pre>
+            import os
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.members = True
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.command()
+async def me(ctx):
+    await ctx.send(f'{ctx.author.mention}是男娘')
+
+@bot.command()
+async def sb(ctx,sb:discord.Member):
+    await ctx.reply(f'{sb.mention}是男娘')
+    
+@bot.command()
+async def welcome(ctx,sb:discord.Member):
+    await ctx.send(f'{sb.mention}歡迎進入左右丞')
+    
+@bot.command()
+async def userinfo(ctx, m: commands.MemberConverter):
+    roles = [role.name for role in m.roles[1:]]
+    await ctx.send( f'User name: {m.name}\nUser ID: {m.id}\nJoined at: {m.joined_at}\nRoles: {', '.join(roles)}' )
+
+
+@bot.event
+async def on_member_join(m):
+    await m.guild.text_channels[0].send(f'{m.mention}是男娘')
+    await m.add_roles(discord.utils.get(m.guild.roles,name='人'))
+
+@bot.event
+async def on_message(m):
+    await bot.process_commands(m)
+    if bot.user.mentioned_in(m) and not m.author.bot:
+        await m.channel.send(f'{m.author.mention}你才男娘')
+    if '左右丞' in m.content and not m.author.bot:
+        await m.reply(f'{discord.utils.get(m.guild.members,name='tablegame___').mention}是男娘')
+    # if '左右丞聯盟' in m.content and not m.author.bot:
+    #     await m.channel.send('歡迎進入左右丞')
+
+@bot.event
+async def on_message_edit(before,m):
+    await bot.process_commands(m)
+    if '左右丞' in m.content:
+        await m.reply(f'{before.content}\n{discord.utils.get(m.guild.members,name='tablegame___').mention}是男娘')
+
+bot.run('')
+        </pre>
+    </body>
+</html>
