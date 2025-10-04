@@ -5,9 +5,13 @@
     </head>
     <body>
         <pre>
-            import os
 import discord
 from discord.ext import commands
+
+WIDE_MAP = {i: i + 0xFEE0 for i in range(0x21, 0x7F)}
+WIDE_MAP[0x20] = 0x3000
+def widen(s):
+    return s.translate(WIDE_MAP)
 
 intents = discord.Intents.default()
 intents.members = True
@@ -31,6 +35,29 @@ async def welcome(ctx,sb:discord.Member):
 async def userinfo(ctx, m: commands.MemberConverter):
     roles = [role.name for role in m.roles[1:]]
     await ctx.send( f'User name: {m.name}\nUser ID: {m.id}\nJoined at: {m.joined_at}\nRoles: {', '.join(roles)}' )
+    
+@bot.command()
+async def quote(ctx, m):
+    u_and_d = '　'
+    for i in range(0,len(m) - 1):
+        u_and_d += '－'
+    await ctx.send(u_and_d)
+    await ctx.send(widen('<' + m + '>'))
+    await ctx.send(u_and_d)
+    await ctx.send('\t\t\\')
+    await ctx.send('\t\t \\')
+    await ctx.send('\t\t\t_~^~^~_')
+    await ctx.send('\t\t\) /  o o  \ (/')
+    await ctx.send("\t\t  '_   -   _'")
+    await ctx.send("\t\t  / '-----' \\")
+    '''
+        \
+         \
+            _~^~^~_
+        \) /  o o  \ (/
+          '_   -   _'
+          / '-----' \
+    '''
 
 
 @bot.event
