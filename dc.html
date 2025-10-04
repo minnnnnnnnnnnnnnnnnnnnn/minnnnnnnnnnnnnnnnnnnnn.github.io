@@ -42,7 +42,7 @@ async def ciallo(ctx):
     await ctx.reply('Ciallo～(∠・ω＜)⌒☆\n⢦⣿⣿⣿⣿⣱⣿⣿⣿⣿⠫⢴⢖⣴⣿⣿⠯⢏⡴⠁⣿⢃⡄⣿\n⡘⢮⣾⣿⣿⣇⣿⣿⣿⣝⠁⠁⠀⠀⠉⠩⡷⠫⡊⢰⣾⣣⣿⡇⣿\n⣴⣿⣿⣿⣿⢸⣿⡏⣿⠇⡰⠋⠡⠀⠀⠠⡀⠻⣕⢎⣵⣿⣿⢹⣿\n⣿⣿⣿⣿⢓⢸⣿⡇⣿⣀⠁⠀⠀⠀⠀⢀⣿⣈⣵⣿⣿⣿⡟⣾⣻\n⣿⣿⣿⣋⢘⠸⣟⢻⢻⣿⡼⣦⣀⣠⣾⣾⣿⣿⣿⣿⣿⡿⠽⢟⡁\n⣛⢟⣣⣧⣡⣏⣓⢿⣤⢻⣿⣿⣿⣥⣾⣿⣿⣿⣿⣿⠿⠐⠀⢉⡀\n⡵⢯⣶⡍⡃⠀⠰⡴⣇⣿⣿⣿⣿⡿⣫⣽⣯⡻⣿⣷⣤⡘⠻⢟⣼\n⣻⣿⣿⣷⡟⣶⡄⢀⠘⠌⠻⣿⣿⢱⣿⣿⣿⣿⢸⣿⣿⣿⣶⢠⡶\n⣿⣿⣿⣿⣽⣿⣿⣆⠁⠀⠠⡀⠙⠸⢿⠿⢟⣵⣿⣿⣿⣿⠿⣸⣿\n⢿⣯⣷⣿⣿⣿⣿⣿⣧⢦⣤⠱⡀⠀⠀⠀⠉⠉⠉⠉⢉⣰⢺⣿⠇\n☆⌒( >ω・∠)～ollɐıɔ ~')
     
 @bot.command()
-async def 子曰(ctx, m):
+async def 子曰(ctx, m = ' ' * 15 ):
     spaces = ''
     for c in m:
         if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
@@ -82,7 +82,7 @@ async def 子曰(ctx, m):
      /__________/===\\__/===\\---'```''')
     
 @bot.command()
-async def quote(ctx,m):
+async def quote(ctx,m = ' ' * 15 ):
     spaces = ''
     tabs = '\t\t'
     for c in m:
