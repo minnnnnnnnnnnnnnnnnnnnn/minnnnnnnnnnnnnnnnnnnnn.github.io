@@ -6,6 +6,7 @@
     <body>
         <pre>
 import discord
+import unicodedata
 from discord.ext import commands
 
 WIDE_MAP = {i: i + 0xFEE0 for i in range(0x21, 0x7F)}
@@ -37,27 +38,69 @@ async def userinfo(ctx, m: commands.MemberConverter):
     await ctx.send( f'User name: {m.name}\nUser ID: {m.id}\nJoined at: {m.joined_at}\nRoles: {', '.join(roles)}' )
     
 @bot.command()
-async def quote(ctx, m):
-    u_and_d = '　'
-    for i in range(0,len(m) - 1):
-        u_and_d += '－'
-    await ctx.send(u_and_d)
-    await ctx.send(widen('<' + m + '>'))
-    await ctx.send(u_and_d)
-    await ctx.send('\t\t\\')
-    await ctx.send('\t\t \\')
-    await ctx.send('\t\t\t_~^~^~_')
-    await ctx.send('\t\t\) /  o o  \ (/')
-    await ctx.send("\t\t  '_   -   _'")
-    await ctx.send("\t\t  / '-----' \\")
-    '''
-        \
-         \
-            _~^~^~_
-        \) /  o o  \ (/
-          '_   -   _'
-          / '-----' \
-    '''
+async def ciallo(ctx):
+    await ctx.reply('Ciallo～(∠・ω＜)⌒☆\n⢦⣿⣿⣿⣿⣱⣿⣿⣿⣿⠫⢴⢖⣴⣿⣿⠯⢏⡴⠁⣿⢃⡄⣿\n⡘⢮⣾⣿⣿⣇⣿⣿⣿⣝⠁⠁⠀⠀⠉⠩⡷⠫⡊⢰⣾⣣⣿⡇⣿\n⣴⣿⣿⣿⣿⢸⣿⡏⣿⠇⡰⠋⠡⠀⠀⠠⡀⠻⣕⢎⣵⣿⣿⢹⣿\n⣿⣿⣿⣿⢓⢸⣿⡇⣿⣀⠁⠀⠀⠀⠀⢀⣿⣈⣵⣿⣿⣿⡟⣾⣻\n⣿⣿⣿⣋⢘⠸⣟⢻⢻⣿⡼⣦⣀⣠⣾⣾⣿⣿⣿⣿⣿⡿⠽⢟⡁\n⣛⢟⣣⣧⣡⣏⣓⢿⣤⢻⣿⣿⣿⣥⣾⣿⣿⣿⣿⣿⠿⠐⠀⢉⡀\n⡵⢯⣶⡍⡃⠀⠰⡴⣇⣿⣿⣿⣿⡿⣫⣽⣯⡻⣿⣷⣤⡘⠻⢟⣼\n⣻⣿⣿⣷⡟⣶⡄⢀⠘⠌⠻⣿⣿⢱⣿⣿⣿⣿⢸⣿⣿⣿⣶⢠⡶\n⣿⣿⣿⣿⣽⣿⣿⣆⠁⠀⠠⡀⠙⠸⢿⠿⢟⣵⣿⣿⣿⣿⠿⣸⣿\n⢿⣯⣷⣿⣿⣿⣿⣿⣧⢦⣤⠱⡀⠀⠀⠀⠉⠉⠉⠉⢉⣰⢺⣿⠇\n☆⌒( >ω・∠)～ollɐıɔ ~')
+    
+@bot.command()
+async def 子曰(ctx, m):
+    spaces = ''
+    for c in m:
+        if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
+            spaces += '　'
+        else:
+            spaces += ' '
+    await ctx.send(f'''```                 __._
+                / ___)_
+               (_/Y ===\\          {spaces}__
+               |||.==. =).        {spaces}  |
+               |((| o |p|      |  {m}  |
+            _./| \\(  /=\\ )     |__
+          /  |@\\ ||||||||.
+         /    \\@\\ ||||||||\\
+        /   \\  \\@\\ ||||||//\\
+       (     Y  \\@\\|||| // _\\
+       |    -\\   \\@\\ \\\\//    \\
+       |     -\\__.-./ //\\.---.^__
+       | \\    /  |@|__/\\_|@|  |  |
+       \\__\\      |@||| |||@|     |
+       <@@@|     |@||| |||@|    /
+      / ---|     /@||| |||@|   /
+     |    /|    /@/ || |||@|  /|
+     |   //|   /@/  ||_|||@| / |
+     |  // \\ ||@|   /|=|||@| | |
+     \\ //   \\||@|  / |/|||@| \\ |
+     |//     ||@| /  ,/|||@|   |
+     //      ||@|/  /|/||/@/   |
+    //|   ,  ||//  /\\|/\\/@/  / /
+   //\\   /   \\|/  /H\\|/H\\/  /_/
+  // |\\_/     |__/|H\\|/H|\\_/
+ |/  |\\        /  |H===H| |
+     ||\\      /|  |H|||H| |
+     ||______/ |  |H|||H| |
+      \\_/ _/  _/  |L|||J| \\_
+      _/  ___/   ___\\__/___ '-._
+     /__________/===\\__/===\\---'```''')
+    
+@bot.command()
+async def quote(ctx,m):
+    spaces = ''
+    tabs = '\t\t'
+    for c in m:
+        if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
+            spaces += '--'
+        else:
+            spaces += '-'
+    if len(m) <= 10:
+        tabs = '\t'
+    await ctx.send(f'''``` {spaces}
+<{m}>
+ {spaces}
+{tabs}\\
+{tabs} \\
+{tabs}    _~^~^~_
+{tabs}\\) /  o o  \\ (/
+{tabs}  '_   -   _'
+{tabs}  / '-----' \\```''')
 
 
 @bot.event
