@@ -2,149 +2,16 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <script id="string" type="text/plain">
-import random
-import discord
-import unicodedata
-from discord.ext import commands
-
-WIDE_MAP = {i: i + 0xFEE0 for i in range(0x21, 0x7F)}
-WIDE_MAP[0x20] = 0x3000
-def widen(s):
-    return s.translate(WIDE_MAP)
-
-intents = discord.Intents.default()
-intents.members = True
-intents.message_content = True
-
-bot = commands.Bot(command_prefix='$', intents=intents)
-
-@bot.command()
-async def me(ctx):
-    await ctx.send(f'{ctx.author.mention}是男娘')
-
-@bot.command()
-async def sb(ctx,sb:discord.Member = None):
-    if sb is None:
-        sb = ctx.author
-    await ctx.reply(f'{sb.mention}是男娘')
-    
-@bot.command()
-async def welcome(ctx,sb:discord.Member = None):
-    if sb is None:
-        sb = ctx.author
-    await ctx.send(f'{sb.mention}歡迎進入左右丞')
-    
-@bot.command()
-async def userinfo(ctx, m: discord.Member = None):
-    if m is None:
-        m = ctx.author
-    roles = [role.name for role in m.roles[1:]]
-    await ctx.reply( f'User name: {m.name}\nUser ID: {m.id}\nJoined at: {m.joined_at}\nRoles: {', '.join(roles)}' )
-    
-@bot.command()
-async def ciallo(ctx):
-    await ctx.reply('Ciallo～(∠・ω＜)⌒☆\n⢦⣿⣿⣿⣿⣱⣿⣿⣿⣿⠫⢴⢖⣴⣿⣿⠯⢏⡴⠁⣿⢃⡄⣿\n⡘⢮⣾⣿⣿⣇⣿⣿⣿⣝⠁⠁⠀⠀⠉⠩⡷⠫⡊⢰⣾⣣⣿⡇⣿\n⣴⣿⣿⣿⣿⢸⣿⡏⣿⠇⡰⠋⠡⠀⠀⠠⡀⠻⣕⢎⣵⣿⣿⢹⣿\n⣿⣿⣿⣿⢓⢸⣿⡇⣿⣀⠁⠀⠀⠀⠀⢀⣿⣈⣵⣿⣿⣿⡟⣾⣻\n⣿⣿⣿⣋⢘⠸⣟⢻⢻⣿⡼⣦⣀⣠⣾⣾⣿⣿⣿⣿⣿⡿⠽⢟⡁\n⣛⢟⣣⣧⣡⣏⣓⢿⣤⢻⣿⣿⣿⣥⣾⣿⣿⣿⣿⣿⠿⠐⠀⢉⡀\n⡵⢯⣶⡍⡃⠀⠰⡴⣇⣿⣿⣿⣿⡿⣫⣽⣯⡻⣿⣷⣤⡘⠻⢟⣼\n⣻⣿⣿⣷⡟⣶⡄⢀⠘⠌⠻⣿⣿⢱⣿⣿⣿⣿⢸⣿⣿⣿⣶⢠⡶\n⣿⣿⣿⣿⣽⣿⣿⣆⠁⠀⠠⡀⠙⠸⢿⠿⢟⣵⣿⣿⣿⣿⠿⣸⣿\n⢿⣯⣷⣿⣿⣿⣿⣿⣧⢦⣤⠱⡀⠀⠀⠀⠉⠉⠉⠉⢉⣰⢺⣿⠇\n☆⌒( >ω・∠)～ollɐıɔ ~')
-    
-@bot.command()
-async def 子曰(ctx, m = ' ' * 15 ):
-    spaces = ''
-    for c in m:
-        if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
-            spaces += '　'
-        else:
-            spaces += ' '
-    await ctx.send(f'''```                 __._
-                / ___)_
-               (_/Y ===\\          {spaces}__
-               |||.==. =).        {spaces}  |
-               |((| o |p|      |  {m}  |
-            _./| \\(  /=\\ )     |__
-          /  |@\\ ||||||||.
-         /    \\@\\ ||||||||\\
-        /   \\  \\@\\ ||||||//\\
-       (     Y  \\@\\|||| // _\\
-       |    -\\   \\@\\ \\\\//    \\
-       |     -\\__.-./ //\\.---.^__
-       | \\    /  |@|__/\\_|@|  |  |
-       \\__\\      |@||| |||@|     |
-       <@@@|     |@||| |||@|    /
-      / ---|     /@||| |||@|   /
-     |    /|    /@/ || |||@|  /|
-     |   //|   /@/  ||_|||@| / |
-     |  // \\ ||@|   /|=|||@| | |
-     \\ //   \\||@|  / |/|||@| \\ |
-     |//     ||@| /  ,/|||@|   |
-     //      ||@|/  /|/||/@/   |
-    //|   ,  ||//  /\\|/\\/@/  / /
-   //\\   /   \\|/  /H\\|/H\\/  /_/
-  // |\\_/     |__/|H\\|/H|\\_/
- |/  |\\        /  |H===H| |
-     ||\\      /|  |H|||H| |
-     ||______/ |  |H|||H| |
-      \\_/ _/  _/  |L|||J| \\_
-      _/  ___/   ___\\__/___ '-._
-     /__________/===\\__/===\\---'```''')
-    
-@bot.command()
-async def quote(ctx,m = ' ' * 15 ):
-    spaces = ''
-    tabs = '\t\t'
-    for c in m:
-        if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
-            spaces += '--'
-        else:
-            spaces += '-'
-    if len(m) <= 10:
-        tabs = '\t'
-    await ctx.send(f'''``` {spaces}
-<{m}>
- {spaces}
-{tabs}\\
-{tabs} \\
-{tabs}    _~^~^~_
-{tabs}\\) /  o o  \\ (/
-{tabs}  '_   -   _'
-{tabs}  / '-----' \\```''')
-
-
-@bot.event
-async def on_member_join(m):
-    roles = [discord.utils.get(m.guild.roles,name='白族'),discord.utils.get(m.guild.roles,name='党項'),discord.utils.get(m.guild.roles,name='女直')]
-    await m.guild.text_channels[0].send(f'{m.mention}是男娘')
-    await m.add_roles(discord.utils.get(m.guild.roles,name='人'))
-    await m.add_roles(roles[random.randint(0,len(roles) - 1)])
-
-@bot.event
-async def on_message(m):
-    await bot.process_commands(m)
-    if bot.user.mentioned_in(m) and not m.author.bot:
-        await m.channel.send(f'{m.author.mention}你才男娘')
-    if '左右丞' in m.content and not m.author.bot:
-        await m.reply(f'{discord.utils.get(m.guild.members,name='tablegame___').mention}是男娘')
-    if '宋啦' in m.content and not m.author.bot:
-        await discord.utils.get(m.guild.channels,name='宋').send(f'宋啦')
-    if ('南一中' in m.content or '國立臺南第一高級中學' in m.content or '臺南第一高中' in m.content or '南部分校' in m.content or '國立臺南第一高級中等學校' in m.content or 'tnfsh' in m.content) and not m.author.bot:
-        await m.reply(f'南一中是我們神聖不可分割的一部分，我們堅持統一一中之大業。')
-
-@bot.event
-async def on_message_edit(before,m):
-    await bot.process_commands(m)
-    if '左右丞' in m.content:
-        await m.reply(f'{before.content}\n{discord.utils.get(m.guild.members,name='tablegame___').mention}是男娘')
-
-        </script>
         <script>
             function copy()
             {
-                navigator.clipboard.writeText( document.getElementById( "string" ).innerText ) ; 
+                navigator.clipboard.writeText( document.getElementById( "code" ).innerText ) ; 
             }
         </script>
     </head>
     <body>
         <button id="copy" onclick="copy()">複製</button>
-        <pre>
-import random
+        <pre id="code" style="font-family:monospace;">import random
 import discord
 import unicodedata
 from discord.ext import commands
@@ -154,42 +21,50 @@ WIDE_MAP[0x20] = 0x3000
 def widen(s):
     return s.translate(WIDE_MAP)
 
-intents = discord.Intents.default()
-intents.members = True
-intents.message_content = True
+
+intents = discord.Intents.all()
 
 bot = commands.Bot(command_prefix='$', intents=intents)
+
 
 @bot.command()
 async def me(ctx):
     await ctx.send(f'{ctx.author.mention}是男娘')
 
+
 @bot.command()
-async def sb(ctx,sb:discord.Member = None):
-    if sb is None:
-        sb = ctx.author
-    await ctx.reply(f'{sb.mention}是男娘')
-    
+async def sb(ctx, m: discord.Member = None):
+    if m is None:
+        m = ctx.author
+    await ctx.reply(f'{m.mention}是男娘')
+
+
 @bot.command()
-async def welcome(ctx,sb:discord.Member = None):
-    if sb is None:
-        sb = ctx.author
-    await ctx.send(f'{sb.mention}歡迎進入左右丞')
-    
+async def welcome(ctx, m: discord.Member = None):
+    if m is None:
+        m = ctx.author
+    await ctx.send(f'{m.mention}歡迎進入左右丞')
+
+
 @bot.command()
 async def userinfo(ctx, m: discord.Member = None):
     if m is None:
         m = ctx.author
     roles = [role.name for role in m.roles[1:]]
-    await ctx.reply( f'User name: {m.name}\nUser ID: {m.id}\nJoined at: {m.joined_at}\nRoles: {', '.join(roles)}' )
-    
+    await ctx.reply(f'User name: {m.name}\nUser ID: {m.id}\nJoined at: {m.joined_at}\nRoles: {', '.join(roles)}')
+
+
 @bot.command()
 async def ciallo(ctx):
-    await ctx.reply('Ciallo～(∠・ω＜)⌒☆\n⢦⣿⣿⣿⣿⣱⣿⣿⣿⣿⠫⢴⢖⣴⣿⣿⠯⢏⡴⠁⣿⢃⡄⣿\n⡘⢮⣾⣿⣿⣇⣿⣿⣿⣝⠁⠁⠀⠀⠉⠩⡷⠫⡊⢰⣾⣣⣿⡇⣿\n⣴⣿⣿⣿⣿⢸⣿⡏⣿⠇⡰⠋⠡⠀⠀⠠⡀⠻⣕⢎⣵⣿⣿⢹⣿\n⣿⣿⣿⣿⢓⢸⣿⡇⣿⣀⠁⠀⠀⠀⠀⢀⣿⣈⣵⣿⣿⣿⡟⣾⣻\n⣿⣿⣿⣋⢘⠸⣟⢻⢻⣿⡼⣦⣀⣠⣾⣾⣿⣿⣿⣿⣿⡿⠽⢟⡁\n⣛⢟⣣⣧⣡⣏⣓⢿⣤⢻⣿⣿⣿⣥⣾⣿⣿⣿⣿⣿⠿⠐⠀⢉⡀\n⡵⢯⣶⡍⡃⠀⠰⡴⣇⣿⣿⣿⣿⡿⣫⣽⣯⡻⣿⣷⣤⡘⠻⢟⣼\n⣻⣿⣿⣷⡟⣶⡄⢀⠘⠌⠻⣿⣿⢱⣿⣿⣿⣿⢸⣿⣿⣿⣶⢠⡶\n⣿⣿⣿⣿⣽⣿⣿⣆⠁⠀⠠⡀⠙⠸⢿⠿⢟⣵⣿⣿⣿⣿⠿⣸⣿\n⢿⣯⣷⣿⣿⣿⣿⣿⣧⢦⣤⠱⡀⠀⠀⠀⠉⠉⠉⠉⢉⣰⢺⣿⠇\n☆⌒( >ω・∠)～ollɐıɔ ~')
-    
+    await ctx.reply(
+        'Ciallo～(∠・ω＜)⌒☆\n⢦⣿⣿⣿⣿⣱⣿⣿⣿⣿⠫⢴⢖⣴⣿⣿⠯⢏⡴⠁⣿⢃⡄⣿\n⡘⢮⣾⣿⣿⣇⣿⣿⣿⣝⠁⠁⠀⠀⠉⠩⡷⠫⡊⢰⣾⣣⣿⡇⣿\n⣴⣿⣿⣿⣿⢸⣿⡏⣿⠇⡰⠋⠡⠀⠀⠠⡀⠻⣕⢎⣵⣿⣿⢹⣿\n⣿⣿⣿⣿⢓⢸⣿⡇⣿⣀⠁⠀⠀⠀⠀⢀⣿⣈⣵⣿⣿⣿⡟⣾⣻\n⣿⣿⣿⣋⢘⠸⣟⢻⢻⣿⡼⣦⣀⣠⣾⣾⣿⣿⣿⣿⣿⡿⠽⢟⡁\n⣛⢟⣣⣧⣡⣏⣓⢿⣤⢻⣿⣿⣿⣥⣾⣿⣿⣿⣿⣿⠿⠐⠀⢉⡀\n⡵⢯⣶⡍⡃⠀⠰⡴⣇⣿⣿⣿⣿⡿⣫⣽⣯⡻⣿⣷⣤⡘⠻⢟⣼\n⣻⣿⣿⣷⡟⣶⡄⢀⠘⠌⠻⣿⣿⢱⣿⣿⣿⣿⢸⣿⣿⣿⣶⢠⡶\n⣿⣿⣿⣿⣽⣿⣿⣆⠁⠀⠠⡀⠙⠸⢿⠿⢟⣵⣿⣿⣿⣿⠿⣸⣿\n⢿⣯⣷⣿⣿⣿⣿⣿⣧⢦⣤⠱⡀⠀⠀⠀⠉⠉⠉⠉⢉⣰⢺⣿⠇\n☆⌒( >ω・∠)～ollɐıɔ ~')
+
+
 @bot.command()
-async def 子曰(ctx, m = ' ' * 15 ):
+async def 子曰(ctx, m=' ' * 15, *mm):
     spaces = ''
+    for c in mm:
+        m += ' ' + c
     for c in m:
         if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
             spaces += '　'
@@ -226,14 +101,17 @@ async def 子曰(ctx, m = ' ' * 15 ):
       \\_/ _/  _/  |L|||J| \\_
       _/  ___/   ___\\__/___ '-._
      /__________/===\\__/===\\---'```''')
-    
+
+
 @bot.command()
-async def quote(ctx,m = ' ' * 15 ):
+async def quote(ctx, m=' ' * 15, *mm):
     spaces = ''
     tabs = '\t\t'
+    for c in mm:
+        m += ' ' + c
     for c in m:
         if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
-            spaces += '--'
+            spaces += '－'
         else:
             spaces += '-'
     if len(m) <= 10:
@@ -251,10 +129,11 @@ async def quote(ctx,m = ' ' * 15 ):
 
 @bot.event
 async def on_member_join(m):
-    roles = [discord.utils.get(m.guild.roles,name='白族'),discord.utils.get(m.guild.roles,name='党項'),discord.utils.get(m.guild.roles,name='女直')]
+    roles = [discord.utils.get(m.guild.roles, name='白族'), discord.utils.get(m.guild.roles, name='党項'), discord.utils.get(m.guild.roles, name='女直')]
     await m.guild.text_channels[0].send(f'{m.mention}是男娘')
-    await m.add_roles(discord.utils.get(m.guild.roles,name='人'))
-    await m.add_roles(roles[random.randint(0,len(roles) - 1)])
+    await m.add_roles(discord.utils.get(m.guild.roles, name='人'))
+    await m.add_roles(roles[random.randint(0, len(roles) - 1)])
+
 
 @bot.event
 async def on_message(m):
@@ -262,17 +141,20 @@ async def on_message(m):
     if bot.user.mentioned_in(m) and not m.author.bot:
         await m.channel.send(f'{m.author.mention}你才男娘')
     if '左右丞' in m.content and not m.author.bot:
-        await m.reply(f'{discord.utils.get(m.guild.members,name='tablegame___').mention}是男娘')
+        await m.reply(f'{discord.utils.get(m.guild.members, name='tablegame___').mention}是男娘')
     if '宋啦' in m.content and not m.author.bot:
-        await discord.utils.get(m.guild.channels,name='宋').send(f'宋啦')
+        await discord.utils.get(m.guild.channels, name='宋').send(f'宋啦')
     if ('南一中' in m.content or '國立臺南第一高級中學' in m.content or '臺南第一高中' in m.content or '南部分校' in m.content or '國立臺南第一高級中等學校' in m.content or 'tnfsh' in m.content) and not m.author.bot:
         await m.reply(f'南一中是我們神聖不可分割的一部分，我們堅持統一一中之大業。')
+    if 'CIALLO' in m.content.upper() and not m.author.bot:
+        await m.reply(f'{m.author.mention}柚子廚蒸鵞心')
+
 
 @bot.event
-async def on_message_edit(before,m):
+async def on_message_edit(before, m):
     await bot.process_commands(m)
     if '左右丞' in m.content:
-        await m.reply(f'{before.content}\n{discord.utils.get(m.guild.members,name='tablegame___').mention}是男娘')
+        await m.reply(f'{before.content}\n{discord.utils.get(m.guild.members, name='tablegame___').mention}是男娘')
 
 bot.run('')
         </pre>
