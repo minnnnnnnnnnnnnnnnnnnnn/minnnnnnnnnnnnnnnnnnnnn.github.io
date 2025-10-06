@@ -15,11 +15,10 @@
 import discord
 import unicodedata
 from discord.ext import commands
+from typing import Optional
 
 WIDE_MAP = {i: i + 0xFEE0 for i in range(0x21, 0x7F)}
 WIDE_MAP[0x20] = 0x3000
-def widen(s):
-    return s.translate(WIDE_MAP)
 
 def is_made_up_of(m, s):
     i = 0
@@ -44,54 +43,56 @@ intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='$', intents=intents)
 
 
-@bot.command()
-async def me(ctx):
-    await ctx.send(f'{ctx.author.mention}是男娘')
+@bot.tree.command(name='me',description='Indicates what u r.')
+async def me(interaction):
+    await interaction.response.send_message(f'{interaction.user.mention}是男娘')
 
 
-@bot.command()
-async def sb(ctx, m: discord.Member = None):
-    if m is None:
-        m = ctx.author
-    await ctx.reply(f'{m.mention}是男娘')
+@bot.tree.command(name='sb',description='提及某人。未指定則提及訊息發送者。')
+async def sb(interaction, member: Optional[discord.Member] = None):
+    if member is None:
+        member = interaction.author
+    await interaction.response.send_message(f'{member.mention}是男娘')
 
 
-@bot.command()
-async def welcome(ctx, m: discord.Member = None):
-    if m is None:
-        m = ctx.author
-    await ctx.send(f'{m.mention}歡迎進入左右丞')
+@bot.tree.command(name='welcome',description='歡迎某人，未指定則為指令發出者')
+async def welcome(interaction, member: Optional[discord.Member] = None):
+    if member is None:
+        member = interaction.user
+    await interaction.response.send_message(f'{member.mention}歡迎進入左右丞')
 
 
-@bot.command()
-async def userinfo(ctx, m: discord.Member = None):
-    if m is None:
-        m = ctx.author
-    roles = [role.name for role in m.roles[1:]]
-    await ctx.reply(f'User name: {m.name}\nUser ID: {m.id}\nJoined at: {m.joined_at}\nRoles: {', '.join(roles)}')
+@bot.tree.command(name='userinfo',description="Responses someone's userinfo. If parameter is not given, it will return info about the current user." )
+async def userinfo(interaction, member: Optional[discord.Member] = None):
+    if member is None:
+        member = interaction.user
+    roles = [role.name for role in member.roles[1:]]
+    await interaction.response.send_message(f'User name: {member.name}\nUser ID: {member.id}\nJoined at: {member.joined_at}\nRoles: {', '.join(roles)}')
 
 
-@bot.command()
-async def ciallo(ctx):
-    await ctx.reply(
-        'Ciallo～(∠・ω＜)⌒☆\n⢦⣿⣿⣿⣿⣱⣿⣿⣿⣿⠫⢴⢖⣴⣿⣿⠯⢏⡴⠁⣿⢃⡄⣿\n⡘⢮⣾⣿⣿⣇⣿⣿⣿⣝⠁⠁⠀⠀⠉⠩⡷⠫⡊⢰⣾⣣⣿⡇⣿\n⣴⣿⣿⣿⣿⢸⣿⡏⣿⠇⡰⠋⠡⠀⠀⠠⡀⠻⣕⢎⣵⣿⣿⢹⣿\n⣿⣿⣿⣿⢓⢸⣿⡇⣿⣀⠁⠀⠀⠀⠀⢀⣿⣈⣵⣿⣿⣿⡟⣾⣻\n⣿⣿⣿⣋⢘⠸⣟⢻⢻⣿⡼⣦⣀⣠⣾⣾⣿⣿⣿⣿⣿⡿⠽⢟⡁\n⣛⢟⣣⣧⣡⣏⣓⢿⣤⢻⣿⣿⣿⣥⣾⣿⣿⣿⣿⣿⠿⠐⠀⢉⡀\n⡵⢯⣶⡍⡃⠀⠰⡴⣇⣿⣿⣿⣿⡿⣫⣽⣯⡻⣿⣷⣤⡘⠻⢟⣼\n⣻⣿⣿⣷⡟⣶⡄⢀⠘⠌⠻⣿⣿⢱⣿⣿⣿⣿⢸⣿⣿⣿⣶⢠⡶\n⣿⣿⣿⣿⣽⣿⣿⣆⠁⠀⠠⡀⠙⠸⢿⠿⢟⣵⣿⣿⣿⣿⠿⣸⣿\n⢿⣯⣷⣿⣿⣿⣿⣿⣧⢦⣤⠱⡀⠀⠀⠀⠉⠉⠉⠉⢉⣰⢺⣿⠇\n☆⌒( >ω・∠)～ollɐıɔ ~')
+@bot.tree.command(name='ciallo',description='柚子廚蒸鵞心')
+async def ciallo(interaction):
+    await interaction.response.send_message('Ciallo～(∠・ω＜)⌒☆\n⢦⣿⣿⣿⣿⣱⣿⣿⣿⣿⠫⢴⢖⣴⣿⣿⠯⢏⡴⠁⣿⢃⡄⣿\n⡘⢮⣾⣿⣿⣇⣿⣿⣿⣝⠁⠁⠀⠀⠉⠩⡷⠫⡊⢰⣾⣣⣿⡇⣿\n⣴⣿⣿⣿⣿⢸⣿⡏⣿⠇⡰⠋⠡⠀⠀⠠⡀⠻⣕⢎⣵⣿⣿⢹⣿\n⣿⣿⣿⣿⢓⢸⣿⡇⣿⣀⠁⠀⠀⠀⠀⢀⣿⣈⣵⣿⣿⣿⡟⣾⣻\n⣿⣿⣿⣋⢘⠸⣟⢻⢻⣿⡼⣦⣀⣠⣾⣾⣿⣿⣿⣿⣿⡿⠽⢟⡁\n⣛⢟⣣⣧⣡⣏⣓⢿⣤⢻⣿⣿⣿⣥⣾⣿⣿⣿⣿⣿⠿⠐⠀⢉⡀\n⡵⢯⣶⡍⡃⠀⠰⡴⣇⣿⣿⣿⣿⡿⣫⣽⣯⡻⣿⣷⣤⡘⠻⢟⣼\n⣻⣿⣿⣷⡟⣶⡄⢀⠘⠌⠻⣿⣿⢱⣿⣿⣿⣿⢸⣿⣿⣿⣶⢠⡶\n⣿⣿⣿⣿⣽⣿⣿⣆⠁⠀⠠⡀⠙⠸⢿⠿⢟⣵⣿⣿⣿⣿⠿⣸⣿\n⢿⣯⣷⣿⣿⣿⣿⣿⣧⢦⣤⠱⡀⠀⠀⠀⠉⠉⠉⠉⢉⣰⢺⣿⠇\n☆⌒( >ω・∠)～ollɐıɔ ~')
 
 
-@bot.command()
-async def 子曰(ctx, m=' ' * 15, *mm):
+@bot.tree.command(name='子曰',description='子不語怪力亂神')
+async def 子曰(interaction, message_to_quote:Optional[str]= ' ' * 15):
     spaces = ''
-    for c in mm:
-        m += ' ' + c
-    for c in m:
-        if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
-            spaces += '　'
-        else:
-            spaces += ' '
-    await ctx.send(f'''```                 __._
+    # for c in mm:
+    #     m += ' ' + c
+    if '怪力亂神' in message_to_quote:
+        await interaction.response.send_message('子不語，以怪力將你打至重傷，精神錯亂')
+    else:
+        for c in message_to_quote:
+            if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
+                spaces += '　'
+            else:
+                spaces += ' '
+        await interaction.response.send_message(f'''```                 __._
                 / ___)_
                (_/Y ===\\          {spaces}__
                |||.==. =).        {spaces}  |
-               |((| o |p|      |  {m}  |
+               |((| o |p|      |  {message_to_quote}  |
             _./| \\(  /=\\ )     |__
           /  |@\\ ||||||||.
          /    \\@\\ ||||||||\\
@@ -120,21 +121,21 @@ async def 子曰(ctx, m=' ' * 15, *mm):
      /__________/===\\__/===\\---'```''')
 
 
-@bot.command()
-async def quote(ctx, m=' ' * 15, *mm):
+@bot.tree.command(name='quote',description='讓螃蟹說')
+async def quote(interaction, message_to_quote:Optional[str]= ' ' * 15):
     spaces = ''
     tabs = '\t\t'
-    for c in mm:
-        m += ' ' + c
-    for c in m:
+    # for c in mm:
+    #     m += ' ' + c
+    for c in message_to_quote:
         if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
             spaces += '－'
         else:
             spaces += '-'
-    if len(m) <= 10:
+    if len(message_to_quote) <= 10:
         tabs = '\t'
-    await ctx.send(f'''``` {spaces}
-<{m}>
+    await interaction.channel.send(f'''``` {spaces}
+<{message_to_quote}>
  {spaces}
 {tabs}\\
 {tabs} \\
@@ -143,6 +144,10 @@ async def quote(ctx, m=' ' * 15, *mm):
 {tabs}  '_   -   _'
 {tabs}  / '-----' \\```''')
 
+
+@bot.event
+async def on_ready():
+    await bot.tree.sync()
 
 @bot.event
 async def on_member_join(m):
@@ -155,6 +160,8 @@ async def on_member_join(m):
 @bot.event
 async def on_message(m):
     await bot.process_commands(m)
+    if '男娘' in m.content and not m.author.bot:
+        await m.reply('我才不是男娘')
     if bot.user.mentioned_in(m) and not m.author.bot:
         await m.channel.send(f'{m.author.mention}你才男娘')
     if '左右丞' in m.content and not m.author.bot:
@@ -181,7 +188,7 @@ async def on_message(m):
 async def on_message_edit(before, m):
     await bot.process_commands(m)
     if '左右丞' in m.content:
-        await m.reply(f'{before.content}\n{discord.utils.get(m.guild.members, name='tablegame___').mention}是男娘')
+        await m.reply(f'原始訊息：\n{before.content}\n\n{discord.utils.get(m.guild.members, name='tablegame___').mention}是男娘')
 
 bot.run('')
         </pre>
