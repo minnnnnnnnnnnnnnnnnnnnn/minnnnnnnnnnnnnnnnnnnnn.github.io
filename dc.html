@@ -21,6 +21,23 @@ WIDE_MAP[0x20] = 0x3000
 def widen(s):
     return s.translate(WIDE_MAP)
 
+def is_made_up_of(m, s):
+    i = 0
+    m = m.upper()
+    remove_s = str.maketrans('', '', s)
+    for c in s:
+        if i == 2:
+            return False
+        i = 0
+        for cc in m:
+            if cc == c:
+                if i > 0:
+                    i = 2
+                    break
+                i = 1
+    if not ( i == 2 or m.translate(remove_s) ):
+        return True
+    return False
 
 intents = discord.Intents.all()
 
@@ -148,6 +165,16 @@ async def on_message(m):
         await m.reply(f'南一中是我們神聖不可分割的一部分，我們堅持統一一中之大業。')
     if 'CIALLO' in m.content.upper() and not m.author.bot:
         await m.reply(f'{m.author.mention}柚子廚蒸鵞心')
+    if m.content.upper() == 'SYBAU' and not m.author.bot:
+        await m.channel.send('https://minnnnnnnnnnnnnnnnnnnnn.github.io/i/sybau.jpeg')
+    elif is_made_up_of(m.content, 'SYBAU') and not m.author.bot:
+        print('sybau')
+        await m.channel.send('https://minnnnnnnnnnnnnnnnnnnnn.github.io/i/subway.jpeg')
+    elif m.content.upper() == 'SUBWAY' and not m.author.bot:
+        await m.channel.send('https://minnnnnnnnnnnnnnnnnnnnn.github.io/i/subway_mark.png')
+    elif is_made_up_of(m.content, 'SUBWAY') and not m.author.bot:
+        print('subway')
+        await m.channel.send('https://minnnnnnnnnnnnnnnnnnnnn.github.io/i/subway.jpeg')
 
 
 @bot.event
