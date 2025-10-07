@@ -11,11 +11,12 @@
     </head>
     <body>
         <button id="copy" onclick="copy()">複製</button>
-        <pre id="code" style="font-family:monospace;">import random
+        <pre id="code" style="font-family:monospace;">import math
+import random
 import discord
 import unicodedata
-from discord.ext import commands
 from typing import Optional
+from discord.ext import commands
 
 WIDE_MAP = {i: i + 0xFEE0 for i in range(0x21, 0x7F)}
 WIDE_MAP[0x20] = 0x3000
@@ -47,20 +48,17 @@ bot = commands.Bot(command_prefix='$', intents=intents)
 async def me(interaction):
     await interaction.response.send_message(f'{interaction.user.mention}是男娘')
 
-
 @bot.tree.command(name='sb',description='提及某人。未指定則提及訊息發送者。')
 async def sb(interaction, member: Optional[discord.Member] = None):
     if member is None:
         member = interaction.author
     await interaction.response.send_message(f'{member.mention}是男娘')
 
-
 @bot.tree.command(name='welcome',description='歡迎某人，未指定則為指令發出者')
 async def welcome(interaction, member: Optional[discord.Member] = None):
     if member is None:
         member = interaction.user
     await interaction.response.send_message(f'{member.mention}歡迎進入左右丞')
-
 
 @bot.tree.command(name='userinfo',description="Responses someone's userinfo. If parameter is not given, it will return info about the current user." )
 async def userinfo(interaction, member: Optional[discord.Member] = None):
@@ -69,11 +67,9 @@ async def userinfo(interaction, member: Optional[discord.Member] = None):
     roles = [role.name for role in member.roles[1:]]
     await interaction.response.send_message(f'User name: {member.name}\nUser ID: {member.id}\nJoined at: {member.joined_at}\nRoles: {', '.join(roles)}')
 
-
 @bot.tree.command(name='ciallo',description='柚子廚蒸鵞心')
 async def ciallo(interaction):
     await interaction.response.send_message('Ciallo～(∠・ω＜)⌒☆\n⢦⣿⣿⣿⣿⣱⣿⣿⣿⣿⠫⢴⢖⣴⣿⣿⠯⢏⡴⠁⣿⢃⡄⣿\n⡘⢮⣾⣿⣿⣇⣿⣿⣿⣝⠁⠁⠀⠀⠉⠩⡷⠫⡊⢰⣾⣣⣿⡇⣿\n⣴⣿⣿⣿⣿⢸⣿⡏⣿⠇⡰⠋⠡⠀⠀⠠⡀⠻⣕⢎⣵⣿⣿⢹⣿\n⣿⣿⣿⣿⢓⢸⣿⡇⣿⣀⠁⠀⠀⠀⠀⢀⣿⣈⣵⣿⣿⣿⡟⣾⣻\n⣿⣿⣿⣋⢘⠸⣟⢻⢻⣿⡼⣦⣀⣠⣾⣾⣿⣿⣿⣿⣿⡿⠽⢟⡁\n⣛⢟⣣⣧⣡⣏⣓⢿⣤⢻⣿⣿⣿⣥⣾⣿⣿⣿⣿⣿⠿⠐⠀⢉⡀\n⡵⢯⣶⡍⡃⠀⠰⡴⣇⣿⣿⣿⣿⡿⣫⣽⣯⡻⣿⣷⣤⡘⠻⢟⣼\n⣻⣿⣿⣷⡟⣶⡄⢀⠘⠌⠻⣿⣿⢱⣿⣿⣿⣿⢸⣿⣿⣿⣶⢠⡶\n⣿⣿⣿⣿⣽⣿⣿⣆⠁⠀⠠⡀⠙⠸⢿⠿⢟⣵⣿⣿⣿⣿⠿⣸⣿\n⢿⣯⣷⣿⣿⣿⣿⣿⣧⢦⣤⠱⡀⠀⠀⠀⠉⠉⠉⠉⢉⣰⢺⣿⠇\n☆⌒( >ω・∠)～ollɐıɔ ~')
-
 
 @bot.tree.command(name='子曰',description='子不語怪力亂神')
 async def 子曰(interaction, message_to_quote:Optional[str]= ' ' * 15):
@@ -120,21 +116,21 @@ async def 子曰(interaction, message_to_quote:Optional[str]= ' ' * 15):
       _/  ___/   ___\\__/___ '-._
      /__________/===\\__/===\\---'```''')
 
-
 @bot.tree.command(name='quote',description='讓螃蟹說')
-async def quote(interaction, message_to_quote:Optional[str]= ' ' * 15):
+async def quote(interaction, message_to_quote:Optional[str]= ' ' * 15, max_width:Optional[int]= 0):
     spaces = ''
     tabs = '\t\t'
     # for c in mm:
     #     m += ' ' + c
-    for c in message_to_quote:
-        if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
-            spaces += '－'
-        else:
-            spaces += '-'
-    if len(message_to_quote) <= 10:
-        tabs = '\t'
-    await interaction.channel.send(f'''``` {spaces}
+    if (max_width == 0) or (len(message_to_quote) <= max_width):
+        for c in message_to_quote:
+            if unicodedata.east_asian_width(c) == 'F' or unicodedata.east_asian_width(c) == 'W':
+                spaces += '－'
+            else:
+                spaces += '-'
+        if len(message_to_quote) <= 10:
+            tabs = '\t'
+        await interaction.channel.send(f'''``` {spaces}
 <{message_to_quote}>
  {spaces}
 {tabs}\\
@@ -143,6 +139,44 @@ async def quote(interaction, message_to_quote:Optional[str]= ' ' * 15):
 {tabs}\\) /  o o  \\ (/
 {tabs}  '_   -   _'
 {tabs}  / '-----' \\```''')
+    else:
+        i = 0
+        m = '``` ' + '－' * max_width + '\n/'
+        column = len(message_to_quote) // max_width
+        if (len(message_to_quote) % max_width) != 0:
+            column += 1
+        if max_width <= 10:
+            tabs = '\t'
+        for c in message_to_quote.translate(WIDE_MAP):
+            if i % max_width == 0 and i != 0:
+                if column - 1 == (i / max_width):
+                    m += '\\'
+                else:
+                    m += '|'
+            m += c
+            i += 1
+            if i % max_width == 0:
+                if i / max_width == 1:
+                    m += '\\\n'
+                elif (len(message_to_quote) % max_width != 0) or (len(message_to_quote) % max_width == 0 and i != len(message_to_quote)):
+                    m += '|\n'
+        m += ('　' * (len(message_to_quote) % max_width)) + '/\n ' + ('－' * max_width) + f'''
+{tabs}\\
+{tabs} \\
+{tabs}    _~^~^~_
+{tabs}\\) /  o o  \\ (/
+{tabs}  '_   -   _'
+{tabs}  / '-----' \\```'''
+        await interaction.channel.send(m)
+    if max_width == 0:
+        max_width = math.inf
+    await interaction.response.send_message(f'received with {message_to_quote} and a parameter of max width {max_width}.')
+
+
+@bot.tree.command(name='to_full',description='將訊息中的半形符號變為全形送出。')
+async def to_full(interaction, message:str):
+    await interaction.response.send_message(message.translate(WIDE_MAP))
+
 
 
 @bot.event
@@ -155,7 +189,6 @@ async def on_member_join(m):
     await m.guild.text_channels[0].send(f'{m.mention}是男娘')
     await m.add_roles(discord.utils.get(m.guild.roles, name='人'))
     await m.add_roles(roles[random.randint(0, len(roles) - 1)])
-
 
 @bot.event
 async def on_message(m):
@@ -182,7 +215,6 @@ async def on_message(m):
     elif is_made_up_of(m.content, 'SUBWAY') and not m.author.bot:
         print('subway')
         await m.channel.send('https://minnnnnnnnnnnnnnnnnnnnn.github.io/i/subway.jpeg')
-
 
 @bot.event
 async def on_message_edit(before, m):
