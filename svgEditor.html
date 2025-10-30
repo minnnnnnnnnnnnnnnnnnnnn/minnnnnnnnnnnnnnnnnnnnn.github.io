@@ -90,15 +90,17 @@
                 } ) ; 
                 $( "#create" ).on( "click" , () => 
                 {
+                    let str;
                     if( b )
                     {
                         let def = $( "#in" ).val() + "\r\n\r\nM0 0h56v82h-56v-82l1 1h54v80h-54z" ; 
-                        let d = new Blob( ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 82" fill="#f00" fill-rule="evenodd">\r\n\t<path d="' + def + '"/>\r\n</svg>'] , { type : "image/svg+xml" } ) ; 
+                        str = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 82" fill="#f00" fill-rule="evenodd">\r\n\t<path d="' + def + '"/>\r\n</svg>' ; 
                     }
                     else 
                     {
-                        let d = new Blob( ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + ( ( $( "#vb" ).val() == null || $( "#vb" ).val() == "" ) ? "0 0 24 24" : $( "#vb" ).val() ) + '" fill=" ' + $( "#color" ).val() + '" fill-rule="' + ( ( $( "#fr" ).val() == null || $( "#fr" ).val() == "" ) ? "evenodd" : $( "#fr" ).val() ) + '">\r\n\t<path d="' + $( "#in" ).val() + '"/>\r\n</svg>'] , { type : "image/svg+xml" } ) ; 
+                        str = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + ( ( $( "#vb" ).val() == null || $( "#vb" ).val() == "" ) ? "0 0 24 24" : $( "#vb" ).val() ) + '" fill=" ' + $( "#color" ).val() + '" fill-rule="' + ( ( $( "#fr" ).val() == null || $( "#fr" ).val() == "" ) ? "evenodd" : $( "#fr" ).val() ) + '">\r\n\t<path d="' + $( "#in" ).val() + '"/>\r\n</svg>' ; 
                     }
+                    let d = new Blob( [ str ] , { type : "image/svg+xml" } ) ; 
                     if( f !== null ) 
                     {
                         window.URL.revokeObjectURL( f ) ; 
