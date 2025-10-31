@@ -93,10 +93,10 @@
                     let str;
                     if( b )
                     {
-                        let def ; 
+                        // AQCST 未完
                         let re = /([ML]) *([0-9]+|[0-9]*\.[0-9]+) +([0-9]+|[0-9]*\.[0-9]+)/g ; 
                         let reg = /([HV]) *([0-9]*\.[0-9]+|[0-9]+)/g ; 
-                        def = $( "#in" ).val().replace( re , ( m , mm1 , mm2 , mm3 ) => 
+                        let def = $( "#in" ).val().replace( re , ( m , mm1 , mm2 , mm3 ) => 
                         {
                             return mm1 + ( Number( mm2 ) + 10 ).toString() + " " + ( Number( mm3 ) + 10 ).toString() ; 
                         }) ; 
@@ -105,7 +105,6 @@
                             return mm1 + ( Number( mm2 ) + 10 ).toString() ; 
                         }) ; 
                         def += "\r\n\r\nM0 0h56v82h-56v-82l10 10h36v62h-36v-62z" ; 
-                        console.log( def ) ; 
                         str = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 82" fill="#f00" fill-rule="evenodd">\r\n\t<path d="' + def + '"/>\r\n</svg>' ; 
                     }
                     else 
