@@ -93,6 +93,7 @@
                     let str;
                     if( b )
                     {
+                        let re = /([ML]{1} *(([0-9]+)|([0-9]*\.[0-9]+)) *(([0-9]+)|([0-9]*\.[0-9]+)))|([HV]{1} *(([0-9]+)|([0-9]*\.[0-9]+)))/ ; 
                         let def = $( "#in" ).val() + "\r\n\r\nM0 0h56v82h-56v-82l10 10h36v62h-36v-62z" ; 
                         str = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 82" fill="#f00" fill-rule="evenodd">\r\n\t<path d="' + def + '"/>\r\n</svg>' ; 
                     }
