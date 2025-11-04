@@ -94,8 +94,8 @@
                     if( b )
                     {
                         // AQCST 未完
-                        let re = /([ML]) *([0-9]+|[0-9]*\.[0-9]+) +([0-9]+|[0-9]*\.[0-9]+)/g ; 
-                        let reg = /([HV]) *([0-9]*\.[0-9]+|[0-9]+)/g ; 
+                        let re = /([MLT])\s*([0-9]+|[0-9]*\.[0-9]+)\s+([0-9]+|[0-9]*\.[0-9]+)/g ; 
+                        let reg = /([HV])\s*([0-9]*\.[0-9]+|[0-9]+)/g ; 
                         let def = $( "#in" ).val().replace( re , ( m , mm1 , mm2 , mm3 ) => 
                         {
                             return mm1 + ( Number( mm2 ) + 10 ).toString() + " " + ( Number( mm3 ) + 10 ).toString() ; 
