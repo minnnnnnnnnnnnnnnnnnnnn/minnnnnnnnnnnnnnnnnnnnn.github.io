@@ -27,7 +27,7 @@
             }
             _updateTimeId = setInterval(updateLocalTime, 1000);
             updateLocalTime();}
-            fetch(new Request('./laws.json')).then( (response) => {return response.json()} ).then( (jj) => 
+            fetch(new Request('https://tcfshsu.github.io/law/json/laws.json')).then( (response) => {return response.json()} ).then( (jj) => 
             {
                 var j = jj[0] ; 
                 var lawCount = j.Laws.length ; 
