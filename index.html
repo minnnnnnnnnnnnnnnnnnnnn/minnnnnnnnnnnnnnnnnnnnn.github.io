@@ -3,7 +3,6 @@
     <head>
         <title>臺中市立臺中第一高級中等學校學生自治聯合會法規彙編</title>
         <meta charset="utf-8">
-        <meta name="description" content="這是截至中華民國114年06月19日的法規"/>
         <meta name="description" content="臺中市立臺中第一高級中等學校網站：https://tcfsh.tc.edu.tw"/>
         <meta name="description" content="臺中市立臺中第一高級中等學校學生自治聯合會網站：https://sites.google.com/view/tcfshsu"/>
         <meta name="description" content="臺中市立臺中第一高級中等學校學生自治聯合會法規資料庫：https://tcfshsu.github.io/law"/>
@@ -36,7 +35,7 @@
                 body.appendChild( cover ) ; 
                 cover.setAttribute( "id" , "COVER" ) ; 
                 cover.setAttribute( "class" , "hanamin" ) ; 
-                cover.innerHTML = "<div>臺中市立臺中第一高級中等學校<br/>學生自治聯合會</div><h1>法規彙編</h1><br/><span>113-2</span><br/><span id=\"localtime\"></span>" ; 
+                cover.innerHTML = "<div>臺中市立臺中第一高級中等學校<br/>學生自治聯合會</div><h1>法規彙編</h1><br/><span>114-1</span><br/><span id=\"localtime\"></span>" ; 
                 var catalogue = document.createElement( "span" ) , contents = document.createElement( "span" ) ; 
                 contents.innerText = "目錄" ; 
                 body.appendChild( catalogue ) ; 
@@ -324,13 +323,13 @@
 
 
                 // cover 
-                var spn = document.createElement( "span" ) ; 
-                var contributes = "" ; 
-                var publishDate = "中華民國" + ( j.UpdateDate.split( "/" )[0] - 1911 ) + "年" + j.UpdateDate.split( "/" )[1] + "月" + j.UpdateDate.split( "/" )[2] + "日" ; //出版日期
-                body.appendChild( spn ) ; 
-                spn.setAttribute( "id" , "COVER-BACK" ) ; 
-                spn.setAttribute( "style" , "line-height:1.3;" ) ; 
-                spn.innerHTML = "<h1><span>臺中市立臺中第一高級中等學校學生自治聯合會&nbsp;法規彙編<span></h1><ul><li><span>出版者：</span><span>臺中市立臺中第一高級中等學校學生自治聯合會第三十屆學生會自治部</span></li><li><span>發行人：</span><span>卓祐宸</span></li><li><span>編輯：</span><span>卓祐宸" + contributes + "</span></li><li><span>網站：</span><a href=\"https://sites.google.com/view/tcfshsu\" style=\"color:#00f;font-family:\'Noto Sans\',sans-serif;\">https://sites.google.com/view/tcfshsu</a></li><li><span>定價：</span><span>免費供大眾下載使用</span></li><li><span>出版日期：</span><span>" + publishDate + "</span></li></ul>"
+                // var spn = document.createElement( "span" ) ; 
+                // var contributes = "" ; 
+                // var publishDate = "中華民國" + ( j.UpdateDate.split( "/" )[0] - 1911 ) + "年" + j.UpdateDate.split( "/" )[1] + "月" + j.UpdateDate.split( "/" )[2] + "日" ; //出版日期
+                // body.appendChild( spn ) ; 
+                // spn.setAttribute( "id" , "COVER-BACK" ) ; 
+                // spn.setAttribute( "style" , "line-height:1.3;" ) ; 
+                // spn.innerHTML = "<h1><span>臺中市立臺中第一高級中等學校學生自治聯合會&nbsp;法規彙編<span></h1><ul><li><span>出版者：</span><span>臺中市立臺中第一高級中等學校學生自治聯合會第三十屆學生會自治部</span></li><li><span>發行人：</span><span>卓祐宸</span></li><li><span>編輯：</span><span>卓祐宸" + contributes + "</span></li><li><span>網站：</span><a href=\"https://sites.google.com/view/tcfshsu\" style=\"color:#00f;font-family:\'Noto Sans\',sans-serif;\">https://sites.google.com/view/tcfshsu</a></li><li><span>定價：</span><span>免費供大眾下載使用</span></li><li><span>出版日期：</span><span>" + publishDate + "</span></li></ul>"
             }).catch( (err) => 
             { 
                 let errorMessage = document.createElement( "div" ) ; 
