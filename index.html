@@ -1,588 +1,3935 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
     <head>
-        <title>臺中市立臺中第一高級中等學校學生自治聯合會法規彙編</title>
-        <meta charset="utf-8">
-        <meta name="description" content="臺中市立臺中第一高級中等學校網站：https://tcfsh.tc.edu.tw"/>
-        <meta name="description" content="臺中市立臺中第一高級中等學校學生自治聯合會網站：https://sites.google.com/view/tcfshsu"/>
-        <meta name="description" content="臺中市立臺中第一高級中等學校學生自治聯合會法規資料庫：https://tcfshsu.github.io/law"/>
-        <meta name="description" content="臺中市立臺中第一高級中等學校學生自治聯合會法規資料庫（舊）：https://sites.google.com/view/tcfshsu/學生議會/自治法規"/>
-        <meta name="description" content="臺中市立臺中第一高級中等學校學生自治聯合會學生會資訊公開區：https://drive.google.com/drive/folders/1Erz6Ns45xVTRNS76Cs_zjDiOCkMczLVP"/>
-        <meta name="author" content="臺中市立臺中第一高級中等學校學生自治聯合會第三十屆學生會自治部部長louischo303@"/>
-        <meta name="google-site-verification" content="plUyqM1X0xk3c7SVgCVOnEOtzqVYP54bEYAPAhrh6is" />
-        <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-        <script type="text/javascript">var _jf = _jf || [];_jf.push(['p','65678']);_jf.push(['initAction',true]);_jf.push(['_setFont','hanamin','css','.hanamin']);_jf.push(['_setFont','hanamin','alias','hanamin']);_jf.push(['_setFont','hanamin','english','Lora']);_jf.push(['_setFont','hanamin','weight',400]);(function(A,p,c,m,l,q,r,h,B,D){var b=A._jf;if(b.constructor!==Object){var t=!0,u=function(a){var f=!0,e;for(e in b)b[e][0]==a&&(f&&(f=f&&!1!==b[e][1].call(b)),b[e]=null,delete b[e])},v=/\S+/g,w=/[\t\r\n\f]/g,C=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,n="".trim,x=n&&!n.call("\ufeff\u00a0")?function(a){return null==a?"":n.call(a)}:function(a){return null==a?"":(a+"").replace(C,"")},k=function(a){var f,b,g;if("string"===typeof a&&a&&(a=(a||"").match(v)||[],f=h[c]?(" "+h[c]+" ").replace(w," "):" ")){for(g=0;b=a[g++];)0>f.indexOf(" "+b+" ")&&(f+=b+" ");h[c]=x(f)}},d=function(a){var b,e,g;if(0===arguments.length||"string"===typeof a&&a){var d=(a||"").match(v)||[];if(b=h[c]?(" "+h[c]+" ").replace(w," "):""){for(g=0;e=d[g++];)for(;0<=b.indexOf(" "+e+" ");)b=b.replace(" "+e+" "," ");h[c]=a?x(b):""}}},y;b.addScript=y=function(b,f,e,g,d,c){d=d||function(){};c=c||function(){};var a=p.createElement("script"),h=p.getElementsByTagName("script")[0],k,m=!1,l=function(){a.src="";a.parentNode.removeChild(a);a=a.onerror=a.onload=a.onreadystatechange=null};g&&(k=setTimeout(function(){l();c()},g));a.type=f||"text/javascript";a.async=e;a.onload=a.onreadystatechange=function(b,c){m||a.readyState&&!/loaded|complete/.test(a.readyState)||(m=!0,g&&clearTimeout(k),l(),c||d())};a.onerror=function(a,b,d){g&&clearTimeout(k);l();c();return!0};a.src=b;h.parentNode.insertBefore(a,h)};for(var z in b)"initAction"==b[z][0]&&(t=b[z][1]);b.push(["_eventPreload",function(){1==t&&k(m);y(B,null,!1,3E3,null,function(){u("_eventInactived")})}]);b.push(["_eventReload",function(){d(r);d(q);k(l)}]);b.push(["_eventActived",function(){d(m);d(l);k(q)}]);b.push(["_eventInactived",function(){d(m);d(l);k(r)}]);u("_eventPreload")}})(this,this.document,"className","jf-loading","jf-reloading","jf-active","jf-inactive",this.document.getElementsByTagName("html")[0],"//ds.justfont.com/js/stable/v/6.1/id/455817665840");</script>
-        <script>
-            window.onload = ()=>{
-            function updateLocalTime() {
-                const now = new Date();
-                const weekday = now.toLocaleDateString("en-US", { weekday: "long" });
-                const y = now.getFullYear();
-                const m = String(now.getMonth() + 1).padStart(2, "0");
-                const d = String(now.getDate()).padStart(2, "0");
-                const hms = now.toLocaleTimeString("en-US", { hour12: false });
-                const localEl = document.getElementById("localtime");
-                if (localEl) localEl.textContent = `${y}-${m}-${d} ${hms} (${weekday})`;
-            }
-            _updateTimeId = setInterval(updateLocalTime, 1000);
-            updateLocalTime();}
-            fetch(new Request('https://tcfshsu.github.io/law/json/laws.json')).then( (response) => {return response.json()} ).then( (jj) => 
-            {
-                var j = jj[0] ; 
-                var lawCount = j.Laws.length ; 
-                var body = document.querySelector( "body" ) ; 
-                var cover = document.createElement( "span" ) ; 
-                body.appendChild( cover ) ; 
-                cover.setAttribute( "id" , "COVER" ) ; 
-                cover.setAttribute( "class" , "hanamin" ) ; 
-				cover.innerHTML = "<div>臺中市立臺中第一高級中等學校<br/>學生自治聯合會</div><h1>法規彙編</h1><div style=\"font-size:8pt\">（應該有不少地方會出錯因為我格式有改過這邊建議使用<a style=\"display:inline;color:#00f;\" href=\"https://tcfshsu.github.io/law\">官方法規資料庫</a>）</div><br/><span>114-2</span><br/><span id=\"localtime\"></span>" ; 
-                var catalogue = document.createElement( "span" ) , contents = document.createElement( "span" ) ; 
-                contents.innerText = "目錄" ; 
-                body.appendChild( catalogue ) ; 
-                catalogue.appendChild( contents ) ; 
-                contents.setAttribute( "class" , "title" ) ; 
-                var a = 0 , b = 0 , c = 0 , d = 0 , e = 0 , h1 = document.createElement( "h1" ) , h2 = document.createElement( "h1" ) , h3 = document.createElement( "h1" ) , h4 = document.createElement( "h1" ) , h5 = document.createElement( "h1" ) ; 
-                let A = document.createElement( "div" ) ; 
-                A.setAttribute( "id" , "A" ) ; 
-                h1.innerText = "中央法規" ; 
-                A.appendChild( h1 ) ; 
-                let B = document.createElement( "div" ) ; 
-                B.setAttribute( "id" , "B" ) ; 
-                h2.innerText = "行政法規" ; 
-                B.appendChild( h2 ) ; 
-                let C = document.createElement( "div" ) ; 
-                C.setAttribute( "id" , "C" ) ; 
-                h3.innerText = "立法法規" ; 
-                C.appendChild( h3 ) ; 
-                let D = document.createElement( "div" ) ; 
-                D.setAttribute( "id" , "D" ) ; 
-                h4.innerText = "司法法規" ; 
-                D.appendChild( h4 ) ; 
-                let E = document.createElement( "div" ) ; 
-                E.setAttribute( "id" , "E" ) ; 
-                h5.innerText = "廢止法規" ; 
-                E.appendChild( h5 ) ; 
-                for( i = 0 ; i < lawCount ; i++ ) 
-                {
-                    if( j.Laws[i].LawCategory[0] == "中" ) 
-                    {
-                        a++ ; 
-                    }
-                    else if( j.Laws[i].LawCategory[0] == "行" ) 
-                    {
-                        b++ ; 
-                    }
-                    else if( j.Laws[i].LawCategory[0] == "立" ) 
-                    {
-                        c++ ; 
-                    }
-                    else if( j.Laws[i].LawCategory[0] == "司" ) 
-                    {
-                        d++ ; 
-                    }
-                    else if( j.Laws[i].LawCategory[0] == "廢" ) 
-                    {
-                        e++ ; 
-                    }
-                }
-                for( i = 0 ; i < lawCount ; i++ ) 
-                {
-                    if( i < a ) 
-                    {
-                        let aa = document.createElement( "a" ) ; 
-                        aa.setAttribute( "href" , "#" + i ) ; 
-                        aa.innerText = j.Laws[i].LawName ; 
-                        A.appendChild( aa ) ; 
-                    }
-                    else if( i < a + b ) 
-                    {
-                        let aa = document.createElement( "a" ) ; 
-                        aa.setAttribute( "href" , "#" + i ) ; 
-                        aa.innerText = j.Laws[i].LawName ; 
-                        B.appendChild( aa ) ; 
-                    }
-                    else if( i < a + b + c ) 
-                    {
-                        let aa = document.createElement( "a" ) ; 
-                        aa.setAttribute( "href" , "#" + i ) ; 
-                        aa.innerText = j.Laws[i].LawName ; 
-                        C.appendChild( aa ) ; 
-                    }
-                    else if( i < a + b + c + d ) 
-                    {
-                        let aa = document.createElement( "a" ) ; 
-                        aa.setAttribute( "href" , "#" + i ) ; 
-                        aa.innerText = j.Laws[i].LawName ; 
-                        D.appendChild( aa ) ; 
-                    }
-                    else 
-                    {
-                        let aa = document.createElement( "a" ) ; 
-                        aa.setAttribute( "href" , "#" + i ) ; 
-                        aa.innerText = j.Laws[i].LawName ; 
-                        E.appendChild( aa ) ; 
-                    }
-                    if( i == 0 ) 
-                    {
-                        let spann = document.createElement( "span" ) ; 
-                        body.appendChild( spann ) ; 
-                        spann.setAttribute( "class" , "break" ) ; 
-                        spann.innerHTML = "<div style=\"display:inline;\">中央法規</span>" ; 
-                    }
-                    else if( i == a ) 
-                    {
-                        let spann = document.createElement( "span" ) ; 
-                        body.appendChild( spann ) ; 
-                        spann.setAttribute( "class" , "break" ) ; 
-                        spann.innerHTML = "<div style=\"display:inline;\">行政法規</span>" ; 
-                    }
-                    else if( i == a + b ) 
-                    {
-                        let spann = document.createElement( "span" ) ; 
-                        body.appendChild( spann ) ; 
-                        spann.setAttribute( "class" , "break" ) ; 
-                        spann.innerHTML = "<div style=\"display:inline;\">立法法規</span>" ; 
-                    }
-                    else if( i == a + b + c ) 
-                    {
-                        let spann = document.createElement( "span" ) ; 
-                        body.appendChild( spann ) ; 
-                        spann.setAttribute( "class" , "break" ) ; 
-                        spann.innerHTML = "<div style=\"display:inline;\">司法法規</span>" ; 
-                    }
-                    else if( i == a + b + c + d ) 
-                    {
-                        let spann = document.createElement( "span" ) ; 
-                        body.appendChild( spann ) ; 
-                        spann.setAttribute( "class" , "break" ) ; 
-                        spann.innerHTML = "<div style=\"display:inline;\">廢止法規</span>" ; 
-                    }
-                    let div = document.createElement("div") ; 
-                    div.setAttribute( "id" , i ) ; 
-                    body.appendChild( div ) ; 
-                }
-                catalogue.appendChild( A ) ; 
-                catalogue.appendChild( B ) ; 
-                catalogue.appendChild( C ) ; 
-                catalogue.appendChild( D ) ; 
-                catalogue.appendChild( E ) ; 
-                var law = body.querySelectorAll( "body > div" ) ; 
-                for( i = 0 ; i < law.length ; i++ ) 
-                {
-                    // 法規名稱
-                    law[i].appendChild( document.createElement("div") ).setAttribute( "class" , "title" ) ; 
-                    function ab() 
-                    {
-                        // 廢止備註
-                        if( j.Laws[i].LawAbandonNote == "廢" ) 
-                        {
-                            return "（廢）" 
-                        }
-                        else 
-                        {
-                            return "" 
-                        }
-                    }
-                    function ac() 
-                    {
-                        if( j.Laws[i].LawLevel == "命令" ) 
-                        {
-                            if( j.Laws[i].LawName.match( /臺中第一高級中學/ ) != null ) 
-                            { 
-                                return "臺中第一高級中學" + j.Laws[i].LawName.split( /臺中第一高級中學/ )[1].replace( /^/ , "<br/>" ) 
-                            }
-                            else if( j.Laws[i].LawName.match( /臺中市立臺中第一高級中等學校學生自治聯合會/ ) != null ) 
-                            {
-                                if( j.Laws[i].LawAbandonNote == "廢" ) 
-                                {
-                                    return "臺中市立臺中第一高級中等學校" + j.Laws[i].LawName.split( /臺中市立臺中第一高級中等學校/ )[1].replace( /^/ , "<br/>" ) 
-                                }
-                                else 
-                                {
-                                    return "臺中市立臺中第一高級中等學校學生自治聯合會" + j.Laws[i].LawName.split( /臺中市立臺中第一高級中等學校學生自治聯合會/ )[1].replace( /^/ , "<br/>" )  
-                                }
-                            }
-                        } 
-                        else 
-                        {
-                            if( j.Laws[i].LawAbandonNote == "廢" ) 
-                            {
-                                return "臺中市立臺中第一高級中等學校" + j.Laws[i].LawName.split( /臺中市立臺中第一高級中等學校/ )[1].replace( /^/ , "<br/>" ) 
-                            }
-                            else 
-                            {
-                                return "臺中市立臺中第一高級中等學校學生自治聯合會" + j.Laws[i].LawName.split( /臺中市立臺中第一高級中等學校學生自治聯合會/ )[1].replace( /^/ , "<br/>" ) 
-                            }
-                        }
-                    }
-                    document.querySelectorAll( ".title" )[i + 1].innerHTML =  "<span class=\"abandoned\">" + ab() + "</span><span>" + ac() + "</span>" ; 
-
-
-
-                    // 立法沿革
-                    var legislativeHistory = document.createElement("ol") ; 
-                    law[i].appendChild( legislativeHistory ) ; 
-                    legislativeHistory.setAttribute( "class" , "legislativeHistory" ) ; 
-                    legislativeHistory.innerHTML += "<li>" + j.Laws[i].LawHistories.replace(/(?:\r\n)/g, "</li><li>") + "</li>" ; 
-
-
-
-                    // 前言
-                    var foreword = "<p>" + j.Laws[i].LawForeword.replace(/(?:\r\n)/g, "<br/>") + "</p>" ; 
-                    if( j.Laws[i].LawForeword != "" ) 
-                    {
-                        law[i].appendChild( document.createElement("div") ).setAttribute( "class" , "Foreword" ) ; 
-                        document.querySelector( ".Foreword" ).innerHTML = "<span>宗旨</span><br/>" + foreword + "<br/>" ; 
-                    }
-
-
-                    // 內文
-                    const articleLength = j.Laws[i].LawArticles.length ; 
-                    var main = document.createElement("div") ; 
-                    law[i].appendChild( main ) ; 
-                    for( ii = 0 ; ii < articleLength ; ii++ )
-                    {
-                        var articleContent = j.Laws[i].LawArticles[ii].ArticleContent.replace(/(?:\r\n)/g, "</span></li><li><span>") ; 
-                        var articleTitle ; 
-                        j.Laws[i].LawArticles[ii].ArticleNo == "" ? articleTitle = j.Laws[i].LawArticles[ii].ArticleNo : articleTitle = j.Laws[i].LawArticles[ii].ArticleNo + "&nbsp;" ; 
-                        main.innerHTML += "<h6>" + articleTitle + "</h6>" ; 
-                        function aaa() 
-                        {
-                            if( j.Laws[i].LawArticles[ii].ArticleContent[0] == "第" ) 
-                            {
-                                main.innerHTML += "<h1><span>" + articleContent.split( / / )[0] + "&#x00A0;" + articleContent.split( / / )[1] + "&#x00A0;" + articleContent.split( / / )[2] + "&#x00A0;" + "</span><span>" + articleContent.split( / / )[3] + "</span></h1><br/>" ; 
-                            }
-                            else if( j.Laws[i].LawArticles[ii].ArticleContent[3] == "第" ) 
-                            {
-                                main.innerHTML += "<h2><span>" + "&#x00A0;&#x00A0;&#x00A0;" + articleContent.split( / / )[3] + "&#x00A0;" + articleContent.split( / / )[4] + "&#x00A0;" + articleContent.split( / / )[5] + "&#x00A0;" + "</span><span>" + articleContent.split( / / )[6] + "</span></h2><br/>" ; 
-                            }
-                            else if( j.Laws[i].LawArticles[ii].ArticleContent[6] == "第" ) 
-                            {
-                                main.innerHTML += "<h3><span>" + "&#x00A0;&#x00A0;&#x00A0;" + "&#x00A0;&#x00A0;&#x00A0;" + articleContent.split( / / )[6] + "&#x00A0;" + articleContent.split( / / )[7] + "&#x00A0;" + articleContent.split( / / )[8] + "&#x00A0;" + "</span><span>" + articleContent.split( / / )[9] + "</span></h3><br/>" ; 
-                            }
-                            else if( j.Laws[i].LawArticles[ii].ArticleContent[9] == "第" ) 
-                            {
-                                main.innerHTML += "<h4><span>" + "&#x00A0;&#x00A0;&#x00A0;" + "&#x00A0;&#x00A0;&#x00A0;" + "&#x00A0;&#x00A0;&#x00A0;" + articleContent.split( / / )[9] + "&#x00A0;" + articleContent.split( / / )[10] + "&#x00A0;" + articleContent.split( / / )[11] + "&#x00A0;" + "</span><span>" + articleContent.split( / / )[12] + "</span></h4><br/>" ; 
-                            }
-                            else if( j.Laws[i].LawArticles[ii].ArticleContent[12] == "第" ) 
-                            {
-                                main.innerHTML += "<h5><span>" + "&#x00A0;&#x00A0;&#x00A0;" + "&#x00A0;&#x00A0;&#x00A0;" + "&#x00A0;&#x00A0;&#x00A0;" + "&#x00A0;&#x00A0;&#x00A0;" + articleContent.split( / / )[12] + "&#x00A0;" + articleContent.split( / / )[13] + "&#x00A0;" + articleContent.split( / / )[14] + "&#x00A0;" + "</span><span>" + articleContent.split( / / )[15] + "</span></h5><br/>" ; 
-                            }
-                        }
-                        function aaaaaa() 
-                        {
-                            function aaaaaaaaa(aC) 
-                            {
-                                var articleBR = articleContent.split( "</span></li><li><span>" ) ; 
-                                if( articleBR.length != 1 ) 
-                                {
-                                    aC += "<ol class=\"paragraph\">" ; 
-                                    for( iii = 0 ; iii < articleBR.length ; iii++ ) 
-                                    {
-                                        if( articleBR[iii].match( /[一二三四五六七八九十]+\u3001/ ) != null && articleBR[iii].split( /[一二三四五六七八九十]+\u3001/ ).length == 2 ) 
-                                        {
-                                            aC += "<span><span>" + articleBR[iii].split( /\u3001/ )[0] + "\u{3001}</span>" ; 
-                                            aC += articleBR[iii].split( /[一二三四五六七八九十]+\u3001/ )[1].replace( /^/ , "<span>" ) + "</span></span>" ; 
-                                        }
-                                        if( articleBR[iii].match( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ ) != null && articleBR[iii].split( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ ).length == 2 ) 
-                                        {
-                                            aC += "<span><span>" + articleBR[iii].split( /\uFF09/ )[0] + "\u{FF09}</span>" ; 
-                                            aC += articleBR[iii].split( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ )[1].replace( /^/ , "<span>" ) + "</span></span>" ; 
-                                        }
-                                        if( articleBR[iii].match( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ ) != null && articleBR[iii].split( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ ).length == 2 ) 
-                                        {
-                                            aC += "<span class=\"of\"><span>" + articleBR[iii].split( /\u3001/ )[0] + "\u{3001}</span>" ; 
-                                            aC += articleBR[iii].split( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ )[1].replace( /^/ , "<span>" ) + "</span></span>" ; 
-                                        }
-                                        if( articleBR[iii].match( /[0-9]+\u002E|[\uFF10-\uFF19]+\u002E/) != null && articleBR[iii].split( /[\uFF10-\uFF19]+\u002E|[0-9]+\u002E/ ).length == 2 ) 
-                                        {
-                                            aC += "<span class=\"of\"><span>" + articleBR[iii].split( /\u002E/ )[0] + "\u{002E}</span>" ; 
-                                            aC += articleBR[iii].split( /[\uFF10-\uFF19]+\u002E|[0-9]+\u002E/ )[1].replace( /^/ , "<span>" ) + "</span></span>" ; 
-                                        }
-                                        if( ( articleBR[iii].match( /[一二三四五六七八九十]+\u3001/ ) == null || articleBR[iii].split( /[一二三四五六七八九十]+\u3001/ ).length != 2 ) && ( articleBR[iii].match( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ ) == null || articleBR[iii].split( /\uFF08[一二三四五六七八九十]+\uFF09|\uFF08[\uFF10-\uFF19]+\uFF09|\uFF08[0-9]+\uFF09/ ).length != 2 ) && ( articleBR[iii].match( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ ) == null || articleBR[iii].split( /[\uFF10-\uFF19]+\u3001|[0-9]+\u3001/ ).length != 2 ) && ( articleBR[iii].match( /[0-9]+\u002E|[\uFF10-\uFF19]+\u002E/) == null && articleBR[iii].split( /[\uFF10-\uFF19]+\u002E|[0-9]+\u002E/ ).length != 2 ) ) 
-                                        {
-                                            aC += "<li>" + articleBR[iii] + "</li>" ; 
-                                        }
-                                    }
-                                    if( aC.split( /<li>/ ).length > 2 ) 
-                                    {
-                                        aC = aC.replace( /class="paragraph"/ , "class=\"paragraph showNum\"" ) ; 
-                                    }
-                                }
-                                else 
-                                {
-                                    aC += "<ol class=\"paragraph\"><li><span>" + articleContent + "</span></li>" ; 
-                                }
-                                return aC 
-                            }
-                            main.innerHTML += "<article>" + aaaaaaaaa("") + "</ol></article><br/>" ; 
-                        }
-                        j.Laws[i].LawArticles[ii].ArticleNo == "" ? aaa() : aaaaaa() ; 
-                    }
-                }
-
-
-                // cover 
-                // var spn = document.createElement( "span" ) ; 
-                // var contributes = "" ; 
-                // var publishDate = "中華民國" + ( j.UpdateDate.split( "/" )[0] - 1911 ) + "年" + j.UpdateDate.split( "/" )[1] + "月" + j.UpdateDate.split( "/" )[2] + "日" ; //出版日期
-                // body.appendChild( spn ) ; 
-                // spn.setAttribute( "id" , "COVER-BACK" ) ; 
-                // spn.setAttribute( "style" , "line-height:1.3;" ) ; 
-                // spn.innerHTML = "<h1><span>臺中市立臺中第一高級中等學校學生自治聯合會&nbsp;法規彙編<span></h1><ul><li><span>出版者：</span><span>臺中市立臺中第一高級中等學校學生自治聯合會第三十屆學生會自治部</span></li><li><span>發行人：</span><span>卓祐宸</span></li><li><span>編輯：</span><span>卓祐宸" + contributes + "</span></li><li><span>網站：</span><a href=\"https://sites.google.com/view/tcfshsu\" style=\"color:#00f;font-family:\'Noto Sans\',sans-serif;\">https://sites.google.com/view/tcfshsu</a></li><li><span>定價：</span><span>免費供大眾下載使用</span></li><li><span>出版日期：</span><span>" + publishDate + "</span></li></ul>"
-            }).catch( (err) => 
-            { 
-                let errorMessage = document.createElement( "div" ) ; 
-                errorMessage.setAttribute( "style" , "display:flex;justify-content:center;align-items:center;width:100%;height:100vh;" ) ; 
-                errorMessage.innerHTML = "<span style=\"font-size:10rem;font-family:\'\u{004E}oto \u{0053}ans \u{0054}\u{0043}\',sans-serif;line-height:2;text-align:center;color:#f00;font-weight:900;\">" + err + "</span>" ; 
-                document.querySelector( "body" ).appendChild( errorMessage ) ; 
-            }) ; 
-        </script>
+        <meta charset="utf-8"/>
+        <title>課表</title>
+        <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+        <meta name="author" content="louischo303@"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&family=Noto+Serif+TC:wght@500&family=Noto+Serif+TC:wght@400&family=Noto+Sans+TC:wght@400&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+        <title>課表</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+Mono:wght@100..900&display=swap&family=Noto+Sans:wght@700&display=swap'); 
-            @font-face 
-            {
-                font-family: "sung";
-                src: url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-98_1.ttf") format("truetype");
-            }
-            @font-face 
-            {
-                font-family: 'kai';
-                src: url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-98_1.ttf") format("truetype") ; 
-            }
-            @font-face 
-            {
-                font-family : "kai_" ; 
-                src : url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-Ext-B-98_1.ttf") format("truetype")
-                , url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Kai-Plus-98_1.ttf") format("truetype") ; 
-            }
-            @font-face 
-            {
-                font-family : "sung_" ; 
-                src : url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-Ext-B-98_1.ttf") format("truetype")
-                , url("https://minnnnnnnnnnnnnnnnnnnnn.github.io/f/TW-Sung-Plus-98_1.ttf") format("truetype") ; 
-            }
-            @page /* pageNum */
-            {
-                @bottom-center 
-                {
-                    content : counter(page) ; 
-                    font-family : "OCR A Std" , "Noto Sans" ; 
-                }
-            }
-            @page a 
-            {
-                margin : 0 ; 
-                margin-bottom : .4in ; 
-            }
             *
             {
-                padding : 0 ; 
-                margin : 0 ; 
-                box-sizing : border-box ; 
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
             }
-            html , body 
+            table 
             {
-                font-family : sung , sung_ , MOESongUN , TW-Sung , TW-Sung-Plus , TW-Sung-EXT-B , kai , kai_ , DFKai-SB , BiauKaiTC , TW-Kai , TW-Kai-Plus , TW-Kai-EXT-B , "Noto Sans TC" , sans-serif ; 
-                line-height : 1 ; 
-                font-size : 12pt ; 
-                color : #000 ; 
+                border : 1px solid #000 ; 
+                width : fit-content ; 
+                overflow : scroll ; 
             }
-            body > div , body > span , body > span > .title 
+            tr , td:not( .top td ) 
+            {
+                display : flex ; 
+                justify-content: center;
+                align-items: center;
+            }
+            tr:not( :last-child ) 
+            {
+                border-bottom : 1px solid #000 ; 
+            }
+            .left , .top td:not( :last-child ) 
+            {
+                border-right : 1px solid #000 ; 
+            }
+            td 
             {
                 width : 100% ; 
-                display : block ; 
-                padding : 0 1rem ; 
-                padding-left : 3.5rem ; 
-                page-break-after : always ; 
+                text-align: center;
             }
-            body > div 
+            td :nth-child(3) 
             {
-                page : pageNum ; 
+                font-size : 10px ; 
             }
-            body > span > .title , .break , #COVER 
+            .Mon , .Tue , .Wed , .Thu , .Fri 
             {
-                page-break-after : auto ; 
+                flex-direction: column;
+                min-width : 13em ; 
             }
-            body > span > div > h1 
+            td:not( .top td ) 
             {
-                margin-left : -1.5rem ; 
+                height : 5em ; 
             }
-            a , a:visited , a:hover , a:focus 
+            .left 
             {
-                color : #000 ; 
-                text-decoration : none ; 
-                display : block ; 
-            }
-            .break , #COVER , #COVER h1 
-            {
-                font-size : 50pt ; 
-                font-weight : 900 ; 
-                display : flex ; 
-                flex-direction : column ; 
-                justify-content : center ; 
-                align-items : center ; 
-                height : calc(297mm - .4in) ; 
-                page : a ; 
-            }
-            #COVER div 
-            {
-                font-weight : 900 ; 
-                font-size : 20pt ; 
-                padding : 2rem 0 ; 
-                text-align : center ; 
-                letter-spacing : 2px ; 
-                line-height : 1 ; 
-            }
-            #COVER h1 
-            {
-                height : fit-content ; 
-            }
-            #COVER span 
-            {
-                font-weight : 500 ; 
-            }
-            .Foreword 
-            {
-                display : flex ; 
-                flex-direction : column ; 
-                align-items : center ; 
-            }
-            .Foreword > span 
-            {
-                font-size : 22pt ; 
-                font-weight : normal ; 
-            }
-            .title 
-            {
-                font-weight : 900 ; 
-                font-size : 20pt ; 
-                padding : 2rem 0 ; 
-                text-align : center ; 
-                letter-spacing : 2px ; 
-                line-height : 1 ; 
-            }
-            .abandoned 
-            {
-                color : #f00 ; 
-            }
-            li 
-            {
-                list-style : none ; 
-            }
-            li , ol > span 
-            {
-                display : flex ; 
-            }
-            h1 , h2 , h3 , h4 , h5 
-            {
-                margin-left : -3.5rem ; 
-            }
-            h1 
-            {
-                font-size : 20pt ; 
-                font-weight : normal ; 
-            }
-            h2 
-            {
-                font-size : 18pt ; 
-                font-weight : normal ; 
-            }
-            h3 
-            {
-                font-size : 16pt ; 
-                font-weight : normal ; 
-            }
-            h4 
-            {
-                font-size : 14pt ; 
-                font-weight : bold ; 
-            }
-            h5 
-            {
-                font-size : 14pt ; 
-                font-weight : normal ; 
-            }
-            h6 
-            {
-                font-weight : bold ; 
-                font-size : 12pt ; 
-            }
-            h1 :first-child , h2 :first-child , h3 :first-child , h4 :first-child , h5 :first-child , ol > span :first-child , #COVER-BACK li :first-child 
-            {
+                width : 3em ; 
                 flex-shrink : 0 ; 
-            }
-            .showNum > li 
-            {
-                counter-increment : paragraph-count ; 
-                position : relative ; 
-            }
-            .showNum > li::before 
-            {
-                content : counter( paragraph-count ) ; 
-                position : absolute ; 
-                color : #666 ; 
-                font-family : "Noto Sans TC" ; 
-                font-style : italic ; 
-                font-size : 1.05em ; 
-                font-weight : 400 ; 
-                left : -1em ; 
-            }
-            .legislativeHistory 
-            {
-                font-size : 8pt ; 
-                font-weight : normal ; 
-                list-style : none ; 
-                text-align : right ; 
-                padding-bottom : 2rem ; 
-            }
-            .of 
-            {
-                padding-left : 2em ; 
-            }
-            .legislativeHistory li 
-            {
-                display : block ; 
-            }
-            .legislativeHistory::before 
-            {
-                content : "立法沿革：" ; 
-                text-align : right ; 
-                font-weight : bold ; 
-            }
-
-            #COVER-BACK 
-            {
-                display : none ; 
-                width : 100% ; 
-            }
-            #COVER-BACK h1 
-            {
-                display : flex ; 
-                font-weight : 900 ; 
-                width : 100% ; 
-                margin : 1rem 0 ; 
-                font-size : 16pt ; 
-                justify-content : center ; 
-                align-items : center ; 
-                flex-shrink : 1 ; 
-                flex-wrap : wrap ; 
-            }
-                
-            #localtime 
-            {
-                font-size : 1.5rem ; 
-                font-family : 'Noto Sans Mono' , mono-space ; 
-                font-weight : 700 ; 
-            }
-            @print 
-            {
-                #COVER-BACK 
-                {
-                    display : block ; 
-                }
             }
         </style>
     </head>
-    <body></body>
+    <body>
+        <main>
+            <select id="se" name="se">
+				<option selected value="115-1">115-1</option>
+				<option value="115-2">115-2</option>
+				<option value="116-1">116-1</option>
+				<option value="116-2">116-2</option>
+				<option value="117-1">117-1</option>
+				<option value="117-2">117-2</option>
+				<option value="118-1">118-1</option>
+				<option value="118-2">118-2</option>
+            </select>
+            <table>
+                <thead></thead>
+                <tbody>
+                    <tr class="top">
+                        <td class="left">節次</td>
+                        <td class="Mon">星期一</td>
+                        <td class="Tue">星期二</td>
+                        <td class="Wed">星期三</td>
+                        <td class="Thu">星期四</td>
+                        <td class="Fri">星期五</td>
+                    </tr>
+                    <tr class="1">
+                        <td class="left"><span>1</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="2">
+                        <td class="left"><span>2</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="3">
+                        <td class="left"><span>3</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="4">
+                        <td class="left"><span>4</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="5">
+                        <td class="left"><span>5</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="6">
+                        <td class="left"><span>6</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="7">
+                        <td class="left"><span>7</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="8">
+                        <td class="left"><span>8</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="9">
+                        <td class="left"><span>9</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="10">
+                        <td class="left"><span>10</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="A">
+                        <td class="left"><span>A</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="B">
+                        <td class="left"><span>B</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="C">
+                        <td class="left"><span>C</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="D">
+                        <td class="left"><span>D</span></td>
+                        <td class="Mon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Tue">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Wed">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Thu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                        <td class="Fri">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <script>
+            const aa = 
+				[
+					{
+						S: "115-1", 
+						Table: 
+							[
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "微積分1&2", 
+												Teacher: "陳彥宇", 
+												Classroom: "共201" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "會計專業入門", 
+												Teacher: "吳淑鈴", 
+												Classroom: "管二104" 
+											}, 
+											{
+												Name: "微積分1&2", 
+												Teacher: "陳彥宇", 
+												Classroom: "共201" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "會計專業入門", 
+												Teacher: "吳淑鈴", 
+												Classroom: "管二104" 
+											}, 
+											{
+												Name: "宋詞之美", 
+												Teacher: "劉少雄", 
+												Classroom: "博雅102" 
+											}, 
+											{
+												Name: "樹木保護", 
+												Teacher: "姚舜閔", 
+												Classroom: "共204" 
+											}, 
+											{
+												Name: "微積分1&2", 
+												Teacher: "陳彥宇", 
+												Classroom: "共201" 
+											}, 
+											{
+												Name: "個體經濟學原理與實習", 
+												Teacher: "朴聖民", 
+												Classroom: "博雅103" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "會計專業入門", 
+												Teacher: "吳淑鈴", 
+												Classroom: "管二104" 
+											}, 
+											{
+												Name: "宋詞之美", 
+												Teacher: "劉少雄", 
+												Classroom: "博雅102" 
+											}, 
+											{
+												Name: "樹木保護", 
+												Teacher: "姚舜閔", 
+												Classroom: "共204" 
+											}, 
+											{
+												Name: "微積分1&2", 
+												Teacher: "陳彥宇", 
+												Classroom: "共201" 
+											}, 
+											{
+												Name: "個體經濟學原理與實習", 
+												Teacher: "朴聖民", 
+												Classroom: "博雅103" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "個體經濟學原理與實習", 
+												Teacher: "朴聖民", 
+												Classroom: "博雅103" 
+											}, 
+											{
+												Name: "宋詞之美", 
+												Teacher: "劉少雄", 
+												Classroom: "博雅102" 
+											}, 
+											{
+												Name: "個體經濟學原理與實習", 
+												Teacher: "朴聖民", 
+												Classroom: "博雅103" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "個體經濟學原理與實習", 
+												Teacher: "朴聖民", 
+												Classroom: "博雅103" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "會計學原理上", 
+												Teacher: "劉心才", 
+												Classroom: "管二102" 
+											}, 
+											{
+												Name: "會計學原理上", 
+												Teacher: "劉心才", 
+												Classroom: "管二102" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "健康體適能", 
+												Teacher: "梁澤敬", 
+												Classroom: "排球場" 
+											}, 
+											{
+												Name: "全民國防軍事訓練－國防科技", 
+												Teacher: "劉鐵軍", 
+												Classroom: "研揚213" 
+											}, 
+											{
+												Name: "希伯來經典與世界文明", 
+												Teacher: "曾宗盛", 
+												Classroom: "綜301" 
+											}, 
+											{
+												Name: "會計學原理上", 
+												Teacher: "劉心才", 
+												Classroom: "管二102" 
+											}, 
+											{
+												Name: "會計學原理上", 
+												Teacher: "劉心才", 
+												Classroom: "管二102" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "健康體適能", 
+												Teacher: "梁澤敬", 
+												Classroom: "排球場" 
+											}, 
+											{
+												Name: "全民國防軍事訓練－國防科技", 
+												Teacher: "劉鐵軍", 
+												Classroom: "研揚213" 
+											}, 
+											{
+												Name: "希伯來經典與世界文明", 
+												Teacher: "曾宗盛", 
+												Classroom: "綜301" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "會計學原理上", 
+												Teacher: "劉心才", 
+												Classroom: "管二102" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "希伯來經典與世界文明", 
+												Teacher: "曾宗盛", 
+												Classroom: "綜301" 
+											}, 
+											{
+												Name: "微積分1&2", 
+												Teacher: "洪德郎", 
+												Classroom: "共204" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "滿文（一）", 
+												Teacher: "林士炫", 
+												Classroom: "和平工401" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "滿文（一）", 
+												Teacher: "林士炫", 
+												Classroom: "和平工401" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								} 
+							]
+					}, 
+					{
+						S: "115-2", 
+						Table: 
+							[
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								} 
+							]
+					}, 
+					{
+						S: "116-1", 
+						Table: 
+							[
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								} 
+							]
+					}, 
+					{
+						S: "116-2", 
+						Table: 
+							[
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								} 
+							]
+					}, 
+					{
+						S: "117-1", 
+						Table: 
+							[
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								} 
+							]
+					}, 
+					{
+						S: "117-2", 
+						Table: 
+							[
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								} 
+							]
+					}, 
+					{
+						S: "118-1", 
+						Table: 
+							[
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								} 
+							]
+					}, 
+					{
+						S: "118-2", 
+						Table: 
+							[
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								}, 
+								{
+									Week: 
+										[
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											}, 
+											{
+												Name: "", 
+												Teacher: "", 
+												Classroom: "" 
+											} 
+										]
+								} 
+							]
+					}, 
+				];
+            const d = [ " .Mon" , " .Tue" , " .Wed" , " .Thu" , " .Fri" ] ; 
+            const name = " span:first-child" ; 
+            const teacher = " span:nth-child(3)" ; 
+            const classroom = " span:nth-child(2)" ; 
+            function changeClass() 
+            {
+                for( let di = 0 ; di < d.length ; di ++ ) 
+                {
+                    for( let i = 1 ; i <= 10 ; i ++ ) 
+                    {
+                        $( "." + i + d[di] + name ).text( "" ) ; 
+                        $( "." + i + d[di] + teacher ).text( "" ) ; 
+                        $( "." + i + d[di] + classroom ).text( "" ) ; 
+                        $( "." + i + d[di] + name ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i - 1].Week[di].Name ) ; 
+                        $( "." + i + d[di] + teacher ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i - 1].Week[di].Teacher ) ; 
+                        $( "." + i + d[di] + classroom ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i - 1].Week[di].Classroom ) ; 
+                    }
+                    for( let i = 10 ; i <= 13 ; i ++ ) 
+                    {
+                        $( "." + i.toString(16).toUpperCase() + d[di] + name ).text( "" ) ; 
+                        $( "." + i.toString(16).toUpperCase() + d[di] + teacher ).text( "" ) ; 
+                        $( "." + i.toString(16).toUpperCase() + d[di] + classroom ).text( "" ) ; 
+                        $( "." + i.toString(16).toUpperCase() + d[di] + name ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i].Week[di].Name ) ; 
+                        $( "." + i.toString(16).toUpperCase() + d[di] + teacher ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i].Week[di].Teacher ) ; 
+                        $( "." + i.toString(16).toUpperCase() + d[di] + classroom ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i].Week[di].Classroom ) ; 
+                    }
+                }
+            }
+            $( () => 
+                {
+                    changeClass() ; 
+                    $( "select#se" ).on( "change" , () => 
+                        {
+                            changeClass() ; 
+                        } ) ; 
+                } ) ; 
+        </script>
+    </body>
 </html>
