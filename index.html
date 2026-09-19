@@ -35,6 +35,14 @@
             {
                 border-right : 1px solid #000 ; 
             }
+			.left 
+			{
+				flex-direction : column ; 
+			}
+			.left span.t 
+			{
+				font-size : 10px ; 
+			}
             td 
             {
                 width : 100% ; 
@@ -84,7 +92,11 @@
                         <td class="Fri">星期五</td>
                     </tr>
                     <tr class="1">
-                        <td class="left"><span>1</span></td>
+                        <td class="left">
+							<span class="t">08：10</span>
+							<span>1</span>
+							<span class="t">09：00</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -112,7 +124,11 @@
                         </td>
                     </tr>
                     <tr class="2">
-                        <td class="left"><span>2</span></td>
+                        <td class="left">
+							<span class="t">09：10</span>
+							<span>2</span>
+							<span class="t">10：00</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -140,7 +156,11 @@
                         </td>
                     </tr>
                     <tr class="3">
-                        <td class="left"><span>3</span></td>
+                        <td class="left">
+							<span class="t">10：20</span>
+							<span>3</span>
+							<span class="t">11：10</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -168,7 +188,11 @@
                         </td>
                     </tr>
                     <tr class="4">
-                        <td class="left"><span>4</span></td>
+                        <td class="left">
+							<span class="t">11：20</span>
+							<span>4</span>
+							<span class="t">12：10</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -196,7 +220,11 @@
                         </td>
                     </tr>
                     <tr class="5">
-                        <td class="left"><span>5</span></td>
+                        <td class="left">
+							<span class="t">12：20</span>
+							<span>5</span>
+							<span class="t">13：10</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -224,7 +252,11 @@
                         </td>
                     </tr>
                     <tr class="6">
-                        <td class="left"><span>6</span></td>
+                        <td class="left">
+							<span class="t">13：20</span>
+							<span>6</span>
+							<span class="t">14：10</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -252,7 +284,11 @@
                         </td>
                     </tr>
                     <tr class="7">
-                        <td class="left"><span>7</span></td>
+                        <td class="left">
+							<span class="t">14：20</span>
+							<span>7</span>
+							<span class="t">15：10</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -280,7 +316,11 @@
                         </td>
                     </tr>
                     <tr class="8">
-                        <td class="left"><span>8</span></td>
+                        <td class="left">
+							<span class="t">15：30</span>
+							<span>8</span>
+							<span class="t">16：20</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -308,7 +348,11 @@
                         </td>
                     </tr>
                     <tr class="9">
-                        <td class="left"><span>9</span></td>
+                        <td class="left">
+							<span class="t">16：30</span>
+							<span>9</span>
+							<span class="t">17：20</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -336,7 +380,11 @@
                         </td>
                     </tr>
                     <tr class="10">
-                        <td class="left"><span>10</span></td>
+                        <td class="left">
+							<span class="t">17：30</span>
+							<span>10</span>
+							<span class="t">18：20</span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -364,7 +412,11 @@
                         </td>
                     </tr>
                     <tr class="A">
-                        <td class="left"><span>A</span></td>
+                        <td class="left">
+							<span class="t"><b>18：40</b></span>
+							<span>A</span>
+							<span class="t"><b>19：30</b></span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -392,7 +444,11 @@
                         </td>
                     </tr>
                     <tr class="B">
-                        <td class="left"><span>B</span></td>
+                        <td class="left">
+							<span class="t"><b>19：35</b></span>
+							<span>B</span>
+							<span class="t"><b>20：25</b></span>
+						</td>
                         <td class="Mon">
                             <span></span>
                             <span></span>
@@ -796,7 +852,8 @@
 											{
 												Name: "滿文（一）", 
 												Teacher: "林士炫", 
-												Classroom: "和平工401" 
+												Classroom: "和平工401", 
+												NTNU: true 
 											}, 
 											{
 												Name: "", 
@@ -826,7 +883,8 @@
 											{
 												Name: "滿文（一）", 
 												Teacher: "林士炫", 
-												Classroom: "和平工401" 
+												Classroom: "和平工401", 
+												NTNU: true 
 											}, 
 											{
 												Name: "", 
@@ -3894,8 +3952,50 @@
             const name = " span:first-child" ; 
             const teacher = " span:nth-child(3)" ; 
             const classroom = " span:nth-child(2)" ; 
+			const abcd = 
+				{
+					ntnu: 
+						[ 
+							{
+								start: "18：40", 
+								end: "19：30" 
+							}, 
+							{
+								start: "19：35", 
+								end: "20：25" 
+							}, 
+							{
+								start: "20：30", 
+								end: "21：20" 
+							}, 
+							{
+								start: "21：25", 
+								end: "22：15" 
+							} 
+						],
+					alt: 
+						[ 
+							{
+								start: "18：25", 
+								end: "19：15" 
+							}, 
+							{
+								start: "19：20", 
+								end: "20：10" 
+							}, 
+							{
+								start: "20：15", 
+								end: "21：05" 
+							}, 
+							{
+								start: "21：10", 
+								end: "22：00" 
+							}
+						]
+				}
             function changeClass() 
             {
+				let ntnu = false;
                 for( let di = 0 ; di < d.length ; di ++ ) 
                 {
                     for( let i = 1 ; i <= 10 ; i ++ ) 
@@ -3915,6 +4015,17 @@
                         $( "." + i.toString(16).toUpperCase() + d[di] + name ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i].Week[di].Name ) ; 
                         $( "." + i.toString(16).toUpperCase() + d[di] + teacher ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i].Week[di].Teacher ) ; 
                         $( "." + i.toString(16).toUpperCase() + d[di] + classroom ).text( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i].Week[di].Classroom ) ; 
+						if( aa.find( a => ( a.S == $("select#se").val() ) ).Table[i].Week[di].NTNU ) 
+						{
+							$( "tr." + i.toString(16).toUpperCase() + " .left span.t:first-child" ).html( "<b>" + abcd.ntnu[i - 10].start + "</b>" ) ; 
+							$( "tr." + i.toString(16).toUpperCase() + " .left span.t:last-child" ).html( "<b>" + abcd.ntnu[i - 10].end + "</b>" ) ; 
+							ntnu = true;
+						}
+						else if( !ntnu )
+						{
+							$( "tr." + i.toString(16).toUpperCase() + " .left span.t:first-child" ).html( abcd.alt[i - 10].start ) ; 
+							$( "tr." + i.toString(16).toUpperCase() + " .left span.t:last-child" ).html( abcd.alt[i - 10].end ) ; 
+						}
                     }
                 }
             }
